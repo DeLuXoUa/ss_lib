@@ -1,2 +1,1 @@
-# ss-lib
-selectspecs php libraries 
+# JSON-RPC - is actual library for PHP
