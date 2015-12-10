@@ -141,7 +141,7 @@ class SSAPI {
     }
 
     private function send($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
-        $this->message_sender(
+        return $this->message_sender(
             $this->method_parser($method, $search, $data, $flags, $options),
             $this->message_parser($search, $data, $flags, $options)
         );
@@ -152,13 +152,13 @@ class SSAPI {
 //===========================================================================================
 
     public function orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        $this->send('orders', $search, $data, $flags, $options);
+        return $this->send('orders', $search, $data, $flags, $options);
     }
     public function items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        $this->send('items', $search, $data, $flags, $options);
+        return $this->send('items', $search, $data, $flags, $options);
     }
     public function order_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        $this->send('orderitems', $search, $data, $flags, $options);
+        return $this->send('orderitems', $search, $data, $flags, $options);
     }
 
 };

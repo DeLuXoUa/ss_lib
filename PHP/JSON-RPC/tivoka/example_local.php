@@ -19,47 +19,46 @@ function profiling($showtotal = false){
     }
 }
 
-$ssapi = new SSAPI("api.warder.tk", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD"); //if we dont send params all params will loaded from config.php file
+$ssapi = new SSAPI("127.0.0.1", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD"); //if we dont send params all params will loaded from config.php file
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
 //$ssAPI = new SSAPI('http', 'api.example.com/json-rpc', 80, 'secret token', 'group id');
 
-
 //Select orders by query
-$result = $ssapi->orders(['id' => 1]);
-var_dump($result);
+    $result = $ssapi->orders(['id' => 1]);
+    var_dump($result);
 
-profiling();
+    profiling();
 
 
 //Update orders by query
-$result = $ssapi->orders(['id' => 2], ['name' => 'test order 2', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_RETURN_RESULT);
-var_dump($result);
+    $result = $ssapi->orders(['id' => 2], ['name' => 'test order 2', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_RETURN_RESULT);
+    var_dump($result);
 
-profiling();
+    profiling();
 
 //Replace orders by query
-$result = $ssapi->orders(['id' => 3], ['name' => 'test order 3', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
-var_dump($result);
+    $result = $ssapi->orders(['id' => 3], ['name' => 'test order 3', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
+    var_dump($result);
 
-profiling();
+    profiling();
 
 //Insert order
-$result = $ssapi->orders(NULL, ['name' => 'test order 4', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
-var_dump($result);
+    $result = $ssapi->orders(NULL, ['name' => 'test order 4', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
+    var_dump($result);
 
-profiling();
+    profiling();
 
 //Insert order and don't wait answer from server
-$ssapi->orders(NULL, ['name' => 'test order 5', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_NO_WAIT_RESPONSE);
-var_dump('NOTIFICATION');
-profiling();
+    $ssapi->orders(NULL, ['name' => 'test order 5', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_NO_WAIT_RESPONSE);
+    var_dump('NOTIFICATION');
+    profiling();
 
 //Replace order and don't wait answer from server
-$ssapi->orders(['id' => 6], ['name' => 'test order 6', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
-var_dump('NOTIFICATION');
+    $ssapi->orders(['id' => 6], ['name' => 'test order 6', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
+    var_dump('NOTIFICATION');
 
-profiling();
-profiling(true);
+    profiling();
+    profiling(true);
 
 
 
