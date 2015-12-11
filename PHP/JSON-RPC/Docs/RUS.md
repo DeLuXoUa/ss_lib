@@ -1,6 +1,6 @@
 #Создание объекта (инициализация коннекта)
 
-$ssapi = new SSAPI($host, $port, $auth_token, $auth_group, $timeout = 15, $notify_mode = true, , $encription = false)
+$ssapi = new SSAPI($host, $port, $auth_token, $auth_group, $timeout = 15, $notify_mode = true, $mode = SSAPI_CONNECTION_NOTIFYS_ENABLE | SSAPI_CONNECTION_ENCRIPTION_DISABLE)
 
 $host - урл сервера
 
