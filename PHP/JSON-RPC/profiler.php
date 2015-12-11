@@ -1,4 +1,5 @@
 <?php
+
 $total = 0;
 $start = microtime(true);
 
@@ -15,4 +16,5 @@ function profiling($showtotal = false){
         $start = microtime(true);
     }
 }
+
 ?>
