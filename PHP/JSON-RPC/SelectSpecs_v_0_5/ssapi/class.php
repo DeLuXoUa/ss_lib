@@ -6,73 +6,58 @@ class SSAPI {
     private $connection;
     private $notif_connection;
     private $target;
+    private $auth;
+    private $mode;
+    private $access;
 
-    private function auth($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        $this->send('orderitems', $search, $data, $flags, $options);
-    }
+    function __construct($host, $port, $auth_token, $auth_group, $timeout = 15, $mode = SSAPI_CONNECTION_NOTIFYS_ENABLE | SSAPI_CONNECTION_ENCRIPTION_DISABLE){
 
-    function __construct($host, $port, $auth_token, $auth_group, $timeout = 15, $notify_mode = true){
-
-        global $ssapi_api_params;
-
-        if(!$auth_token && isset($ssapi_api_params['auth_token'])){ $auth_token = $ssapi_api_params['auth_token']; }
-        if(!$auth_group && isset($ssapi_api_params['auth_group'])){ $auth_group = $ssapi_api_params['auth_group']; }
-        if(!$host && isset($ssapi_api_params['host'])){ $host = $ssapi_api_params['host']; }
-        if(!$port && isset($ssapi_api_params['port'])){ $port = $ssapi_api_params['port']; }
-
+        if(!$host){ throw new Exception\ConnectionException('host is required'); }
+        if(!$port){ throw new Exception\ConnectionException('port is required'); }
         if(!$auth_token) { throw new Exception\ConnectionException('auth_token is required'); }
         if(!$auth_group) { throw new Exception\ConnectionException('auth_group is required'); }
-        if(!$host) { throw new Exception\ConnectionException('host is required'); }
 
-        if(!$port){
-            throw new Exception\ConnectionException('port is required on tcp connection');
-        } else {
 //                    $this->target = array('host' => $host, 'port' => $port);
-            $target = array('host' => $host, 'port' => $port);
-            $this->connection = Tivoka\Client::connect($target);
-            $this->notif_connection = Tivoka\Client::connect($target);
-            $this->connection->setTimeout(5);
-            $this->notif_connection->setTimeout(5);
+        $this->target = array('host' => $host, 'port' => $port);
+        $this->connection = Tivoka\Client::connect($this->target);
+        $this->connection->setTimeout($timeout);
+
+        if($mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
+            $this->notif_connection = Tivoka\Client::connect($this->target);
+            $this->notif_connection->setTimeout($timeout);
         }
 
-//        if(!$connection_type){ $connection_type = 'http'; }
-//        if(!$connection_type && isset($ssapi_api_params['connection_type'])){ $connection_type = $ssapi_api_params['connection_type']; }
+        $this->auth = ['token' => $auth_token, 'group' => $auth_group];
+        $this->mode = $mode;
 
-/*        switch($connection_type){
+        if(!$this->auth()){
+            throw new Exception\ConnectionException('auth: failed');
+        }
+    }
 
-            default:
-            case 'http': {
-                $target = ("http://$host");
-                if ($port) { $target .= ":$port"; }
+    private function auth(){
+        $request = $this->connection->sendRequest('auth.init', ['_group_id' => $this->auth['group']]);
+        if(!$request->isError()){
 
-                $this->connection = Tivoka\Client::connect($target);
-                $this->connection->setHeader('User-Agent', 'SSAPI/0.1');
-                $this->connection->setHeader('Auth_token', $auth_token);
-                $this->connection->setHeader('Auth_group', $auth_group);
+            $request->result['_key_id'];
+            $request2 = $this->connection->sendRequest('auth.vrf', ['check' => (md5($request->result['_key_id'].$this->auth['token']))]);
 
-                break;
-            }
-            case 'tcp': {
-                if(!$port){
-                    throw new Exception\ConnectionException('port is required on tcp connection');
-                } else {
-//                    $this->target = array('host' => $host, 'port' => $port);
-                    $target = array('host' => $host, 'port' => $port);
-                    $this->connection = Tivoka\Client::connect($target);
-                    $this->notif_connection = Tivoka\Client::connect($target);
-                    $this->connection->setTimeout(5);
-                    $this->notif_connection->setTimeout(5);
+            if(!$request2->isError()){
+                if($request2->result['result']){
+                    $this->access = $request2->result['access'];
+
+                    if($this->mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
+                        $salt = time();
+                        $this->notif_connection->sendNotification('auth.nrm', ['_group_id' => $this->auth['group'], '_key_id' => $request->result['_key_id'], 'check' => (md5($request->result['_key_id'].$this->auth['token'].$salt)), 'salt' => $salt]);
+                    }
+
+                    return true;
                 }
-                break;
-            }
-            case 'websocket': {
-                $target = ("ws://$host");
-                if ($port) { $target .= ":$port"; }
-                $this->connection = Tivoka\Client::connect($target);
-                break;
-            }
-        }
-*/
+            } else { throw new Exception\ConnectionException('auth: cant get answer 2'); }
+
+        } else { throw new Exception\ConnectionException('auth: cant get answer 1'); }
+
+        return false;
     }
 
     private function message_parser($search, $data, $flags, $options){

@@ -9,4 +9,9 @@ define('SSAPI_ONLY_IN_GROUP', 1 << 5); //all operations only in selected group
 define('SSAPI_MULTI_QUERY', 1 << 6); //multiple query transactions
 define('SSAPI_TASK_FOR_JOB_SERVER', 1 << 7); //tasks for jobs server
 
+define('SSAPI_CONNECTION_NOTIFYS_ENABLE', 1 << 0); //notifys mode enable
+define('SSAPI_CONNECTION_NOTIFYS_DISABLE', 0 << 0); //notifys mode disable
+define('SSAPI_CONNECTION_ENCRIPTION_ENABLE', 1 << 1); //encription data transer enable
+define('SSAPI_CONNECTION_ENCRIPTION_DISABLE', 0 << 1); //encription data transer disable
+
 ?>
