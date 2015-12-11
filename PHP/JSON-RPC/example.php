@@ -1,27 +1,17 @@
 <pre>
 <?php
+include(dirname(__FILE__) . '/profiler.php');
 include(dirname(__FILE__) . '/SelectSpecs_v_0_5/include.php');
 
-$total = 0;
-$start = microtime(true);
 
-function profiling($showtotal = false){
-    global $total, $start;
-
-    if($showtotal) {
-        echo "\n=======================================================\ntime spended TOTAL: ", round($total, 6), " seconds\n=======================================================\n\n";
-    } else {
-        $end = microtime(true);
-        $spended = ($end - $start);
-        $total += $spended;
-        echo "\n-------------------------------------------------------\ntime spended on connection & request: ", round($spended, 6), " seconds\n-------------------------------------------------------\n\n";
-        $start = microtime(true);
-    }
-}
-
-$ssapi = new SSAPI("api.warder.tk", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD"); //if we dont send params all params will loaded from config.php file
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
 //$ssAPI = new SSAPI('http', 'api.example.com/json-rpc', 80, 'secret token', 'group id');
+try {
+    $ssapi = new SSAPI("api.warder.tk", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD"); //if we dont send params all params will loaded from config.php file
+} catch (Exception $e) {
+    echo $e;
+    die('<br><br><hr><b>CANT CONNECT TO SERVER');
+}
 
 
 //Select orders by query

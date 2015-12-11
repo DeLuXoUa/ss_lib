@@ -4116,3 +4116,11 @@
 ::1 - - [11/Dec/2015:13:46:25 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 575
 ::1 - - [11/Dec/2015:13:46:52 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1778
 ::1 - - [11/Dec/2015:13:47:34 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1781
+::1 - - [11/Dec/2015:14:15:24 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1780
+::1 - - [11/Dec/2015:14:15:28 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 3075
+::1 - - [11/Dec/2015:14:16:19 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 29
+::1 - - [11/Dec/2015:14:16:31 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 985
+::1 - - [11/Dec/2015:14:17:25 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 791
+::1 - - [11/Dec/2015:14:18:10 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 824
+::1 - - [11/Dec/2015:14:18:34 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 828
+::1 - - [11/Dec/2015:14:18:40 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 828
