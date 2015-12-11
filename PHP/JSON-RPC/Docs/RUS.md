@@ -63,17 +63,17 @@ $mode - режим подключения задаёться флагами
 
 ###OMNIS аналоги
 все функции для омниса аналогичны обычным, но добавляеться префикс "omnis_"
-omnis_orders
-omnis_order_items
-omnis_items
-omnis_item_images
-omnis_item_translations
-omnis_item_categories
-omnis_users
-omnis_user_profiles
-omnis_groups
-omnis_group_rules
-omnis_group_domains
+* omnis_orders
+* omnis_order_items
+* omnis_items
+* omnis_item_images
+* omnis_item_translations
+* omnis_item_categories
+* omnis_users
+* omnis_user_profiles
+* omnis_groups
+* omnis_group_rules
+* omnis_group_domains
 
 Параметры:
 
