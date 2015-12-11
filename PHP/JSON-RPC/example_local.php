@@ -3,9 +3,15 @@
 include(dirname(__FILE__) . '/profiler.php');
 include(dirname(__FILE__) . '/SelectSpecs_v_0_5/include.php');
 
-$ssapi = new SSAPI("127.0.0.1", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD"); //if we dont send params all params will loaded from config.php file
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
-//$ssAPI = new SSAPI('http', 'api.example.com/json-rpc', 80, 'secret token', 'group id');
+//$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
+try {
+    $ssapi = new SSAPI("127.0.0.1", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD"); //if we dont send params all params will loaded from config.php file
+} catch (Exception $e) {
+    echo $e;
+    die('<br><br><hr><b>CANT CONNECT TO SERVER');
+}
+
 
 //Select orders by query
     $result = $ssapi->orders(['id' => 1]);

@@ -1,3 +1,7 @@
+## version 0.5.1
+- docs place changed
+- try catch added to example for right work demo
+
 ## version 0.5
 - changed lib structure
 - add data encription flag (but encription dont support yet)
