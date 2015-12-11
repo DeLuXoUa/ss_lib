@@ -1,10 +1,17 @@
 #Создание объекта (инициализация коннекта)
+
 $ssapi = new SSAPI($host, $port, $auth_token, $auth_group, $timeout = 15, $notify_mode = true, , $encription = false)
+
 $host - урл сервера
+
 $port - порт сервера
+
 $auth_token - секретный ключ
+
 $auth_group айди группы по умолчанию
+
 $timeout = 15 - время ожидания ответа (п умолчанию 15 секунд)
+
 $mode - режим подключения задаёться флагами
 * SSAPI_CONNECTION_NOTIFYS_ENABLE - включает режим уведомления (активно по умолчанию), создаёт второй коннект не требующий ответа
 * SSAPI_CONNECTION_NOTIFYS_DISABLE - выключает режим уведомлений
