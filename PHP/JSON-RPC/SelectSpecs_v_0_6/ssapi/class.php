@@ -148,6 +148,12 @@ class SSAPI {
     public function item_images($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('items.images', $search, $data, $flags, $options);
     }
+    public function item_translations($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('items.translations', $search, $data, $flags, $options);
+    }
+    public function item_categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('items.categories', $search, $data, $flags, $options);
+    }
     public function users($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('users', $search, $data, $flags, $options);
     }
@@ -163,7 +169,7 @@ class SSAPI {
     public function group_domains($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('groups.domains', $search, $data, $flags, $options);
     }
-
+//========================OMNIS================================
     public function omnis_orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('omnis.orders', $search, $data, $flags, $options);
     }
@@ -175,6 +181,12 @@ class SSAPI {
     }
     public function omnis_item_images($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('omnis.items.images', $search, $data, $flags, $options);
+    }
+    public function omnis_item_translations($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('omnis.items.translations', $search, $data, $flags, $options);
+    }
+    public function omnis_item_categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('omnis.items.categories', $search, $data, $flags, $options);
     }
     public function omnis_users($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('omnis.users', $search, $data, $flags, $options);

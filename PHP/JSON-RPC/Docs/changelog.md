@@ -1,3 +1,10 @@
+## version 0.6.1
+- docs renewed
+- add few functions
+
+## version 0.6
+- add functions of omnis
+
 ## version 0.5.1
 - docs place changed
 - try catch added to example for right work demo

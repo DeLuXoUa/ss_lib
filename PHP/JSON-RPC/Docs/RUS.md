@@ -31,27 +31,49 @@ $mode - режим подключения задаёться флагами
 ### SSAPI::order($search, $data, $flags, $options)
 Заменяет(обновляет) или дополняет ордер в апи.
 
-### SSAPI::items($search, $data, $flags, $options)
-Заменяет(обновляет) или дополняет айтем в апи.
-
 ### SSAPI::order_items($search, $data, $flags, $options)
 Заменяет(обновляет) или дополняет айтем в ордере в апи.
 
-### SSAPI::items_images($search, $data, $flags, $options)
+### SSAPI::items($search, $data, $flags, $options)
+Заменяет(обновляет) или дополняет айтем в апи.
+
+### SSAPI::item_images($search, $data, $flags, $options)
 Заменяет(обновляет) или дополняет картинки в айтемах в апи.
-
-### SSAPI::groups($search, $data, $flags, $options)
-Заменяет(обновляет) или дополняет группы в апи.
-
-### SSAPI::users($search, $data, $flags, $options)
-Заменяет(обновляет) или дополняет юзеров в апи.
-
-### SSAPI::profiles($search, $data, $flags, $options)
-Заменяет(обновляет) или дополняет профили в апи.
 
 ### SSAPI::item_translations($search, $data, $flags, $options)
 Заменяет(обновляет) или дополняет перевод для айтема в апи.
 
+### SSAPI::item_categories($search, $data, $flags, $options)
+Заменяет(обновляет) иликатегорию для айтема в апи.
+
+### SSAPI::groups($search, $data, $flags, $options)
+Заменяет(обновляет) или дополняет группы в апи.
+
+### SSAPI::group_rules($search, $data, $flags, $options)
+Заменяет(обновляет) или дополняет правилла группы в апи.
+
+### SSAPI::group_domains($search, $data, $flags, $options)
+Заменяет(обновляет) или дополняет домены группы в апи.
+
+### SSAPI::users($search, $data, $flags, $options)
+Заменяет(обновляет) или дополняет юзеров в апи.
+
+### SSAPI::user_profiles($search, $data, $flags, $options)
+Заменяет(обновляет) или дополняет профили юзеров в апи.
+
+###OMNIS аналоги
+все функции для омниса аналогичны обычным, но добавляеться префикс "omnis_"
+omnis_orders
+omnis_order_items
+omnis_items
+omnis_item_images
+omnis_item_translations
+omnis_item_categories
+omnis_users
+omnis_user_profiles
+omnis_groups
+omnis_group_rules
+omnis_group_domains
 
 Параметры:
 
