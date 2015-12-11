@@ -7,7 +7,7 @@ include(dirname(__FILE__) . '/SelectSpecs_v_0_6/include.php');
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
-    $ssapi = new SSAPI("api.warder.tk", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD");
+    $ssapi = new SSAPI("ssapi.selectspecs.com", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD");
 } catch (Exception $e) {
     echo $e;
     die('<br><br><hr><b>CANT CONNECT TO SERVER');

@@ -4126,3 +4126,5 @@
 ::1 - - [11/Dec/2015:14:18:40 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 828
 ::1 - - [11/Dec/2015:14:27:31 +0200] "GET /JSON-RPC/tivoka/ HTTP/1.1" 404 1054
 ::1 - - [11/Dec/2015:14:27:35 +0200] "GET /favicon.ico HTTP/1.1" 404 1208
+::1 - - [11/Dec/2015:16:26:58 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1782
+::1 - - [11/Dec/2015:18:09:24 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 1780
