@@ -4128,3 +4128,17 @@
 ::1 - - [11/Dec/2015:14:27:35 +0200] "GET /favicon.ico HTTP/1.1" 404 1208
 ::1 - - [11/Dec/2015:16:26:58 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1782
 ::1 - - [11/Dec/2015:18:09:24 +0200] "GET /JSON-RPC/example.php HTTP/1.1" 200 1780
+127.0.0.1 - - [14/Dec/2015:11:00:53 +0200] "GET / HTTP/1.1" 200 996
+127.0.0.1 - - [14/Dec/2015:11:00:53 +0200] "GET /icons/blank.gif HTTP/1.1" 200 148
+127.0.0.1 - - [14/Dec/2015:11:00:53 +0200] "GET /icons/folder.gif HTTP/1.1" 200 225
+127.0.0.1 - - [14/Dec/2015:11:00:53 +0200] "GET /favicon.ico HTTP/1.1" 404 1176
+127.0.0.1 - - [14/Dec/2015:11:01:13 +0200] "GET /JSON-RPC/ HTTP/1.1" 200 1846
+127.0.0.1 - - [14/Dec/2015:11:01:13 +0200] "GET /icons/back.gif HTTP/1.1" 200 216
+127.0.0.1 - - [14/Dec/2015:11:01:13 +0200] "GET /icons/text.gif HTTP/1.1" 200 229
+127.0.0.1 - - [14/Dec/2015:11:01:15 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 825
+127.0.0.1 - - [14/Dec/2015:11:01:28 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 825
+127.0.0.1 - - [14/Dec/2015:11:45:32 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 824
+127.0.0.1 - - [14/Dec/2015:11:52:23 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1093
+127.0.0.1 - - [14/Dec/2015:11:52:48 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1778
+127.0.0.1 - - [14/Dec/2015:11:53:40 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1780
+127.0.0.1 - - [14/Dec/2015:17:46:12 +0200] "GET /JSON-RPC/example_local.php HTTP/1.1" 200 1777

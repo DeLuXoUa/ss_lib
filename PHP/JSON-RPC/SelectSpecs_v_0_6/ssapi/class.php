@@ -70,6 +70,7 @@ class SSAPI {
             if($flags & SSAPI_NO_WAIT_RESPONSE) { $message['flags'][] = 'noresponse'; }
             elseif($flags & SSAPI_RETURN_RESULT) { $message['flags'][] = 'returnresult'; } //only if we waiting response we can use this flag
 
+            if($flags & SSAPI_CREATE_IF_NOT_EXIST) { $message['flags'][] = 'createifnotexist'; }
             if($flags & SSAPI_FULL_REWRITE) { $message['flags'][] = 'fullrewrite'; }
             if($flags & SSAPI_ONLY_IN_GROUP) { $message['flags'][] = 'ingrouponly'; }
             if($flags & SSAPI_MULTI_QUERY) { $message['flags'][] = 'multi'; }
@@ -88,18 +89,14 @@ class SSAPI {
 
     private function method_parser($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
         if(!is_null($search) && !is_null($data)){
-            if(!is_null($flags) && $flags & SSAPI_CREATE_IF_NOT_EXIST) {
-                $method .= 'update';
-            } else {
-                $method .= 'replace';
-            }
+            $method .= '.update';
         } elseif(!is_null($data)) {
-            $method .= 'add';
+            $method .= '.add';
         } elseif(!is_null($search)) {
             if(!is_null($flags) && $flags & SSAPI_DELETE_DOCUMENT) {
-                $method .= 'delete';
+                $method .= '.delete';
             } else {
-                $method .= 'get';
+                $method .= '.get';
             }
         }
 
