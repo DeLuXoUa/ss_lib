@@ -1,7 +1,7 @@
 <pre>
 <?php
 include(dirname(__FILE__) . '/profiler.php');
-include(dirname(__FILE__) . '/SelectSpecs_v_0_6/include.php');
+include(dirname(__FILE__) . '/SelectSpecs_v_0_7/include.php');
 
 
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php

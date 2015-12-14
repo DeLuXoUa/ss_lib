@@ -1,3 +1,6 @@
+## version 0.7.0
+- methods names separation added (IMPORTANT UPDATE! previus versions is will no work anymore)
+
 ## version 0.6.2
 - fixed constructor defaults declaration for PHP 5.5
 
