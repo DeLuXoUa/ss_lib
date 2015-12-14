@@ -1,3 +1,6 @@
+## version 0.6.2
+- fixed constructor defaults declaration for PHP 5.5
+
 ## version 0.6.1
 - docs renewed
 - add few functions

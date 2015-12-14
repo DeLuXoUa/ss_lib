@@ -10,8 +10,9 @@ class SSAPI {
     private $mode;
     private $access;
 
-    function __construct($host, $port, $auth_token, $auth_group, $timeout = 15, $mode = SSAPI_CONNECTION_NOTIFYS_ENABLE | SSAPI_CONNECTION_ENCRIPTION_DISABLE){
+    function __construct($host, $port, $auth_token, $auth_group, $timeout = 15, $mode = NULL){
 
+        if(is_null($mode)) $mode = (SSAPI_CONNECTION_NOTIFYS_ENABLE | SSAPI_CONNECTION_ENCRIPTION_DISABLE);
         if(!$host){ throw new Exception\ConnectionException('host is required'); }
         if(!$port){ throw new Exception\ConnectionException('port is required'); }
         if(!$auth_token) { throw new Exception\ConnectionException('auth_token is required'); }
