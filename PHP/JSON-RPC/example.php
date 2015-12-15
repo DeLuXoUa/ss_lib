@@ -3,11 +3,12 @@
 include(dirname(__FILE__) . '/profiler.php');
 include(dirname(__FILE__) . '/SelectSpecs_v_0_7/include.php');
 
-
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
-    $ssapi = new SSAPI("ssapi.selectspecs.com", 8843, "SeCrEtToKeNvAlUe", "GrOuPiD");
+    //111c1111111111cc11111111 - test group_id
+    //SeCrEtToKeNvAlUe - test token
+    $ssapi = new SSAPI("ssapi.selectspecs.com", 8843, "SeCrEtToKeNvAlUe", "111c1111111111cc11111111");
 } catch (Exception $e) {
     echo $e;
     die('<br><br><hr><b>CANT CONNECT TO SERVER');
@@ -15,6 +16,7 @@ try {
 
 
 //Select orders by query
+echo "<b>SELECT:</b>\n";
 $result = $ssapi->orders(['id' => 1]);
 var_dump($result);
 
@@ -22,18 +24,21 @@ profiling();
 
 
 //Update orders by query
+echo "<b>UPDATE (with return result flag):</b>\n";
 $result = $ssapi->orders(['id' => 2], ['name' => 'test order 2', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_RETURN_RESULT);
 var_dump($result);
 
 profiling();
 
 //Replace orders by query
+echo "<b>REPLACE (with return result flag):</b>\n";
 $result = $ssapi->orders(['id' => 3], ['name' => 'test order 3', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
 var_dump($result);
 
 profiling();
 
 //Insert order
+echo "<b>INSERT (with return result flag):</b>\n";
 $result = $ssapi->orders(NULL, ['name' => 'test order 4', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
 var_dump($result);
 
@@ -41,12 +46,13 @@ profiling();
 
 //Insert order and don't wait answer from server
 $ssapi->orders(NULL, ['name' => 'test order 5', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_NO_WAIT_RESPONSE);
-var_dump('NOTIFICATION');
+echo "INSERT (w/o answer)\n";
+
 profiling();
 
 //Replace order and don't wait answer from server
 $ssapi->orders(['id' => 6], ['name' => 'test order 6', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
-var_dump('NOTIFICATION');
+echo "REPLACE (w/o answer)\n";
 
 profiling();
 profiling(true);

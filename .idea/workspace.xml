@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3574ffa7-efff-4099-8790-24f202190234" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/include.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/include.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/BatchRequest.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/BatchRequest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/Connection/AbstractConnection.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Connection/AbstractConnection.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/Connection/ConnectionInterface.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Connection/ConnectionInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/Connection/Tcp.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Connection/Tcp.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/NativeInterface.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/NativeInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/Notification.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Notification.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Client/Request.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Request.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/ConnectionException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/ConnectionException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/Exception.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/Exception.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/InvalidParamsException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/InvalidParamsException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/ProcedureException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/ProcedureException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/RemoteProcedureException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/RemoteProcedureException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/SpecException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/SpecException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Exception/SyntaxException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/SyntaxException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/lib/Tivoka/Tivoka.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Tivoka.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/ssapi/class.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/ssapi/flags.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php" />
+    <list default="true" id="3574ffa7-efff-4099-8790-24f202190234" name="Default" comment="methods name changed (separated by dots)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
@@ -50,18 +31,18 @@
       <file leaf-file-name="example.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.269231">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example_local.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="example_local.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.7602862">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -107,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changelog.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="changelog.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.028960818">
-              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+            <state vertical-scroll-proportion="-1.2592592">
+              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -169,10 +150,10 @@
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_5/ssapi/class.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/profiler.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/ssapi/class.php" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
       </list>
     </option>
   </component>
@@ -677,7 +658,7 @@
       <created>1449759645307</created>
       <option name="number" value="Default" />
       <updated>1449759645307</updated>
-      <workItem from="1449759646636" duration="27324000" />
+      <workItem from="1449759646636" duration="37530000" />
     </task>
     <task id="LOCAL-00001" summary="auth works">
       <created>1449834778374</created>
@@ -787,11 +768,17 @@
       <option name="project" value="LOCAL" />
       <updated>1450108104124</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="methods name changed (separated by dots)">
+      <created>1450112158841</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1450112158841</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27324000" />
+    <option name="totallyTimeSpent" value="37530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="0" width="1318" height="775" extended-state="0" />
@@ -966,14 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.269231">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.418182">
@@ -982,18 +961,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        <state vertical-scroll-proportion="-1.2592592">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028960818">
-          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7602862">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="16" />
           <folding />
         </state>
       </provider>
