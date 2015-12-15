@@ -62,7 +62,7 @@ try {
     echo "REPLACE (w/o answer)\n";
 
     profiling();
-*/
+
     profiling(true);
 
 

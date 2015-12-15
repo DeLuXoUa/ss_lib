@@ -14,47 +14,54 @@ try {
     die('<br><br><hr><b>CANT CONNECT TO SERVER');
 }
 
-
 //Select orders by query
 echo "<b>SELECT:</b>\n";
-$result = $ssapi->orders(['id' => 1]);
+$result = $ssapi->orders(['order_id' => 4]);
 var_dump($result);
 
 profiling();
 
-
-//Update orders by query
-echo "<b>UPDATE (with return result flag):</b>\n";
-$result = $ssapi->orders(['id' => 2], ['name' => 'test order 2', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_RETURN_RESULT);
+//Remove orders by query
+echo "<b>Remove:</b>\n";
+$result = $ssapi->orders(['order_id' => 4], NULL, SSAPI_DELETE_DOCUMENT);
 var_dump($result);
 
 profiling();
+
 
 //Replace orders by query
 echo "<b>REPLACE (with return result flag):</b>\n";
-$result = $ssapi->orders(['id' => 3], ['name' => 'test order 3', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
+$result = $ssapi->orders(['order_id' => 3], ['name' => 'test order 3', '_group_id' => '333d3333333333dd33333333'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
 var_dump($result);
 
 profiling();
 
 //Insert order
 echo "<b>INSERT (with return result flag):</b>\n";
-$result = $ssapi->orders(NULL, ['name' => 'test order 4', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
+$result = $ssapi->orders(NULL, ['order_id' => 4, 'name' => 'test order 4', '_group_id' => '333d3333333333dd33333333'], SSAPI_RETURN_RESULT);
+var_dump($result);
+
+profiling();
+
+//Update orders by query
+echo "<b>UPDATE (with return result flag):</b>\n";
+$result = $ssapi->orders(['order_id' => 4, '_group_id' => '333d3333333333dd33333333'], ['name' => 'UPDATED order 4 to 2', '_group_id' => '444d4444444444dd44444444'], SSAPI_RETURN_RESULT);
 var_dump($result);
 
 profiling();
 
 //Insert order and don't wait answer from server
-$ssapi->orders(NULL, ['name' => 'test order 5', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_NO_WAIT_RESPONSE);
+$ssapi->orders(NULL, ['order_id' => 5, 'name' => 'test order 5', '_group_id' => '333d3333333333dd33333333'], SSAPI_NO_WAIT_RESPONSE);
 echo "INSERT (w/o answer)\n";
 
 profiling();
 
 //Replace order and don't wait answer from server
-$ssapi->orders(['id' => 6], ['name' => 'test order 6', '_group_id' => 'A1498Hjhjh99hjjh'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
+$ssapi->orders(['order_id' => 6], ['name' => 'test order 6', '_group_id' => '333d3333333333dd33333333'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
 echo "REPLACE (w/o answer)\n";
 
 profiling();
+
 profiling(true);
 
 
