@@ -8,7 +8,7 @@ include(dirname(__FILE__) . '/SelectSpecs_v_0_7/include.php');
 try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
-    $ssapi = new SSAPI("ssapi.selectspecs.com", 8843, "SeCrEtToKeNvAlUe", "111c1111111111cc11111111");
+    $ssapi = new SSAPI("api.warder.tk", 8843, "SeCrEtToKeNvAlUe", "111c1111111111cc11111111");
 } catch (Exception $e) {
     echo $e;
     die('<br><br><hr><b>CANT CONNECT TO SERVER');
