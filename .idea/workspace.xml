@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3574ffa7-efff-4099-8790-24f202190234" name="Default" comment="methods name changed (separated by dots)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" />
+    <list default="true" id="3574ffa7-efff-4099-8790-24f202190234" name="Default" comment="x">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/logs/access.log" afterPath="$PROJECT_DIR$/PHP/logs/access.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
     </list>
     <ignored path="ss-lib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,12 +27,22 @@
     <favorites_list name="ss-lib" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="example.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="example.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16156463">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flags.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,9 +51,22 @@
       <file leaf-file-name="example_local.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.709091">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding />
+            <state vertical-scroll-proportion="-4.506024">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="33" />
+              <folding>
+                <marker date="1450347066772" expanded="true" signature="763:772" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="870:891" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="1050:1068" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="1229:1247" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="1501:1519" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="1764:1782" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="2083:2101" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="2372:2390" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="2673:2691" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="2824:2833" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="3036:3047" placeholder="..." />
+                <marker date="1450347066772" expanded="true" signature="3197:3213" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +74,8 @@
       <file leaf-file-name="profiler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/profiler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="3" column="25" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -60,8 +84,8 @@
       <file leaf-file-name="class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0">
-              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="150" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -70,18 +94,18 @@
       <file leaf-file-name="example_dev.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692">
+            <state vertical-scroll-proportion="0.0">
               <caret line="40" column="115" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="115" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changelog.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="changelog.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2592592">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.17465754">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -90,7 +114,7 @@
       <file leaf-file-name="RUS.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.481482">
+            <state vertical-scroll-proportion="0.0">
               <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
@@ -120,11 +144,13 @@
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/profiler.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/ssapi/class.php" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
         <option value="$PROJECT_DIR$/PHP/query.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
       </list>
     </option>
   </component>
@@ -140,7 +166,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="55" />
     <option name="width" value="1318" />
-    <option name="height" value="775" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -167,6 +193,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,11 +294,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JSON-RPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,12 +329,12 @@
     <property name="js-jscs-nodeInterpreter" value="C:\node.js\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OneDrive\www\ss-lib\PHP\JSON-RPC" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OneDrive\www\ss-lib\PHP\JSON-RPC" />
       <recent name="C:\OneDrive\www\ss-lib\PHP\JSON-RPC\tivoka" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OneDrive\www\ss-lib\PHP\JSON-RPC" />
     </key>
   </component>
   <component name="RunManager">
@@ -541,6 +589,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -578,7 +631,8 @@
       <created>1449759645307</created>
       <option name="number" value="Default" />
       <updated>1449759645307</updated>
-      <workItem from="1449759646636" duration="48983000" />
+      <workItem from="1449759646636" duration="49604000" />
+      <workItem from="1450270222269" duration="10486000" />
     </task>
     <task id="LOCAL-00001" summary="auth works">
       <created>1449834778374</created>
@@ -706,38 +760,44 @@
       <option name="project" value="LOCAL" />
       <updated>1450187305599</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="x">
+      <created>1450259155754</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1450259155754</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48983000" />
+    <option name="totallyTimeSpent" value="60090000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="0" width="1318" height="775" extended-state="0" />
+    <frame x="55" y="0" width="1318" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -756,7 +816,6 @@
     <MESSAGE value="auth works" />
     <MESSAGE value="docs edited" />
     <MESSAGE value="tru catch added to example!" />
-    <MESSAGE value="x" />
     <MESSAGE value="0.5.1" />
     <MESSAGE value="new fns and omnis fns added" />
     <MESSAGE value="0.6" />
@@ -764,7 +823,8 @@
     <MESSAGE value="added adres" />
     <MESSAGE value="for php 5.5 fix" />
     <MESSAGE value="methods name changed (separated by dots)" />
-    <option name="LAST_COMMIT_MESSAGE" value="methods name changed (separated by dots)" />
+    <MESSAGE value="x" />
+    <option name="LAST_COMMIT_MESSAGE" value="x" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -775,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="58.846153">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,17 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3090909">
           <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#1358#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4074073">
           <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,62 +906,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/profiler.php">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="115" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.481482">
+        <state vertical-scroll-proportion="0.0">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2592592">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692">
-          <caret line="40" column="115" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.709091">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16156463">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/profiler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="25" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.506024">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <marker date="1450347066772" expanded="true" signature="763:772" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="870:891" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="1050:1068" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="1229:1247" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="1501:1519" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="1764:1782" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="2083:2101" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="2372:2390" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="2673:2691" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="2824:2833" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="3036:3047" placeholder="..." />
+            <marker date="1450347066772" expanded="true" signature="3197:3213" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="150" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17465754">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
       </provider>

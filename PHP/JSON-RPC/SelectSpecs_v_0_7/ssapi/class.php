@@ -9,6 +9,10 @@ class SSAPI {
     private $auth;
     private $mode;
     private $access;
+    private $last_error_data = null; //last error
+    private $errors_log = [];
+    private $last_ex_time = null; //execution time (profiler timer)
+    private $ex_times_log = [];
 
     function __construct($host, $port, $auth_token, $auth_group, $timeout = 15, $mode = NULL){
 
@@ -102,22 +106,94 @@ class SSAPI {
 
         return $method;
     }
+    
+    public function getLastError(){
+        if(is_null($this->last_error_data)){
+            return false;
+        } else {
+            return $this->last_error_data;
+        }
+    }
+    public function getAllErrors(){
+        if(!count($this->errors_log)){
+            return false;
+        } else {
+            return $this->errors_log;
+        }
+    }
+    public function getLastTime($round = 3){
+        if(is_null($this->last_ex_time)){
+            return false;
+        } else {
+            if($round === false){
+                return $this->last_ex_time;
+            } else {
+                return round($this->last_ex_time, $round);
+            }
+        }
+    }
+    public function getAllTimes($round = 3){
+        if(!count($this->ex_times_log)){
+            return false;
+        } else {
+            if($round === false){
+                return $this->ex_times_log;
+            } else {
+                $result = [];
+                foreach($this->ex_times_log as $t) {
+                    $result[] = round($t, $round);
+                }
+                return $result;
+            }
+        }
+    }
 
+    public function getTotalTime($round = 3){
+        if(!count($this->ex_times_log)){
+            return false;
+        } else {
+            $result = 0;
+            foreach($this->ex_times_log as $t) {
+                $result+=$t;
+            }
+            if($round === false){
+                return $result;
+            } else {
+                return round($result, $round);
+            }
+        }
+    }
     public function message_sender($method, $message){
+        $ex_time = microtime(true);
         if(isset($message['flags']) && in_array('noresponse', $message['flags'])){
             $this->notif_connection->sendNotification($method, $message);
+            $ex_time = microtime(true) - $ex_time;
+            $this->last_ex_time = $ex_time;
+            $this->ex_times_log[] = $ex_time;
             return true;
         } else {
 //            $request = Tivoka\Client::connect($this->target)->sendRequest($method, $message);
             $request = $this->connection->sendRequest($method, $message);
+            $ex_time = microtime(true) - $ex_time;
+            $this->last_ex_time = $ex_time;
+            $this->ex_times_log[] = $ex_time;
+
             if($request->isError()){
-                return [
+                $this->last_error_data = [
                     'result' => false,
                     'error' => $request->error,
                     'errorData' => $request->errorData,
-                    'reason' => $request->errorMessage
+                    'reason' => $request->errorMessage,
+                    'params' => ['method'=>$method]
                 ];
+                foreach($message as $key=>$value){
+                    $this->last_error_data['params'][$key] = $value;
+                }
+
+                $this->errors_log[] = $this->last_error_data;
+                return false;
             } else {
+                $this->last_error_data = null;
                 return $request->result;
             }
         }

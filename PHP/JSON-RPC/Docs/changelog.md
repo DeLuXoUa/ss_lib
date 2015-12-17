@@ -1,3 +1,11 @@
+## version 0.7.1
+- now if error always return false
+- function getLastError() added
+- function getAllErrors() added
+- function getLastTime() added
+- function getAllTimes() added
+- function getTotalTime() added
+
 ## version 0.7.0
 - methods names separation added (IMPORTANT UPDATE! previus versions is will no work anymore)
 - examples was fixed (_group_id now have right format)
