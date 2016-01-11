@@ -206,6 +206,21 @@ class SSAPI {
         );
     }
 
+    private function last_updated_date($type, $group_id, $flags = NULL, $options = NULL){
+        $search = ['q' => ['__service._group_id' => ['$ne' => $group_id] ] ];
+
+        return $this->send($type.'.last_updated_date', $search, NULL, $flags, $options);
+    }
+    private function last_updated($type, $group_id, $from_date, $to_date, $flags = NULL, $options = NULL){
+        $search = ['q' => [
+            ['__service._group_id' => ['$ne' => $group_id] ],
+            ['__service.updated' => ['$gt' => $from_date] ],
+            ['__service.updated' => ['$lte' => $to_date] ]
+        ]];
+
+        return $this->send($type.'.last_updated', $search, NULL, $flags, $options);
+    }
+
 //===========================================================================================
 //=======================   P U B L I C   F U N C T I O N S   ===============================
 //===========================================================================================
@@ -214,21 +229,20 @@ class SSAPI {
         return $this->send('orders', $search, $data, $flags, $options);
     }
     public function orders_last_updated_date($group_id, $flags = NULL, $options = NULL){
-        $search = ['q' => ['__service._group_id' => ['$ne' => $group_id] ] ];
-
-        return $this->send('orders.last_updated_date', $search, NULL, $flags, $options);
+        return $this->last_updated_date('orders', $group_id, $flags, $options = NULL);
     }
     public function orders_last_updated($group_id, $from_date, $to_date, $flags = NULL, $options = NULL){
-        $search = ['q' => [
-            ['__service._group_id' => ['$ne' => $group_id] ],
-            ['__service.updated' => ['$gt' => $from_date] ],
-            ['__service.updated' => ['$lte' => $to_date] ]
-        ]];
-
-        return $this->send('orders.last_updated', $search, NULL, $flags, $options);
+        return $this->last_updated('orders', $group_id, $from_date, $to_date, $flags, $options);
     }
     public function order_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('orders.items', $search, $data, $flags, $options);
+    }
+
+    public function items_last_updated_date($group_id, $flags = NULL, $options = NULL){
+        return $this->last_updated_date('items', $group_id, $flags, $options = NULL);
+    }
+    public function items_last_updated($group_id, $from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('items', $group_id, $from_date, $to_date, $flags, $options);
     }
     public function items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('items', $search, $data, $flags, $options);
@@ -241,6 +255,12 @@ class SSAPI {
     }
     public function item_categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('items.categories', $search, $data, $flags, $options);
+    }
+    public function users_last_updated_date($group_id, $flags = NULL, $options = NULL){
+        return $this->last_updated_date('users', $group_id, $flags, $options = NULL);
+    }
+    public function users_last_updated($group_id, $from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('users', $group_id, $from_date, $to_date, $flags, $options);
     }
     public function users($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('users', $search, $data, $flags, $options);

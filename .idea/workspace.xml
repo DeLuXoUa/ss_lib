@@ -94,8 +94,8 @@
       <file leaf-file-name="class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6420863">
-              <caret line="218" column="88" selection-start-line="218" selection-start-column="88" selection-end-line="218" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.6512821">
+              <caret line="305" column="5" selection-start-line="305" selection-start-column="5" selection-end-line="305" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -656,7 +656,7 @@
       <updated>1449759645307</updated>
       <workItem from="1449759646636" duration="49604000" />
       <workItem from="1450270222269" duration="13246000" />
-      <workItem from="1452503984607" duration="5441000" />
+      <workItem from="1452503984607" duration="5851000" />
     </task>
     <task id="LOCAL-00001" summary="auth works">
       <created>1449834778374</created>
@@ -808,11 +808,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452504654189</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add orders last updated">
+      <created>1452526089799</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1452526089799</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68291000" />
+    <option name="totallyTimeSpent" value="68701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="0" width="1318" height="772" extended-state="0" />
@@ -869,7 +875,8 @@
     <MESSAGE value="0.7.1" />
     <MESSAGE value="examples fixed" />
     <MESSAGE value="array implementations changed for PHP 5.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="array implementations changed for PHP 5.3" />
+    <MESSAGE value="add orders last updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="add orders last updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1153,8 +1160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6420863">
-          <caret line="218" column="88" selection-start-line="218" selection-start-column="88" selection-end-line="218" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.6512821">
+          <caret line="305" column="5" selection-start-line="305" selection-start-column="5" selection-end-line="305" selection-end-column="5" />
           <folding />
         </state>
       </provider>
