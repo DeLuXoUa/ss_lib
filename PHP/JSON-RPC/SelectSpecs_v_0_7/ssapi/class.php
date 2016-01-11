@@ -213,6 +213,20 @@ class SSAPI {
     public function orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('orders', $search, $data, $flags, $options);
     }
+    public function orders_last_updated_date($group_id, $flags = NULL, $options = NULL){
+        $search = ['q' => ['__service._group_id' => ['$ne' => $group_id] ] ];
+
+        return $this->send('orders.last_updated_date', $search, NULL, $flags, $options);
+    }
+    public function orders_last_updated($group_id, $from_date, $to_date, $flags = NULL, $options = NULL){
+        $search = ['q' => [
+            ['__service._group_id' => ['$ne' => $group_id] ],
+            ['__service.updated' => ['$gt' => $from_date] ],
+            ['__service.updated' => ['$lte' => $to_date] ]
+        ]];
+
+        return $this->send('orders.last_updated', $search, NULL, $flags, $options);
+    }
     public function order_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('orders.items', $search, $data, $flags, $options);
     }
