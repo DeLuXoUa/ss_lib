@@ -10,9 +10,9 @@ class SSAPI {
     private $mode;
     private $access;
     private $last_error_data = null; //last error
-    private $errors_log = [];
+    private $errors_log = array();
     private $last_ex_time = null; //execution time (profiler timer)
-    private $ex_times_log = [];
+    private $ex_times_log = array();
 
     function __construct($host, $port, $auth_token, $auth_group, $timeout = 15, $mode = NULL){
 
@@ -32,7 +32,7 @@ class SSAPI {
             $this->notif_connection->setTimeout($timeout);
         }
 
-        $this->auth = ['token' => $auth_token, 'group' => $auth_group];
+        $this->auth = array('token' => $auth_token, 'group' => $auth_group);
         $this->mode = $mode;
 
         if(!$this->auth()){
@@ -41,11 +41,11 @@ class SSAPI {
     }
 
     private function auth(){
-        $request = $this->connection->sendRequest('auth.init', ['_group_id' => $this->auth['group']]);
+        $request = $this->connection->sendRequest('auth.init', array('_group_id' => $this->auth['group']));
         if(!$request->isError()){
 
             $request->result['_key_id'];
-            $request2 = $this->connection->sendRequest('auth.vrf', ['check' => (md5($request->result['_key_id'].$this->auth['token']))]);
+            $request2 = $this->connection->sendRequest('auth.vrf', array('check' => (md5($request->result['_key_id'].$this->auth['token']))));
 
             if(!$request2->isError()){
                 if($request2->result['result']){
@@ -53,7 +53,7 @@ class SSAPI {
 
                     if($this->mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
                         $salt = time();
-                        $this->notif_connection->sendNotification('auth.nrm', ['_group_id' => $this->auth['group'], '_key_id' => $request->result['_key_id'], 'check' => (md5($request->result['_key_id'].$this->auth['token'].$salt)), 'salt' => $salt]);
+                        $this->notif_connection->sendNotification('auth.nrm', array('_group_id' => $this->auth['group'], '_key_id' => $request->result['_key_id'], 'check' => (md5($request->result['_key_id'].$this->auth['token'].$salt)), 'salt' => $salt));
                     }
 
                     return true;
@@ -67,8 +67,8 @@ class SSAPI {
 
     private function message_parser($search, $data, $flags, $options){
 
-        $message = [];
-        $message['flags'] = [];
+        $message = array();
+        $message['flags'] = array();
 
         if(!is_null($flags)) {
             if($flags & SSAPI_NO_WAIT_RESPONSE) { $message['flags'][] = 'noresponse'; }
@@ -139,7 +139,7 @@ class SSAPI {
             if($round === false){
                 return $this->ex_times_log;
             } else {
-                $result = [];
+                $result = array();
                 foreach($this->ex_times_log as $t) {
                     $result[] = round($t, $round);
                 }
@@ -179,13 +179,13 @@ class SSAPI {
             $this->ex_times_log[] = $ex_time;
 
             if($request->isError()){
-                $this->last_error_data = [
+                $this->last_error_data = array(
                     'result' => false,
                     'error' => $request->error,
                     'errorData' => $request->errorData,
                     'reason' => $request->errorMessage,
                     'params' => ['method'=>$method]
-                ];
+                );
                 foreach($message as $key=>$value){
                     $this->last_error_data['params'][$key] = $value;
                 }
