@@ -21,8 +21,9 @@ class SSAPI {
         if(is_null($mode)) $mode = (SSAPI_CONNECTION_NOTIFYS_ENABLE | SSAPI_CONNECTION_ENCRIPTION_DISABLE);
         if(!$host){ throw new Exception\ConnectionException('host is required'); }
         if(!$port){ throw new Exception\ConnectionException('port is required'); }
+        if(!$auth_key_id) { throw new Exception\ConnectionException('auth_key_id is required'); }
         if(!$auth_token) { throw new Exception\ConnectionException('auth_token is required'); }
-        if(!$auth_group) { throw new Exception\ConnectionException('auth_group is required'); }
+        if(!$auth_group_id) { throw new Exception\ConnectionException('auth_group is required'); }
 
 //                    $this->target = array('host' => $host, 'port' => $port);
         $this->target = array('host' => $host, 'port' => $port);
@@ -34,7 +35,7 @@ class SSAPI {
             $this->notif_connection->setTimeout($timeout);
         }
 
-        $this->auth = array('_key_id' => $auth_key_id, 'token' => $auth_token, '_group_id' => $auth_group);
+        $this->auth = array('_key_id' => $auth_key_id, 'token' => $auth_token, '_group_id' => $auth_group_id);
         if(is_null($custom_client_id)){
             $this->client_id = md5($this->auth['_key_id'].$this->auth['_group_id']);
         }
@@ -59,7 +60,8 @@ class SSAPI {
             ]);
 
             if(!$request2->isError()){
-                if($request2->result['result']){
+                print_r($request2->result);
+                if($request2->result){
                     $this->access = $request2->result['access'];
 
                     if($this->mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
@@ -385,7 +387,9 @@ class SSAPI {
         if($data) $data = $this->web_json_encode($data);
         $result = $this->send('items', $search, $data, $flags, $options);
         if($search && $result) {
-            $result = $this->web_json_decode($result);
+            foreach($result as $k => $v){
+                $result[$k] = $this->web_json_decode($v);
+            }
         }
         return $result;
     }

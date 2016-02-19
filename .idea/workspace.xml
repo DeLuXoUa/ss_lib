@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3574ffa7-efff-4099-8790-24f202190234" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/config_groups.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example_dev_lu.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/include.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/BatchRequest.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/BatchRequest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Connection/AbstractConnection.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/Connection/AbstractConnection.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Connection/ConnectionInterface.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/Connection/ConnectionInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Connection/Tcp.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/Connection/Tcp.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/NativeInterface.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/NativeInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Notification.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/Notification.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Client/Request.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Client/Request.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/ConnectionException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/ConnectionException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/Exception.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/Exception.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/InvalidParamsException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/InvalidParamsException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/ProcedureException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/ProcedureException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/RemoteProcedureException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/RemoteProcedureException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/SpecException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/SpecException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Exception/SyntaxException.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Exception/SyntaxException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/lib/Tivoka/Tivoka.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/lib/Tivoka/Tivoka.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/flags.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example_dev_lu.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
     </list>
@@ -73,29 +51,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example_local.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="90" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="90" />
-              <folding>
-                <marker date="1455794704568" expanded="true" signature="763:772" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="870:891" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="1050:1068" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="1229:1247" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="1501:1519" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="1764:1782" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="2083:2101" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="2372:2390" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="2673:2691" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="2824:2833" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="3036:3047" placeholder="..." />
-                <marker date="1455794704568" expanded="true" signature="3197:3213" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="profiler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/profiler.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,8 +64,8 @@
       <file leaf-file-name="class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44894367">
-              <caret line="387" column="53" selection-start-line="387" selection-start-column="53" selection-end-line="387" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.36267605">
+              <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,43 +95,30 @@
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+              <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example_dev_lu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev_lu.php">
+      <file leaf-file-name="example_local.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.423077">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.692307">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
-                <marker date="1455794704590" expanded="true" signature="860:869" placeholder="..." />
-                <marker date="1455794704590" expanded="true" signature="967:988" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example_dev.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding>
-                <marker date="1455794704579" expanded="true" signature="767:776" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="874:895" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="1050:1068" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="1225:1243" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="1493:1511" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="1752:1770" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="2067:2085" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="2352:2370" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="2649:2667" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="2800:2809" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="3012:3023" placeholder="..." />
-                <marker date="1455794704579" expanded="true" signature="3173:3189" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="957:966" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="1064:1085" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="1240:1258" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="1415:1433" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="1683:1701" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="1942:1960" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="2257:2275" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="2542:2560" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="2839:2857" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="2990:2999" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="3202:3213" placeholder="..." />
+                <marker date="1455888452290" expanded="true" signature="3363:3379" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -218,15 +160,15 @@
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_6/ssapi/class.php" />
         <option value="$PROJECT_DIR$/PHP/query.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/flags.php" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/example.php" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_dev_lu.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/config_groups.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" />
       </list>
     </option>
@@ -725,7 +667,7 @@
       <workItem from="1449759646636" duration="49604000" />
       <workItem from="1450270222269" duration="13246000" />
       <workItem from="1452503984607" duration="8077000" />
-      <workItem from="1454499114014" duration="53625000" />
+      <workItem from="1454499114014" duration="57392000" />
     </task>
     <task id="LOCAL-00001" summary="auth works">
       <created>1449834778374</created>
@@ -895,11 +837,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452527737322</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="new protocol + convertors">
+      <created>1455884777989</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1455884777989</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124552000" />
+    <option name="totallyTimeSpent" value="128319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -907,6 +855,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -920,7 +869,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -959,7 +907,8 @@
     <MESSAGE value="add orders last updated" />
     <MESSAGE value="add last updated &amp; last updated_date methods" />
     <MESSAGE value="bugfixes&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfixes&#10;" />
+    <MESSAGE value="new protocol + convertors" />
+    <option name="LAST_COMMIT_MESSAGE" value="new protocol + convertors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -995,27 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="6" />
-          <folding>
-            <marker date="1455794704568" expanded="true" signature="763:772" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="870:891" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1050:1068" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1229:1247" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1501:1519" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1764:1782" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2083:2101" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2372:2390" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2673:2691" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2824:2833" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="3036:3047" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="3197:3213" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/profiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1037,18 +965,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <marker date="1455794704579" expanded="true" signature="767:776" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="874:895" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1050:1068" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1225:1243" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1493:1511" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1752:1770" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2067:2085" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2352:2370" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2649:2667" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2800:2809" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="3012:3023" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="3173:3189" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="870:879" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="977:998" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1153:1171" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1328:1346" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1596:1614" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1855:1873" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2170:2188" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2455:2473" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2752:2770" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2903:2912" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="3115:3126" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="3276:3292" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1098,27 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="6" />
-          <folding>
-            <marker date="1455794704568" expanded="true" signature="763:772" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="870:891" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1050:1068" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1229:1247" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1501:1519" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1764:1782" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2083:2101" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2372:2390" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2673:2691" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2824:2833" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="3036:3047" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="3197:3213" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/profiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1140,18 +1047,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1455794704579" expanded="true" signature="767:776" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="874:895" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1050:1068" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1225:1243" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1493:1511" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1752:1770" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2067:2085" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2352:2370" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2649:2667" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2800:2809" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="3012:3023" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="3173:3189" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="870:879" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="977:998" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1153:1171" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1328:1346" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1596:1614" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1855:1873" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2170:2188" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2455:2473" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2752:2770" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2903:2912" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="3115:3126" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="3276:3292" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1258,80 +1165,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <marker date="1455794704555" expanded="true" signature="775:784" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="882:903" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="1058:1076" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="1233:1251" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="1501:1519" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="1760:1778" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="2075:2093" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="2360:2378" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="2657:2675" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="2808:2817" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="3020:3031" placeholder="..." />
-            <marker date="1455794704555" expanded="true" signature="3181:3197" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <marker date="1455794704579" expanded="true" signature="767:776" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="874:895" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1050:1068" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1225:1243" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1493:1511" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="1752:1770" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2067:2085" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2352:2370" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2649:2667" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="2800:2809" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="3012:3023" placeholder="..." />
-            <marker date="1455794704579" expanded="true" signature="3173:3189" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="90" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="90" />
-          <folding>
-            <marker date="1455794704568" expanded="true" signature="763:772" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="870:891" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1050:1068" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1229:1247" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1501:1519" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="1764:1782" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2083:2101" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2372:2390" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2673:2691" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="2824:2833" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="3036:3047" placeholder="..." />
-            <marker date="1455794704568" expanded="true" signature="3197:3213" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev_lu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.423077">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1455794704590" expanded="true" signature="860:869" placeholder="..." />
-            <marker date="1455794704590" expanded="true" signature="967:988" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.961538">
@@ -1356,18 +1189,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <marker date="1455794704555" expanded="true" signature="775:784" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="882:903" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="1058:1076" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="1233:1251" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="1501:1519" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="1760:1778" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="2075:2093" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="2360:2378" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="2657:2675" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="2808:2817" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="3020:3031" placeholder="..." />
+            <marker date="1455794704555" expanded="true" signature="3181:3197" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="197" />
+          <folding>
+            <marker date="1455887604332" expanded="true" signature="870:879" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="977:998" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1153:1171" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1328:1346" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1596:1614" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="1855:1873" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2170:2188" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2455:2473" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2752:2770" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="2903:2912" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="3115:3126" placeholder="..." />
+            <marker date="1455887604332" expanded="true" signature="3276:3292" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+          <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/example_local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <marker date="1455888452290" expanded="true" signature="957:966" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="1064:1085" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="1240:1258" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="1415:1433" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="1683:1701" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="1942:1960" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="2257:2275" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="2542:2560" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="2839:2857" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="2990:2999" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="3202:3213" placeholder="..." />
+            <marker date="1455888452290" expanded="true" signature="3363:3379" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44894367">
-          <caret line="387" column="53" selection-start-line="387" selection-start-column="53" selection-end-line="387" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.36267605">
+          <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -8,7 +8,14 @@ include(dirname(__FILE__) . '/SelectSpecs_v_0_8/include.php');
 try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
-    $ssapi = new SSAPI("127.0.0.1", 8843, "SeCrEtToKeNvAlUe", "111c1111111111cc11111111");
+    $ssapi = new SSAPI(
+        "127.0.0.1",
+        8843,
+        "56b32b778ec929c4110cbbfc",
+        "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
+        "56a9da969a0bf84c09c316be",
+        "local"
+    );
 } catch (Exception $e) {
     echo $e;
     die('<br><br><hr><b>CANT CONNECT TO SERVER');
@@ -29,38 +36,38 @@ function result_print($result){
 }
 
 //Select orders by query
-    $result = $ssapi->orders(['order_id' => 4]);
+$result = $ssapi->orders(['order_id' => 4]);
 echo "<h2 style='color: blueviolet;'>SELECT:</h2>";
 result_print($result);
 
 //Remove orders by query
-    $result = $ssapi->orders(['order_id' => 4], NULL, SSAPI_DELETE_DOCUMENT);
+$result = $ssapi->orders(['order_id' => 4], NULL, SSAPI_DELETE_DOCUMENT);
 echo "<h2 style='color: blueviolet;'>REMOVE:</h2>";
 result_print($result);
 
 
 //Replace orders by query
-    $result = $ssapi->orders(['order_id' => 3], ['name' => 'test order 3', '_group_id' => '333d3333333333dd33333333'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
+$result = $ssapi->orders(['order_id' => 3], ['name' => 'test order 3', '_group_id' => '333d3333333333dd33333333'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_RETURN_RESULT);
 echo "<h2 style='color: blueviolet;'>REPLACE (with return result flag):</h2>";
 result_print($result);
 
 //Insert order
-    $result = $ssapi->orders(NULL, ['order_id' => 4, 'name' => 'test order 4', '_group_id' => '333d3333333333dd33333333'], SSAPI_RETURN_RESULT);
+$result = $ssapi->orders(NULL, ['order_id' => 4, 'name' => 'test order 4', '_group_id' => '333d3333333333dd33333333'], SSAPI_RETURN_RESULT);
 echo "<h2 style='color: blueviolet;'>INSERT (with return result flag):</h2>";
 result_print($result);
 
 //Update orders by query
-    $result = $ssapi->orders(['order_id' => 4, '_group_id' => '333d3333333333dd33333333'], ['name' => 'UPDATED order 4 to 2', '_group_id' => '444d4444444444dd44444444'], SSAPI_RETURN_RESULT);
+$result = $ssapi->orders(['order_id' => 4, '_group_id' => '333d3333333333dd33333333'], ['name' => 'UPDATED order 4 to 2', '_group_id' => '444d4444444444dd44444444'], SSAPI_RETURN_RESULT);
 echo "<h2 style='color: blueviolet;'>UPDATE (with return result flag):</h2>";
 result_print($result);
 
 //Insert order and don't wait answer from server
-    $ssapi->orders(NULL, ['order_id' => 5, 'name' => 'test order 5', '_group_id' => '333d3333333333dd33333333'], SSAPI_NO_WAIT_RESPONSE);
+$ssapi->orders(NULL, ['order_id' => 5, 'name' => 'test order 5', '_group_id' => '333d3333333333dd33333333'], SSAPI_NO_WAIT_RESPONSE);
 echo "<h2 style='color: blueviolet;'>INSERT (w/o answer):</h2>";
 result_print($result);
 
 //Replace order and don't wait answer from server
-    $ssapi->orders(['order_id' => 6], ['name' => 'test order 6', '_group_id' => '333d3333333333dd33333333'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
+$ssapi->orders(['order_id' => 6], ['name' => 'test order 6', '_group_id' => '333d3333333333dd33333333'], SSAPI_CREATE_IF_NOT_EXIST | SSAPI_NO_WAIT_RESPONSE);
 echo "<h2 style='color: blueviolet;'>REPLACE (w/o answer):</h2>";
 result_print($result);
 
