@@ -6,9 +6,13 @@ $host - урл сервера
 
 $port - порт сервера
 
+$auth_key_id - номер секретного ключа
+
 $auth_token - секретный ключ
 
-$auth_group айди группы по умолчанию
+$auth_group_id - айди группы по умолчанию
+
+$custom_client_id - уникальный ключ клиента, который задаёт сам клиент
 
 $timeout = 15 - время ожидания ответа (п умолчанию 15 секунд)
 
@@ -111,10 +115,11 @@ $mode - режим подключения задаёться флагами
 
     require('lib/NodeAPI.php');
 
-//  NodeAPI($host, $port, $auth_token, $auth_group, $timeout = 15, $notify_mode = true)
+//  NodeAPI($host, $port, $auth_key_id, $auth_token, $auth_group_id, $custom_client_id, $timeout = 15, $mode = NULL)
 //два последних параметра не обязательные
+//если не указаан уникальный ключ клиента, то он будет сгенерирован автоматически в виде МД5 хєша айдишников ключа и группы
 
-    $ssapi = new SSAPI("api.warder.tk", 9984, "SeCrEtToKeNvAlUe", "GrOuPiD", [15 [, true]]);
+    $ssapi = new SSAPI("api.warder.tk", 9984, "_key_id", ""SeCrEtToKeNvAlUe", "_group_id", "my_custom_key", [15 [, true]]);
 
     // перезапись ордера, после чего получаем полностью объект изминённый
     $rewritten_order = $ssapi->orders(['id'=>123], [...], SSAPI_RETURN_RESULT | SSAPI_FULL_REWRITE);

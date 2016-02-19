@@ -1,3 +1,14 @@
+## version 0.8.0
+- new auth method with client id
+- new examples
+- new initialization
+- convertor for items web2api
+- convertor for items api2web
+
+#########################################################################################
+############# AUTH METHOD IS DIFFERENT AND DONT WORK ON VERSION 0.8+ ####################
+#########################################################################################
+
 ## version 0.7.1
 - now if error always return false
 - function getLastError() added
