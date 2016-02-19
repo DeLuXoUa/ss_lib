@@ -25,7 +25,7 @@ $ssdir = dirname(__FILE__);
 
 include $ssdir . '/ssapi/flags.php';
 include $ssdir . '/ssapi/class.php';
-include $ssdir . '/../config_groups.php';
+include $ssdir . '/config_groups.php';
 
 if(!isset($GROUPS)) $GROUPS=[];
 
