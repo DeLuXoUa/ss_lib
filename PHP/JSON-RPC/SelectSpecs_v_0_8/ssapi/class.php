@@ -47,25 +47,24 @@ class SSAPI {
     }
 
     private function auth(){
-        $request = $this->connection->sendRequest('v2.auth.init', [
+        $request = $this->connection->sendRequest('auth.init', [
             '_key_id' => $this->auth['_key_id'],
             '_group_id' => $this->auth['_group_id']
         ]);
 
         if(!$request->isError()){
 
-            $request2 = $this->connection->sendRequest('v2.auth.vrf', [
+            $request2 = $this->connection->sendRequest('auth.vrf', [
                 'token' => $this->auth['token'],
                 'client_id' => $this->client_id
             ]);
 
             if(!$request2->isError()){
-                print_r($request2->result);
+//                print_r($request2->result);
                 if($request2->result){
-                    $this->access = $request2->result['access'];
-
+//                    $this->access = $request2->result['access'];
                     if($this->mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
-                        $this->notif_connection->sendNotification('v2.auth.nrm', [
+                        $this->notif_connection->sendNotification('auth.nrm', [
                             '_key_id' => $this->auth['_key_id'],
                             '_group_id' => $this->auth['_group_id'],
                             'token' => $this->auth['token'],
@@ -99,9 +98,9 @@ class SSAPI {
 
     private function web_json_encode($data){
 
-        $result['rr_price'] = $data['rrp'];
-        $result['price_old'] = $data['price_old'];
-        $result['price'] = $data['price'];
+        if(isset($data['rrp'])) $result['rr_price'] = $data['rrp'];
+        if(isset($data['price_old'])) $result['price_old'] = $data['price_old'];
+        if(isset($data['price'])) $result['price'] = $data['price'];
 
         //==> __service
         $result['__service'] = [];
@@ -169,6 +168,8 @@ class SSAPI {
         if(isset($data['option_description'])) $result['options']['option_description'] = $data['option_description'];
         if(isset($data['option_name'])) $result['options']['option_name'] = $data['option_name'];
         if(isset($data['option_order'])) $result['options']['option_order'] = $data['option_order'];
+
+        return $result;
     }
 
     private function web_json_decode($data){
@@ -384,7 +385,17 @@ class SSAPI {
         return $this->last_updated('items', $from_date, $to_date, $flags, $options);
     }
     public function items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        if($data) $data = $this->web_json_encode($data);
+        if($data && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB))
+        {
+            if(!is_null($flags) && ($flags & SSAPI_MULTI_QUERY)) {
+                foreach($data as $k => $v){
+                    $data[$k] = $this->web_json_encode($v);
+                }
+            } else {
+                $data = $this->web_json_encode($data);
+            }
+        }
+
         $result = $this->send('items', $search, $data, $flags, $options);
         if($search && $result) {
             foreach($result as $k => $v){

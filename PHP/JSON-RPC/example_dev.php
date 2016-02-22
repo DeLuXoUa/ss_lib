@@ -8,7 +8,14 @@ include(dirname(__FILE__) . '/SelectSpecs_v_0_8/include.php');
 try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
-    $ssapi = new SSAPI("api.warder.tk", 8843, "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@", "56a9da969a0bf84c09c316be");
+    $ssapi = new SSAPI(
+        "api.warder.tk",
+        8843,
+        "56b32b778ec929c4110cbbfc",
+        "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
+        "56a9da969a0bf84c09c316be",
+        "local"
+    );
 } catch (Exception $e) {
     echo $e;
     die('<br><br><hr><b>CANT CONNECT TO SERVER');
