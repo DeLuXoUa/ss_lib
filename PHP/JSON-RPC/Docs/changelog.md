@@ -2,7 +2,8 @@
 - fixed items last updated func
 - convertor for items omnis2api
 - convertor for items api2omnis
--
+- aggregator mode added
+- min&max for items_last_updated added
 
 ## version 0.8.0
 - new auth method with client id
