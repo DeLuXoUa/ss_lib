@@ -146,7 +146,7 @@ class SSAPI {
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
         if(isset($data['desigenr_name'])) $result['designer_name'] = $data['desigenr_name'];
         if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
-        if(isset($data['categories'])) $result['categories'] = $data['categories'];
+        if(isset($data['categories'])) $result['category_name'] = $data['categories'];
         if(isset($data['tab'])) $result['main_categories']=$data['tab'];
         if(isset($data['item_id'])) $result['item_id']=$data['item_id'];
         if(isset($data['option_id'])) $result['option_id']=$data['option_id'];
@@ -195,7 +195,7 @@ class SSAPI {
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
         if(isset($data['desigenr_name'])) $result['designer_name'] = $data['desigenr_name'];
         if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
-        if(isset($data['categories'])) $result['categories'] = $data['categories'];
+        if(isset($data['category_name'])) $result['categories'] = $data['category_name'];
         if(isset($data['main_categories'])) $result['tab']=$data['main_categories'];
         if(isset($data['item_id'])) $result['item_id']=$data['item_id'];
         if(isset($data['option_id'])) $result['option_id']=$data['option_id'];
