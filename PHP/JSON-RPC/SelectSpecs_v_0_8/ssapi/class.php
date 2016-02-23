@@ -25,6 +25,7 @@ class SSAPI {
         if(!$auth_token) { throw new Exception\ConnectionException('auth_token is required'); }
         if(!$auth_group_id) { throw new Exception\ConnectionException('auth_group is required'); }
 
+
 //                    $this->target = array('host' => $host, 'port' => $port);
         $this->target = array('host' => $host, 'port' => $port);
         $this->connection = Tivoka\Client::connect($this->target);
@@ -35,10 +36,10 @@ class SSAPI {
             $this->notif_connection->setTimeout($timeout);
         }
 
-        $this->auth = array('_key_id' => $auth_key_id, 'token' => $auth_token, '_group_id' => $auth_group_id);
-        if(is_null($custom_client_id)){
-            $this->client_id = md5($this->auth['_key_id'].$this->auth['_group_id']);
-        }
+        if(!is_null($custom_client_id)) { $this->client_id = $custom_client_id; }
+        else { $this->client_id = md5($this->auth['_key_id'].$this->auth['_group_id']); }
+
+        $this->auth = array('_key_id' => $auth_key_id, 'token' => $auth_token, '_group_id' => $auth_group_id, 'client_id' => $this->client_id);
         $this->mode = $mode;
 
         if(!$this->auth()){
@@ -49,14 +50,14 @@ class SSAPI {
     private function auth(){
         $request = $this->connection->sendRequest('auth.init', [
             '_key_id' => $this->auth['_key_id'],
-            '_group_id' => $this->auth['_group_id']
+            '_group_id' => $this->auth['_group_id'],
+            'client_id' => $this->client_id
         ]);
 
         if(!$request->isError()){
 
             $request2 = $this->connection->sendRequest('auth.vrf', [
-                'token' => $this->auth['token'],
-                'client_id' => $this->client_id
+                'token' => $this->auth['token']
             ]);
 
             if(!$request2->isError()){
