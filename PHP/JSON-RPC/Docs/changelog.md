@@ -2,6 +2,7 @@
 - fixed items last updated func
 - convertor for items omnis2api
 - convertor for items api2omnis
+-
 
 ## version 0.8.0
 - new auth method with client id

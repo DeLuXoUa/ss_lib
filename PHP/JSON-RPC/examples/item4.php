@@ -54,7 +54,7 @@ $item4save['supplier_name'] = 'supplier_name';
 $item4save['designer_name'] = 'desigenr_name';
 $item4save['brand_name'] = 'brand_name';
 $item4save['categories'] = ["cheap", "good", "glass"];
-$item4save['main_categories']=["men", "sale"];
+$item4save['main_categories']="men";
 
 //==> migration
 

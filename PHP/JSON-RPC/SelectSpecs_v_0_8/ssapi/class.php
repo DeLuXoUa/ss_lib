@@ -176,6 +176,7 @@ class SSAPI {
     private function web_json_decode($data){
         if(isset($data["rr_price"])) $result["rrp"] = (double)$data["rr_price"];
         if(isset($data["price"])) $result["price"] = (double)$data["price"];
+        if(isset($data['price_old'])) $result['price_old'] = $data['price_old'];
 
         if(isset($data["group_prices"])){
             foreach($data["group_prices"] as $k => $v) {
@@ -331,8 +332,8 @@ class SSAPI {
 
         if($search) { $message['search'] = $search; }
         if($data) { $message['data'] = $data; }
-        $options['protocol_version'] = 2;
-        $options['client_id'] = $this->client_id;
+//        $options['protocol_version'] = 2;
+//        $options['client_id'] = $this->client_id;
         $options['protocol_version'] = $this->protocol_version;
         $message['options'] = $options;
 
@@ -340,15 +341,19 @@ class SSAPI {
     }
 
     private function method_parser($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
-        if(!is_null($search) && !is_null($data)){
-            $method .= '.update';
-        } elseif(!is_null($data)) {
-            $method .= '.add';
-        } elseif(!is_null($search)) {
-            if(!is_null($flags) && $flags & SSAPI_DELETE_DOCUMENT) {
-                $method .= '.delete';
-            } else {
-                $method .= '.get';
+        if(!is_null($flags) && ($flags & SSAPI_AGGREGATOR)) {
+            $method .= '.aggregator';
+        } else {
+            if (!is_null($search) && !is_null($data)) {
+                $method .= '.update';
+            } elseif (!is_null($data)) {
+                $method .= '.add';
+            } elseif (!is_null($search)) {
+                if (!is_null($flags) && $flags & SSAPI_DELETE_DOCUMENT) {
+                    $method .= '.delete';
+                } else {
+                    $method .= '.get';
+                }
             }
         }
 
@@ -476,6 +481,36 @@ class SSAPI {
         return $this->send($type, $search, NULL, $flags, $options);
     }
 
+    private function last_updated_minmax($type, $from_date, $to_date){
+        $search['__service.client_id']['$ne'] = $this->client_id;
+
+        if(!is_null($to_date)) {
+            $search['__service.updated']['$lte'] =  $to_date;
+        }
+        if(!is_null($from_date)) {
+            $search['__service.updated']['$gt'] = $from_date;
+        }
+
+        $search = [
+                ['$match' => $search ],
+                ['$group' => [
+                    '_id' => null,
+                    'max' => [ '$max' => '$__service.updated' ],
+                    'min' => [ '$min' => '$__service.updated' ]
+                    ]
+                ]
+            ];
+
+
+        /*
+                 $search = ['q' => [
+                    ['__service.client_id' => ['$ne' => $this->client_id] ],
+                    ['__service.updated' => [['$gt' => $from_date], ['$lte' => $to_date] ]]
+                ]];
+        */
+        return $this->send($type, $search, NULL, SSAPI_AGGREGATOR, NULL);
+    }
+
 //===========================================================================================
 //=======================   P U B L I C   F U N C T I O N S   ===============================
 // *_last_updated - is function for search updates creates by another client
@@ -500,6 +535,11 @@ class SSAPI {
         }
         return $result;
     }
+    public function items_last_updated_minmax($from_date, $to_date){
+        $result = $this->last_updated_minmax('items', $from_date, $to_date);
+        return $result;
+    }
+
     public function items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         if($data && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB))
         {

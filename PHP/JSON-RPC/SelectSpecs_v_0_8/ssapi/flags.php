@@ -18,5 +18,5 @@ define('SSAPI_CONNECTION_ENCRIPTION_DISABLE', 0 << 9); //encription data transer
 define('SSAPI_CONVERTER_WEB', 1 << 10); //enable convertor web2api
 define('SSAPI_CONVERTER_OMNIS', 1 << 11); //enable convertor omnis2api
 
-
+define('SSAPI_AGGREGATOR', 1 << 13); //aggregation operations
 ?>
