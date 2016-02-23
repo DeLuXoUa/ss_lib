@@ -50,14 +50,18 @@ $item4save = [];
 //result_print($result);
 
 //Select LAST items by query
-//$result = $ssapi->items_last_updated("2012-01-01 00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB);
-//echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
+$result = $ssapi->items_last_updated("2007-01-01 00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB);
+echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
 //result_print($result);
+foreach($result as $r){
+    var_dump($r['__service']['updated']);
+    echo "\n\n";
+}
 
 //Select MIN&MAX LAST items by query
-$result = $ssapi->items_last_updated_minmax("2012-01-01T00:00:00.000Z", NULL);
-echo "<h2 style='color: blueviolet;'>SELECT MIN&MAX LAST:</h2>";
-result_print($result);
+//$result = $ssapi->items_last_updated_minmax("2012-01-01T00:00:00.000Z", NULL);
+//echo "<h2 style='color: blueviolet;'>SELECT MIN&MAX LAST:</h2>";
+//result_print($result);
 
 /*
 //Remove orders by query

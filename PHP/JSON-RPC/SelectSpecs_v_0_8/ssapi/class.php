@@ -184,6 +184,8 @@ class SSAPI {
             }
         }
 
+        if(isset($data['__service'])) $result['__service'] = $data['__service'];
+
         foreach($data['specifications'] as $k => $v){ $result[$k] = $v; }
         foreach($data['options'] as $k => $v){ $result[$k] = $v; }
         foreach($data['stock'] as $k => $v){ $result[$k] = $v; }
@@ -465,6 +467,10 @@ class SSAPI {
     private function last_updated($type, $from_date, $to_date, $flags = NULL, $options = NULL){
         $search = array();
         $search['__service.client_id']['$ne'] = $this->client_id;
+
+        if(!isset($options['order'])){
+            $options['order'] = ["__service.updated" => 1];
+        }
 
         if(!is_null($to_date)) {
             $search['__service.updated']['$lte'] =  $to_date;
