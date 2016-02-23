@@ -9,14 +9,14 @@ try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
     $ssapi = new SSAPI(
-        "127.0.0.1",
-        //"api.warder.tk",
+        //"127.0.0.1",
+        "api.warder.tk",
         //"ssapi.selectspecs.com",
         8843,
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
-        "local"
+        "local2"
     );
 } catch (Exception $e) {
     echo $e;
@@ -39,7 +39,7 @@ function result_print($result){
 
 //Insert items
 $item4save = [];
-include('examples/item4.php');
+include(dirname(__FILE__).'/examples/item4.php');
 //$result = $ssapi->items(NULL, $item4save, SSAPI_RETURN_RESULT);
 //echo "<h2 style='color: blueviolet;'>ITEMS INSERT:</h2>";
 //result_print($result);
