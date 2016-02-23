@@ -203,6 +203,114 @@ class SSAPI {
         return $result;
     }
 
+    private function omnis_json_encode($data)
+    {
+        $arr = array();
+        if (strpos($field['option_string'], ';') === false) {
+            $field['discontinued'] = true;
+            $field['option_order'] = 0;
+            $field['option_name'] = $field['option_string'];
+        } else {
+            $field['discontinued'] = false;
+            @list($field['option_order'], $field['option_name']) = $this->get_field_array($field['option_string'], ';');
+            $field['option_name'] = trim($field['option_name']);
+        }
+        unset($field['option_string']);
+
+        $field['item_id'] = intval(str_replace('.', '', $field['sku']));
+        $field['option_id'] = intval($field['item_id'].sprintf('%02d', $field['option_order']));
+        $field['category_names'] = $this->get_field_array($field['category_names'], ';');
+        // Prepare tab
+        $field['tab'] = $this->get_field_array($field['tab'], ';');
+        if (isset($field['tab'][0]) && (($field['tab'][0] == 'SERVICES') || ($field['tab'][0] == 'NULL'))) {
+            $field['tab'] = array();
+            $field['category_names'] = array('Other');
+        }
+        if (in_array('Prescription Compatible', $field['category_names'])) {
+            $field['tab'] = array('DESIGNER SUNGLASSES', 'PRESCRIPTION SUNGLASSES');
+        }
+
+        switch (count($field['tab'])) {
+            case 0:
+                $field['tab'] = 'Accessories';
+                break;
+            case 1:
+                $field['tab'] = $field['tab'][0];
+                break;
+            default:
+                $field['tab'] = 'Prescription Sunglasses';
+        }
+        // Prepare frame sizes and status option
+        $field['option_best_status'] = 'DISCONTINUED';
+        $arr = array();
+        $field['frame_sizes'] = $this->get_field_array($field['frame_sizes'], ';');
+        foreach ($field['frame_sizes'] as $frame_size) {
+            @list($sizes, $disc, $back, $stock) = $this->get_field_array($frame_size, ':');
+            @list($arm, $bridge, $lens, $height) = $this->get_field_array($sizes, '_');
+            if (($arm == 0) && ($bridge == 0) && ($lens == 0) && ($height == 0)) {
+                continue;
+            }
+            $status = 'IN_STOCK';
+            if ($disc) {
+                $status = 'DISCONTINUED';
+            } else if ($back) {
+                $status = 'IN_STOCK';
+            }
+            if ($field['option_best_status'] === 'DISCONTINUED' && $status != 'DISCONTINUED') {
+                $field['option_best_status'] = $status;
+            }
+            if ($field['option_best_status'] === 'BACK_ORDERED' && $status === 'IN_STOCK') {
+                $field['option_best_status'] = 'IN_STOCK';
+            }
+            $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height, 'disk' => $disc, 'back' => $back, 'stock' => $stock, 'status' => $status);
+        }
+        $field['frame_sizes'] = $arr;
+        $arr = array();
+        $field['prices_domain'] = $this->get_field_array($field['prices_domain'], ',');
+        foreach ($field['prices_domain'] as $domain_price) {
+            // We can get from omnis: "1000/R10" or "1000/-20" or "1000/-20/R10" or "1000/R10/-20"
+            $dp        = $this->get_field_array($domain_price, '/');
+            $domain_id = $dp[0];
+            $percent   = '';
+            $round     = '';
+
+            if (isset($dp[1])) {
+                if ($dp[1][0] == 'R') {
+                    $round = substr($dp[1], 1);
+                } else {
+                    $percent = $dp[1];
+                }
+            }
+
+            if (isset($dp[2])) {
+                if ($dp[2][0] == 'R') {
+                    $round = substr($dp[2], 1);
+                } else {
+                    $percent = $dp[2];
+                }
+            }
+
+            $arr[$domain_id] = array('percent' => $percent, 'round' => $round);
+        }
+        $field['prices_domain'] = $arr;
+        // recognize new items (added <= 3 months ago), add them category 'new'
+        if (strtotime($field['item_added']) >= strtotime('-3 month')) {
+            $field['category_names'][] = 'New Items';
+        }
+        // promo 2 for 1 Added into category
+        if ($field['is_2_for_1'] === 'YES') {
+            $field['category_names'][] = '2 for 1';
+        }
+        unset($field['is_2_for_1']);
+        // if is prescription sunglasses, add category 'RX'
+        if ($field['tab'] == 'Prescription Sunglasses') {
+            $field['category_names'][] = 'Prescription Compatible';
+        }
+        if ($field['base_curve'] == 0) {
+            $field['base_curve'] = 2;
+        }
+    }
+
     private function message_parser($search, $data, $flags, $options){
 
         $message = array();
@@ -384,7 +492,13 @@ class SSAPI {
     }
 
     public function items_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
-        return $this->last_updated('items', $from_date, $to_date, $flags, $options);
+        $result = $this->last_updated('items', $from_date, $to_date, $flags, $options);
+        if($result && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB)) {
+            foreach($result as $k => $v){
+                $result[$k] = $this->web_json_decode($v);
+            }
+        }
+        return $result;
     }
     public function items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         if($data && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB))

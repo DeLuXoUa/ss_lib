@@ -1,9 +1,17 @@
+## version 0.8.1
+- fixed items last updated func
+- convertor for items omnis2api
+- convertor for items api2omnis
+
 ## version 0.8.0
 - new auth method with client id
 - new examples
 - new initialization
 - convertor for items web2api
 - convertor for items api2web
+- flag SSAPI_FORCEADD for force rewrite when adding record
+- flag SSAPI_CONVERTER_OMNIS
+- flag SSAPI_CONVERTER_WEB
 
 #########################################################################################
 ############# AUTH METHOD IS DIFFERENT AND DONT WORK ON VERSION 0.8+ ####################
