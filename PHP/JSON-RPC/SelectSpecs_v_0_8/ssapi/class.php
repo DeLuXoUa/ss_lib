@@ -85,6 +85,7 @@ class SSAPI {
     private function domain_id_2_group_id($alt_id){
         $alt_id = (int)$alt_id;
         $result =[];
+        global $GROUP_ALT_ID;
         foreach($GROUP_ALT_ID as $k => $v){
             if($alt_id == $v) $result[]=$k;
         }
@@ -93,6 +94,8 @@ class SSAPI {
     }
 
     private function group_id_2_domain_id($gid){
+        global $GROUP_ALT_ID;
+
         if(isset($GROUP_ALT_ID[$gid])) return $GROUP_ALT_ID[$gid];
         else return false;
     }
@@ -146,7 +149,7 @@ class SSAPI {
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
         if(isset($data['desigenr_name'])) $result['designer_name'] = $data['desigenr_name'];
         if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
-        if(isset($data['categories'])) $result['category_name'] = $data['categories'];
+        if(isset($data['category_names'])) $result['categories'] = $data['category_names'];
         if(isset($data['tab'])) $result['main_categories']=$data['tab'];
         if(isset($data['item_id'])) $result['item_id']=$data['item_id'];
         if(isset($data['option_id'])) $result['option_id']=$data['option_id'];

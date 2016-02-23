@@ -1,7 +1,6 @@
 <?php
 
-$item_eugene = array(array('0' => array
-(
+$item_eugene = [
     'item_added' => '11 Jun 2013',
     'base_curve' => 2,
     'prices_domain' => Array
@@ -75,6 +74,4 @@ $item_eugene = array(array('0' => array
     'item_id' => 42874,
     'option_id' => 4287401,
     'option_best_status' => 'IN_STOCK'
-)
-
-));
+];
