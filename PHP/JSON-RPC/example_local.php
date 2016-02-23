@@ -9,8 +9,8 @@ try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
     $ssapi = new SSAPI(
-        "127.0.0.1",
-        //"api.warder.tk",
+        //"127.0.0.1",
+        "api.warder.tk",
         //"ssapi.selectspecs.com",
         8843,
         "56b32b778ec929c4110cbbfc",

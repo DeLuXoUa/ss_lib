@@ -216,6 +216,7 @@ class SSAPI {
             if($flags & SSAPI_FULL_REWRITE) { $message['flags'][] = 'fullrewrite'; }
             if($flags & SSAPI_ONLY_IN_GROUP) { $message['flags'][] = 'ingrouponly'; }
             if($flags & SSAPI_MULTI_QUERY) { $message['flags'][] = 'multi'; }
+            if($flags & SSAPI_FORCEADD) { $message['flags'][] = 'forceadd'; }
 
             if($flags & SSAPI_TASK_FOR_JOB_SERVER) { $message['flags'][] = 'taskforjobserver'; }
         }
