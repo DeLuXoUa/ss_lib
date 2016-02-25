@@ -143,7 +143,7 @@ class SSAPI {
 
 
         if(isset($data['colours'])) $result['colours'] = $data['colours'];
-        if(isset($data['description'])) $result['description'] = $data['description'];
+        if(isset($data['supplier_description'])) $result['description'] = $data['supplier_description'];
         if(isset($data['option_best_status'])) $result['status'] = $data['option_best_status'];
         if(isset($data['model_name'])) $result['model_name'] = $data['model_name'];
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
@@ -195,11 +195,11 @@ class SSAPI {
         foreach($data['migration'] as $k => $v){ $result[$k] = $v; }
 
         if(isset($data['colours'])) $result['colours'] = $data['colours'];
-        if(isset($data['description'])) $result['description'] = $data['description'];
+        if(isset($data['description'])) $result['supplier_description'] = $data['description'];
         if(isset($data['status'])) $result['option_best_status'] = $data['status'];
         if(isset($data['model_name'])) $result['model_name'] = $data['model_name'];
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
-        if(isset($data['desigenr_name'])) $result['designer_name'] = $data['desigenr_name'];
+        if(isset($data['designer_name'])) $result['designer_name'] = $data['designer_name'];
         if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
         if(isset($data['category_name'])) $result['categories'] = $data['category_name'];
         if(isset($data['main_categories'])) $result['tab']=$data['main_categories'];
