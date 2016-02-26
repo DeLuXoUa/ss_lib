@@ -9,8 +9,8 @@ try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
     $ssapi = new SSAPI(
-        //"127.0.0.1",
-        "api.warder.tk",
+        "127.0.0.1",
+        //"api.warder.tk",
         //"ssapi.selectspecs.com",
         8843,
         "56b32b778ec929c4110cbbfc",
@@ -22,7 +22,6 @@ try {
     echo $e;
     die('<br><br><hr><b>CANT CONNECT TO SERVER');
 }
-
 
 function result_print($result){
     global $ssapi;
@@ -44,10 +43,17 @@ function result_print($result){
 //result_print($result);
 
 //Insert items (eugene)
-include(dirname(__FILE__).'/examples/item_eugene.php');
-$result = $ssapi->items(NULL, $item_eugene, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_WEB);
-echo "<h2 style='color: blueviolet;'>ITEMS INSERT (eugene):</h2>";
-result_print($result);
+//include(dirname(__FILE__).'/examples/item_eugene.php');
+//$result = $ssapi->items(NULL, $item_eugene, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_WEB);
+//echo "<h2 style='color: blueviolet;'>ITEMS INSERT (eugene):</h2>";
+//result_print($result);
+
+//Insert items (omnis)
+//include(dirname(__FILE__).'/examples/item_omnis.php');
+//print_r($item_omnis);
+//$result = $ssapi->items(NULL, $item_omnis, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_OMNIS);
+//echo "<h2 style='color: blueviolet;'>ITEMS INSERT (omnis):</h2>";
+//result_print($result);
 
 //Select items by query
 //$result = $ssapi->items(['item_id' => 4]);
@@ -55,13 +61,9 @@ result_print($result);
 //result_print($result);
 
 //Select LAST items by query
-$result = $ssapi->items_last_updated("2007-01-01 00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>-1], "limit"=>2, "skip"=>1]);
-echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
+//$result = $ssapi->items_last_updated("2007-01-01 00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>-1], "limit"=>2, "skip"=>1]);
+//echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
 //result_print($result);
-foreach($result as $r){
-    var_dump($r['__service']['updated']);
-    echo "\n\n";
-}
 
 //Select MIN&MAX LAST items by query
 //$result = $ssapi->items_last_updated_minmax("2012-01-01T00:00:00.000Z", NULL);
