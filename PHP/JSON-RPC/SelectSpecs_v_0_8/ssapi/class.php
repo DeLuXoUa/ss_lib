@@ -463,36 +463,24 @@ class SSAPI {
     private function method_parser($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
         $method_type = NULL;
         if(!is_null($flags) && ($flags & SSAPI_AGGREGATOR)) {
-            echo ">1\n";
             $method_type = '.aggregator';
         } else {
-            echo ">2\n";
-            echo "\n\ndata:";
-            print_r($data);
-            echo "\n\n";
             if (!is_null($search) && !is_null($data)) {
-                echo ">3\n";
                 $method_type = '.update';
             } elseif (!is_null($data)) {
-                echo ">4\n";
                 $method_type = '.add';
             } elseif (!is_null($search)) {
-                echo ">5\n";
                 if (!is_null($flags) && $flags & SSAPI_DELETE_DOCUMENT) {
-                    echo ">6\n";
                     $method_type = '.delete';
                 } else {
-                    echo ">7\n";
                     $method_type = '.get';
                 }
             }
         }
 
         if($method_type) {
-            echo ">8\n";
             return ($method . $method_type);
         } else {
-            echo ">9\n";
             return FALSE;
         }
     }
