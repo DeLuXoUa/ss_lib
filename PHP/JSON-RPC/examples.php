@@ -49,11 +49,10 @@ function result_print($result){
 //result_print($result);
 
 //Insert items (omnis)
-//include(dirname(__FILE__).'/examples/item_omnis.php');
-//print_r($item_omnis);
-//$result = $ssapi->items(NULL, $item_omnis, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_OMNIS);
-//echo "<h2 style='color: blueviolet;'>ITEMS INSERT (omnis):</h2>";
-//result_print($result);
+include(dirname(__FILE__).'/examples/item_omnis.php');
+$result = $ssapi->items(NULL, $item_omnis, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_OMNIS);
+echo "<h2 style='color: blueviolet;'>ITEMS INSERT (omnis):</h2>";
+result_print($result);
 
 //Select items by query
 //$result = $ssapi->items(['item_id' => 4]);
