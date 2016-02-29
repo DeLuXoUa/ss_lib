@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3574ffa7-efff-4099-8790-24f202190234" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/omnis_validator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/examples/item_omnis_multy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/logger.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/omnis_validator.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/ssapi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/examples.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/examples.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php" afterPath="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php" />
     </list>
     <ignored path="ss-lib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,26 +22,6 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="omnis_validator.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/omnis_validator.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.9168026">
-                    <caret line="232" column="13" selection-start-line="230" selection-start-column="12" selection-end-line="232" selection-end-column="13" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -100,15 +81,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items_export.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="items_export.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/items_export.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31423292">
-              <caret line="160" column="21" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+            <state vertical-scroll-proportion="-2.195122">
+              <caret line="181" column="7" selection-start-line="181" selection-start-column="2" selection-end-line="181" selection-end-column="7" />
               <folding>
                 <element signature="e#424#505#0#PHP" expanded="false" />
-                <marker date="1456501749216" expanded="true" signature="2427:2479" placeholder="SELECT value... settings" />
-                <marker date="1456501749216" expanded="true" signature="8785:8843" placeholder="UPDATE setti... " />
+                <marker date="1456743022290" expanded="true" signature="2427:2479" placeholder="SELECT value... settings" />
+                <marker date="1456743022290" expanded="true" signature="8785:8843" placeholder="UPDATE setti... " />
               </folding>
             </state>
           </provider>
@@ -124,26 +105,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php">
+      <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8363636">
-              <caret line="786" column="21" selection-start-line="786" selection-start-column="21" selection-end-line="786" selection-end-column="21" />
-              <folding>
-                <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#web_json_decode#0;n#SSAPI#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-6.309091">
+              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/test.php">
+      <file leaf-file-name="logger.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/logger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.28169015">
+              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="include.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.76923">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -163,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -179,7 +165,7 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="rc" target-remote="origin" target-branch="rc" />
+      <push-target-info repo="$PROJECT_DIR$" source="rc" target-remote="origin" target-branch="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -203,7 +189,6 @@
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_7/ssapi/class.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/config_groups.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/RUS.md" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_dev.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/examples/item4.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/examples/item4.php" />
@@ -211,13 +196,16 @@
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/examples/item_eugene.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/test.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/example_local.php" />
-        <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/examples/item_omnis.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/examples/item_omnis_multy.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/examples.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/omnis_validator.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php" />
         <option value="$PROJECT_DIR$/PHP/JSON-RPC/items_export.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/ssapi.php" />
+        <option value="$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/logger.php" />
       </list>
     </option>
   </component>
@@ -739,7 +727,7 @@
       <workItem from="1449759646636" duration="49604000" />
       <workItem from="1450270222269" duration="13246000" />
       <workItem from="1452503984607" duration="8077000" />
-      <workItem from="1454499114014" duration="131987000" />
+      <workItem from="1454499114014" duration="138820000" />
     </task>
     <task id="LOCAL-00001" summary="auth works">
       <created>1449834778374</created>
@@ -1023,11 +1011,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456502177207</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="0.8.1 rc3">
+      <created>1456502199238</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1456502199238</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202914000" />
+    <option name="totallyTimeSpent" value="209747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1129,16 +1123,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode#0;n#SSAPI#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,16 +1163,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="150" selection-end-column="45" />
-          <folding>
-            <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode#0;n#SSAPI#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,14 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.807693">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/examples/item4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.884615">
@@ -1321,14 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/config_groups.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
@@ -1349,6 +1317,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/examples/item_omnis_multy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1383,44 +1359,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/examples/item_omnis_multy.php">
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/include.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        <state vertical-scroll-proportion="-16.76923">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/omnis_validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9168026">
-          <caret line="232" column="13" selection-start-line="230" selection-start-column="12" selection-end-line="232" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8363636">
-          <caret line="786" column="21" selection-start-line="786" selection-start-column="21" selection-end-line="786" selection-end-column="21" />
-          <folding>
-            <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode#0;n#SSAPI#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/items_export.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31423292">
-          <caret line="160" column="21" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+        <state vertical-scroll-proportion="-2.195122">
+          <caret line="181" column="7" selection-start-line="181" selection-start-column="2" selection-end-line="181" selection-end-column="7" />
           <folding>
             <element signature="e#424#505#0#PHP" expanded="false" />
-            <marker date="1456501749216" expanded="true" signature="2427:2479" placeholder="SELECT value... settings" />
-            <marker date="1456501749216" expanded="true" signature="8785:8843" placeholder="UPDATE setti... " />
+            <marker date="1456743022290" expanded="true" signature="2427:2479" placeholder="SELECT value... settings" />
+            <marker date="1456743022290" expanded="true" signature="8785:8843" placeholder="UPDATE setti... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/Docs/changelog.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/ssapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.309091">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/JSON-RPC/SelectSpecs_v_0_8/ssapi/logger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28169015">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

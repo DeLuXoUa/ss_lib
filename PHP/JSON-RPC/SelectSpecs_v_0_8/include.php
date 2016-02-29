@@ -24,7 +24,8 @@ include $dir . '/Client/NativeInterface.php';
 $ssdir = dirname(__FILE__);
 
 include $ssdir . '/ssapi/flags.php';
-include $ssdir . '/ssapi/class.php';
+include $ssdir . '/ssapi/logger.php';
+include $ssdir . '/ssapi/ssapi.php';
 include $ssdir . '/config_groups.php';
 
 if(!isset($GROUPS)) $GROUPS=[];

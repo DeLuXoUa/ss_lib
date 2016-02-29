@@ -1,3 +1,8 @@
+## version 0.8.2
+- logger class added
+- log format and output added
+- fix some bugs
+
 ## version 0.8.1
 - fixed items last updated func
 - convertor for items omnis2api added

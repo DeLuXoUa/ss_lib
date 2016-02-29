@@ -1,6 +1,8 @@
 <?php
 use Tivoka\Exception;
 
+$import_logger = new LOGGER('logs/import.log', null, null, false, true);
+
 class SSAPI {
 
     private $connection;
@@ -16,7 +18,7 @@ class SSAPI {
     private $client_id = null;
     private $protocol_version = 2;
 
-    function __construct($host, $port, $auth_key_id, $auth_token, $auth_group_id, $custom_client_id, $timeout = 15, $mode = NULL){
+    function __construct($host, $port, $auth_key_id, $auth_token, $auth_group_id, $custom_client_id, $timeout = 15, $mode = NULL, $logger_params = null){
 
         if(is_null($mode)) $mode = (SSAPI_CONNECTION_NOTIFYS_ENABLE | SSAPI_CONNECTION_ENCRIPTION_DISABLE);
         if(!$host){ throw new Exception\ConnectionException('host is required'); }
@@ -44,6 +46,24 @@ class SSAPI {
 
         if(!$this->auth()){
             throw new Exception\ConnectionException('auth: failed');
+        }
+
+        if(!is_null($logger_params) && $logger_params){
+            global $import_logger;
+
+            if(!isset($logger_params['file_path'])) $logger_params['file_path'] = null;
+            if(!isset($logger_params['email'])) $logger_params['email'] = null;
+            if(!isset($logger_params['console_out'])) $logger_params['console_out'] = false;
+            if(!isset($logger_params['echo_out'])) $logger_params['echo_out'] = false;
+            if(!isset($logger_params['remote_host'])) $logger_params['remote_host'] = null;
+
+            $import_logger = new LOGGER(
+                $logger_params["file_path"],
+                $logger_params['remote_host'],
+                $logger_params['email'],
+                $logger_params['console_out'],
+                $logger_params['echo_out']
+            );
         }
     }
 
@@ -775,13 +795,15 @@ class SSAPI {
                     $data = $this->web_json_encode($data);
                 }
             } elseif($flags & SSAPI_CONVERTER_OMNIS) {
+                global $import_logger;
                 if($flags & SSAPI_MULTI_QUERY) {
                     foreach ($data as $k => $v) {
                         $data[$k] = $this->omnis_json_encode($v);
                         if($data[$k]['result']){
                             $data[$k] = $data[$k]['data'];
                         } else {
-                            print_r([$data[$k]['ss_no'], $data[$k]['option_id'], $data[$k]['errors']]);
+                            print_r($data[$k]['errors']);
+                            $import_logger->error(["ss_no" => $data[$k]['ss_no'], "option_id" => $data[$k]['option_id'], "errors" => $data[$k]['errors']]);
                             unset($data[$k]);
                         }
                     }
@@ -790,7 +812,8 @@ class SSAPI {
                     if($data['result']){
                         $data=$data['$data'];
                     } else {
-                        print_r([$data['ss_no'], $data['option_id'], $data['errors']]);
+//                        print_r($data['errors']);
+                        $import_logger->error(["ss_no" => $data['ss_no'], "option_id" => $data['option_id'], "errors" => $data['errors']]);
                         return false;
                     }
                 }
