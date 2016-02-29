@@ -15,7 +15,7 @@ class LOGGER {
         $this->remote_host = $remote_host;
     }
 
-    private function writelog($type, $message){
+    private function writelog($type, $message, $splitfiles = true){
 //        echo "\nMESSAGE: ".$message."\n";
         if(is_array($message)) $message = $this->array_deepout($message);
 //        echo "\nMESSAGE2: ".$message."\n";
@@ -25,10 +25,14 @@ class LOGGER {
             echo 'LOGGER '.$message;
         }
         if($this->console_out){
-            error_log($message, 0);
+            error_log ($message, 0);
         }
         if(!is_null($this->file_path) && $this->file_path){
-            error_log ($message, 3, $this->file_path);
+            if($splitfiles){
+                error_log ($message, 3, str_replace(".log", strtolower($type).".log", $this->file_path));
+            } else {
+                error_log ($message, 3, $this->file_path);
+            }
         }
         if(!is_null($this->remote_host) && $this->remote_host){
             error_log ($message, 2, $this->remote_host);
@@ -60,7 +64,22 @@ class LOGGER {
         return $result;
     }
 
-    public function error($message){
-        $this->writelog('ERROR', $message);
+    public function error($message, $splitfiles = true){
+        $this->writelog('ERROR', $message, $splitfiles);
+    }
+    public function info($message, $splitfiles = true){
+        $this->writelog('INFO', $message, $splitfiles);
+    }
+    public function notice($message, $splitfiles = true){
+        $this->writelog('NOTICE', $message, $splitfiles);
+    }
+    public function dubug($message, $splitfiles = true){
+        $this->writelog('DEBUG', $message, $splitfiles);
+    }
+    public function warn($message, $splitfiles = true){
+        $this->writelog('WARNING', $message, $splitfiles);
+    }
+    public function warning($message, $splitfiles = true){
+        $this->warn($message, $splitfiles);
     }
 }
