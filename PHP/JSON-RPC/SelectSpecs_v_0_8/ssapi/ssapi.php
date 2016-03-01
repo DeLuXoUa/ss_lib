@@ -224,7 +224,7 @@ class SSAPI {
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
         if(isset($data['designer_name'])) $result['designer_name'] = $data['designer_name'];
         if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
-        if(isset($data['category_name'])) $result['categories'] = $data['category_name'];
+        if(isset($data['categories'])) $result['category_names'] = $data['categories'];
         if(isset($data['main_category'])) $result['tab']=$data['main_category'];
         if(isset($data['item_id'])) $result['item_id']=$data['item_id'];
         if(isset($data['option_id'])) $result['option_id']=$data['option_id'];
