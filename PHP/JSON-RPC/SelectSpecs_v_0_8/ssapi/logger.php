@@ -29,7 +29,7 @@ class LOGGER {
         }
         if(!is_null($this->file_path) && $this->file_path){
             if($splitfiles){
-                error_log ($message, 3, str_replace(".log", strtolower($type).".log", $this->file_path));
+                error_log ($message, 3, str_replace(".log", '_'.strtolower($type).".log", $this->file_path));
             } else {
                 error_log ($message, 3, $this->file_path);
             }

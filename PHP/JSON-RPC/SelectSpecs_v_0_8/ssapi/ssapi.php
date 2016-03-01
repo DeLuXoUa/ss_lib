@@ -200,7 +200,9 @@ class SSAPI {
     private function web_json_decode($data){
         if(isset($data["rr_price"])) $result["rrp"] = (double)$data["rr_price"];
         if(isset($data["price"])) $result["price"] = (double)$data["price"];
+
         if(isset($data['price_old'])) $result['price_old'] = $data['price_old'];
+        else $result['price_old'] = $data['price'];
 
         if(isset($data["group_prices"])){
             foreach($data["group_prices"] as $k => $v) {
@@ -321,7 +323,7 @@ class SSAPI {
         if(isset($data['webstock_rx_sunglasses_pd'])) $result['specifications']['pd'] = $data['webstock_rx_sunglasses_pd'];
         else $err[] = 'webstock_rx_sunglasses_pd is required';
 
-        if(isset($data['featured'])) $result['featured'] = $data['featured'];
+        if(isset($data['featured'])) $result['stock']['featured'] = $data['featured'];
         else $err[] = 'featured is required';
 
         if(isset($data['webstock_tempdesc'])) $result['migration']['item_info'] = $data['webstock_tempdesc'];
