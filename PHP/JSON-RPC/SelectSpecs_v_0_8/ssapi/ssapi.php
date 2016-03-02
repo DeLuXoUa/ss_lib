@@ -362,6 +362,7 @@ class SSAPI {
                 $result['stock']['discontinued'] = false;
 
                 @list($result['options']['option_order'], $result['options']['option_name']) = $this->get_field_array($data['color_name'], ';');
+                $result['options']['option_order'] = trim($result['options']['option_order']);
                 $result['options']['option_name'] = trim($result['options']['option_name']);
             }
 
