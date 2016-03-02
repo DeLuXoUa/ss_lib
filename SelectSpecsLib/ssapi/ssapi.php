@@ -214,7 +214,10 @@ class SSAPI {
 
         foreach($data['specifications'] as $k => $v){ $result[$k] = $v; }
         foreach($data['options'] as $k => $v){ $result[$k] = $v; }
+
         foreach($data['stock'] as $k => $v){ $result[$k] = $v; }
+        if(!isset($result["stock"]['featured'])) $result["stock"]['featured'] = false;
+
         foreach($data['migration'] as $k => $v){ $result[$k] = $v; }
 
         if(isset($data['colours'])) $result['colours'] = $data['colours'];
