@@ -317,7 +317,7 @@ class SSAPI {
         }
         else $err[] = 'model is required';
 
-        if(isset($data['description'])) $result['options']['option_description'] = $data['description'];
+        if(isset($data['description']) or is_null($data['description'])) $result['options']['option_description'] = $data['description'];
         else $err[] = 'description is required';
 
         if(isset($data['hashs1'])) $result['description'] = $data['hashs1'];
@@ -329,7 +329,7 @@ class SSAPI {
         if(isset($data['featured'])) $result['stock']['featured'] = $data['featured'];
         else $err[] = 'featured is required';
 
-        if(isset($data['webstock_tempdesc'])) $result['migration']['item_info'] = $data['webstock_tempdesc'];
+        if(isset($data['webstock_tempdesc']) or is_null($data['webstock_tempdesc'])) $result['migration']['item_info'] = $data['webstock_tempdesc'];
         else $err[] = 'webstock_tempdesc is required';
 
         if(isset($data['webstock_shipband'])) {
@@ -341,19 +341,19 @@ class SSAPI {
         if(isset($data['webstock_modified'])) $result['migration']['is_modified'] = $data['webstock_modified'];
         else $err[] = 'webstock_modified is required';
 
-        if(isset($data['webstock_extendeddescription'])) $result['migration']['product_information'] = $data['webstock_extendeddescription'];
+        if(isset($data['webstock_extendeddescription']) or is_null($data['webstock_extendeddescription'])) $result['migration']['product_information'] = $data['webstock_extendeddescription'];
         else $err[] = 'webstock_extendeddescription is required';
 
-        if(isset($data['webstock_oldpicture'])) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
+        if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
         else $err[] = 'webstock_oldpicture is required';
 
-        if(isset($data['webstock_smallpicoption'])) $result['migration']['no_large_image'] = $data['webstock_smallpicoption'];
+        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['migration']['no_large_image'] = $data['webstock_smallpicoption'];
         else $err[] = 'webstock_smallpicoption is required';
 
         if(isset($data['webstock_warrantyperiod'])) $result['specifications']['warranty_period'] = $data['webstock_warrantyperiod'];
         else $err[] = 'webstock_warrantyperiod is required';
 
-        if(isset($data['webstock_parsesearch'])) $result['migration']['supp_name'] = $data['webstock_parsesearch'];
+        if(isset($data['webstock_parsesearch']) or is_null($data['webstock_parsesearch'])) $result['migration']['supp_name'] = $data['webstock_parsesearch'];
         else $err[] = 'webstock_parsesearch is required';
 
         if(isset($data['color_name'])) {
