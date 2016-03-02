@@ -1,7 +1,7 @@
 <pre>
 <?php
 //include(dirname(__FILE__) . '/profiler.php');
-include(dirname(__FILE__) . '/SelectSpecs_v_0_8/include.php');
+include(dirname(__FILE__) . '/SelectSpecsLib/include.php');
 
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
@@ -37,25 +37,25 @@ function result_print($result){
 }
 
 //Insert items
-//include(dirname(__FILE__).'/examples/item4.php');
+//include(dirname(__FILE__).'/items/item4.php');
 //$result = $ssapi->items(NULL, $item4save, SSAPI_RETURN_RESULT);
 //echo "<h2 style='color: blueviolet;'>ITEMS INSERT:</h2>";
 //result_print($result);
 
 //Insert items (eugene)
-//include(dirname(__FILE__).'/examples/item_eugene.php');
+//include(dirname(__FILE__).'/items/item_eugene.php');
 //$result = $ssapi->items(NULL, $item_eugene, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_WEB);
 //echo "<h2 style='color: blueviolet;'>ITEMS INSERT (eugene):</h2>";
 //result_print($result);
 
 //Insert items (omnis-multy)
-//include(dirname(__FILE__).'/examples/item_omnis_multy.php');
+//include(dirname(__FILE__).'/items/item_omnis_multy.php');
 //$result = $ssapi->items(NULL, $item_omnis_multy, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_OMNIS | SSAPI_MULTI_QUERY);
 //echo "<h2 style='color: blueviolet;'>ITEMS INSERT (omnis):</h2>";
 //result_print($result);
 
 //Insert items (omnis)
-//include(dirname(__FILE__).'/examples/item_omnis.php');
+//include(dirname(__FILE__).'/items/item_omnis.php');
 //$result = $ssapi->items(NULL, $item_omnis, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_OMNIS);
 //echo "<h2 style='color: blueviolet;'>ITEMS INSERT (omnis):</h2>";
 //result_print($result);

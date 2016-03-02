@@ -1,3 +1,7 @@
+## version 0.8.3
+- strcuture of folders changed
+- fix some bugs in converters
+
 ## version 0.8.2
 - logger class added
 - log format and output added
