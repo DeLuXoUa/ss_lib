@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
+    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="designer_name error">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/examples/items/item_eugene.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/examples/items/item_eugene.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
     <ignored path="ss-lib.iws" />
@@ -38,12 +40,14 @@
       <file leaf-file-name="examples.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4363637">
-              <caret line="86" column="73" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="73" />
+            <state vertical-scroll-proportion="-1.5454545">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
-                <marker date="1456929239588" expanded="true" signature="1004:1013" placeholder="..." />
-                <marker date="1456929239588" expanded="true" signature="1111:1132" placeholder="..." />
-                <marker date="1456929239588" expanded="true" signature="2623:2641" placeholder="..." />
+                <marker date="1457020570943" expanded="true" signature="1004:1013" placeholder="..." />
+                <marker date="1457020570943" expanded="true" signature="1111:1132" placeholder="..." />
+                <marker date="1457020570943" expanded="true" signature="1598:1616" placeholder="..." />
+                <marker date="1457020570943" expanded="true" signature="2159:2177" placeholder="..." />
+                <marker date="1457020570943" expanded="true" signature="2619:2637" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -52,8 +56,18 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7816901">
-              <caret line="218" column="68" selection-start-line="218" selection-start-column="68" selection-end-line="218" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.029929578">
+              <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_eugene.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/items/item_eugene.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8545456">
+              <caret line="68" column="18" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -103,6 +117,7 @@
         <option value="$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
+        <option value="$PROJECT_DIR$/SelectSpecsLib/examples/items/item_eugene.php" />
         <option value="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
       </list>
     </option>
@@ -213,6 +228,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectSpecsLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="items" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,7 +382,7 @@
       <created>1456928075763</created>
       <option name="number" value="Default" />
       <updated>1456928075763</updated>
-      <workItem from="1456928076957" duration="3068000" />
+      <workItem from="1456928076957" duration="5257000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -353,11 +390,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456929401946</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="featured fix in converter">
+      <created>1456931352134</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1456931352134</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3068000" />
+    <option name="totallyTimeSpent" value="5257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -401,7 +444,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="error fix on example file" />
-    <option name="LAST_COMMIT_MESSAGE" value="error fix on example file" />
+    <MESSAGE value="featured fix in converter" />
+    <option name="LAST_COMMIT_MESSAGE" value="featured fix in converter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -442,20 +486,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4363637">
-          <caret line="86" column="73" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="73" />
+        <state vertical-scroll-proportion="-1.5454545">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1456929239588" expanded="true" signature="1004:1013" placeholder="..." />
-            <marker date="1456929239588" expanded="true" signature="1111:1132" placeholder="..." />
-            <marker date="1456929239588" expanded="true" signature="2623:2641" placeholder="..." />
+            <marker date="1457020570943" expanded="true" signature="1004:1013" placeholder="..." />
+            <marker date="1457020570943" expanded="true" signature="1111:1132" placeholder="..." />
+            <marker date="1457020570943" expanded="true" signature="1598:1616" placeholder="..." />
+            <marker date="1457020570943" expanded="true" signature="2159:2177" placeholder="..." />
+            <marker date="1457020570943" expanded="true" signature="2619:2637" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/items/item_eugene.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8545456">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7816901">
-          <caret line="218" column="68" selection-start-line="218" selection-start-column="68" selection-end-line="218" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.029929578">
+          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
           <folding />
         </state>
       </provider>

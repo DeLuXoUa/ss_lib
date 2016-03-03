@@ -15,6 +15,7 @@ class SSAPI {
     private $ex_times_log = array();
     private $client_id = null;
     private $protocol_version = 2;
+    private $timeout = 15000;
     public $logger = null;
 
     function __construct($host, $port, $auth_key_id, $auth_token, $auth_group_id, $custom_client_id, $timeout = 15, $mode = NULL, $logger_params = null){
@@ -46,6 +47,8 @@ class SSAPI {
         if(!$auth_token) { throw new Exception\ConnectionException('auth_token is required'); }
         if(!$auth_group_id) { throw new Exception\ConnectionException('auth_group is required'); }
 
+        $this->timeout = $timeout*1000; // convert to ms
+
 
 //                    $this->target = array('host' => $host, 'port' => $port);
         $this->target = array('host' => $host, 'port' => $port);
@@ -72,13 +75,15 @@ class SSAPI {
         $request = $this->connection->sendRequest('auth.init', [
             '_key_id' => $this->auth['_key_id'],
             '_group_id' => $this->auth['_group_id'],
-            'client_id' => $this->client_id
+            'client_id' => $this->client_id,
+            'socketTimeout' => $this->timeout
         ]);
 
         if(!$request->isError()){
 
             $request2 = $this->connection->sendRequest('auth.vrf', [
-                'token' => $this->auth['token']
+                'token' => $this->auth['token'],
+                'socketTimeout' => $this->timeout
             ]);
 
             if(!$request2->isError()){
@@ -90,7 +95,8 @@ class SSAPI {
                             '_key_id' => $this->auth['_key_id'],
                             '_group_id' => $this->auth['_group_id'],
                             'token' => $this->auth['token'],
-                            'client_id' => $this->client_id
+                            'client_id' => $this->client_id,
+                            'socketTimeout' => $this->timeout
                         ]);
                     }
 
@@ -168,7 +174,7 @@ class SSAPI {
         if(isset($data['option_best_status'])) $result['status'] = $data['option_best_status'];
         if(isset($data['model_name'])) $result['model_name'] = $data['model_name'];
         if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
-        if(isset($data['desigenr_name'])) $result['designer_name'] = $data['desigenr_name'];
+        if(isset($data['designer_name'])) $result['designer_name'] = $data['designer_name'];
         if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
         if(isset($data['category_names'])) $result['categories'] = $data['category_names'];
         if(isset($data['tab'])) $result['main_category']=$data['tab'];

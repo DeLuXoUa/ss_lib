@@ -9,8 +9,8 @@ try {
     //111c1111111111cc11111111 - test group_id
     //SeCrEtToKeNvAlUe - test token
     $ssapi = new SSAPI(
-        //"127.0.0.1",
-        "api.warder.tk",
+        "127.0.0.1",
+        //"api.warder.tk",
         //"ssapi.selectspecs.com",
         8843,
         "56b32b778ec929c4110cbbfc",
@@ -43,10 +43,10 @@ function result_print($result){
 //result_print($result);
 
 //Insert items (eugene)
-//include(dirname(__FILE__).'/items/item_eugene.php');
-//$result = $ssapi->items(NULL, $item_eugene, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_WEB);
-//echo "<h2 style='color: blueviolet;'>ITEMS INSERT (eugene):</h2>";
-//result_print($result);
+include(dirname(__FILE__).'/items/item_eugene.php');
+$result = $ssapi->items(NULL, $item_eugene, SSAPI_RETURN_RESULT | SSAPI_CONVERTER_WEB);
+echo "<h2 style='color: blueviolet;'>ITEMS INSERT (eugene):</h2>";
+result_print($result);
 
 //Insert items (omnis-multy)
 //include(dirname(__FILE__).'/items/item_omnis_multy.php');
@@ -66,9 +66,9 @@ function result_print($result){
 //result_print($result);
 
 //Select LAST items by query with limit and skip
-$result = $ssapi->items_last_updated("2007-01-01 00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>-1], "limit"=>700, "skip"=>15000]);
-echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
-result_print($result);
+//$result = $ssapi->items_last_updated("2007-01-01 00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>-1], "limit"=>700, "skip"=>15000]);
+//echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
+//result_print($result);
 
 //Select MIN&MAX LAST items by query
 //$result = $ssapi->items_last_updated_minmax("2012-01-01T00:00:00.000Z", NULL);
