@@ -251,7 +251,7 @@ class SSAPI {
         return $arr;
     }
 
-    private function omnis_json_encode($data)
+    public function omnis_json_encode($data)
     {
 //	0	sku	==	ss_no	//		    string "124.99"
 //	1	tab	==	type_name	//		    string "DESIGNER SUNGLASSES"
@@ -935,6 +935,9 @@ class SSAPI {
     }
     public function omnis_group_domains($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('omnis.groups.domains', $search, $data, $flags, $options);
+    }
+    public function ping(){
+        $request = $this->connection->sendRequest('ping', NULL);
     }
 
 };

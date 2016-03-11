@@ -1,3 +1,7 @@
+## version 0.8.4
+- socket timeout send to server added
+- fix some bugs in converters
+
 ## version 0.8.3
 - strcuture of folders changed
 - fix some bugs in converters

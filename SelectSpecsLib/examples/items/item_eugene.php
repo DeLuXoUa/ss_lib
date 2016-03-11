@@ -14,8 +14,7 @@ $item_eugene = [
 
         5 => Array
         (
-            'percent' => 'X',
-            'round' => ''
+            'price' => 0.00
         )
 
     ),
