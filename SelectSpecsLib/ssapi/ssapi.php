@@ -251,6 +251,7 @@ class SSAPI {
         return $arr;
     }
 
+//public converter
     public function omnis_json_encode($data)
     {
 //	0	sku	==	ss_no	//		    string "124.99"
