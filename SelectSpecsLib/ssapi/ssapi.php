@@ -496,8 +496,11 @@ class SSAPI {
             }
             if (count($arr)) {
                 foreach($arr as $k => $v) {
-                    $v['_group_id'] = $this->domain_id_2_group_id($k);
-                    $result['options']['group_prices'][] = $v;
+                    $groups = $this->domain_id_2_group_id($k);
+                    foreach($groups as $g){
+                        $v['_group_id'] = $g;
+                        $result['options']['group_prices'][] = $v;
+                    }
                 }
             }
         }

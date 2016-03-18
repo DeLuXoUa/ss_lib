@@ -60,8 +60,8 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9403509">
-              <caret line="482" column="21" selection-start-line="482" selection-start-column="21" selection-end-line="482" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.7017544">
+              <caret line="501" column="45" selection-start-line="501" selection-start-column="45" selection-end-line="501" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -397,7 +397,7 @@
       <updated>1456928075763</updated>
       <workItem from="1456928076957" duration="6960000" />
       <workItem from="1457106216992" duration="14146000" />
-      <workItem from="1458042789775" duration="2886000" />
+      <workItem from="1458042789775" duration="3525000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -441,11 +441,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458310235703</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="omnis converter changed">
+      <created>1458310400751</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1458310400751</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23992000" />
+    <option name="totallyTimeSpent" value="24631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -716,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9403509">
-          <caret line="482" column="21" selection-start-line="482" selection-start-column="21" selection-end-line="482" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.7017544">
+          <caret line="501" column="45" selection-start-line="501" selection-start-column="45" selection-end-line="501" selection-end-column="45" />
           <folding />
         </state>
       </provider>
