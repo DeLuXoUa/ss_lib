@@ -251,7 +251,6 @@ class SSAPI {
         return $arr;
     }
 
-//public converter
     public function omnis_json_encode($data)
     {
 //	0	sku	==	ss_no	//		    string "124.99"
@@ -292,20 +291,20 @@ class SSAPI {
         $err = [];
 
         if(isset($data['sell_price'])) {
-            $result['price'] = (float)$data['sell_price'];
-            if (!is_numeric($result['price'])) { $err[] = 'sell_price is not numeric'; }
+            $result['options']['price'] = (float)$data['sell_price'];
+            if (!is_numeric($result['options']['price'])) { $err[] = 'sell_price is not numeric'; }
         }
         else $err[] = 'sell_price is required';
 
         if(isset($data['rrp'])) {
-            $result['rr_price'] = (float)$data['rrp'];
-            if (!is_numeric($result['rr_price'])) { $err[] = 'rrp is not numeric'; }
+            $result['options']['price_retailer'] = (float)$data['rrp'];
+            if (!is_numeric($result['options']['price_retailer'])) { $err[] = 'rrp is not numeric'; }
         }
         else $err[] = 'rrp is required';
 
         if(isset($data['old_price'])) {
-            $result['old_price'] = (float)$data['old_price'];
-            if (!is_numeric($result['old_price'])) { $err[] = 'old_price is not numeric'; }
+            $result['options']['price_old'] = (float)$data['old_price'];
+            if (!is_numeric($result['options']['price_old'])) { $err[] = 'old_price is not numeric'; }
         }
 
         if(isset($data['brand'])) {
@@ -327,7 +326,7 @@ class SSAPI {
         if(isset($data['description']) or is_null($data['description'])) $result['options']['option_description'] = $data['description'];
         else $err[] = 'description is required';
 
-        if(isset($data['hashs1'])) $result['description'] = $data['hashs1'];
+        if(isset($data['hashs1'])) $result['options']['description'] = $data['hashs1'];
         else $err[] = 'hashs1 is required';
 
         if(isset($data['webstock_rx_sunglasses_pd'])) $result['specifications']['pd'] = $data['webstock_rx_sunglasses_pd'];
@@ -354,7 +353,7 @@ class SSAPI {
         if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
         else $err[] = 'webstock_oldpicture is required';
 
-        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['migration']['no_large_image'] = $data['webstock_smallpicoption'];
+        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['options']['migration']['no_large_image'] = $data['webstock_smallpicoption'];
         else $err[] = 'webstock_smallpicoption is required';
 
         if(isset($data['webstock_warrantyperiod'])) $result['specifications']['warranty_period'] = $data['webstock_warrantyperiod'];
@@ -366,18 +365,18 @@ class SSAPI {
         if(isset($data['color_name'])) {
             if (strpos($data['color_name'], ';') === false) {
                 $result['stock']['discontinued'] = true;
-                $result['options']['option_order'] = 0;
-                $result['options']['option_name'] = $data['color_name'];
+                $result['options']['order'] = 0;
+                $result['options']['name'] = $data['color_name'];
             } else {
                 $result['stock']['discontinued'] = false;
 
-                @list($result['options']['option_order'], $result['options']['option_name']) = $this->get_field_array($data['color_name'], ';');
-                $result['options']['option_order'] = trim($result['options']['option_order']);
-                $result['options']['option_name'] = trim($result['options']['option_name']);
+                @list($result['options']['order'], $result['options']['name']) = $this->get_field_array($data['color_name'], ';');
+                $result['options']['order'] = trim($result['options']['order']);
+                $result['options']['name'] = trim($result['options']['name']);
             }
 
-            if(!isset($result['options']['option_name'])) $err[] = 'option_name is required';
-            if (!is_numeric($result['options']['option_order'])) { $err[] = 'option_order is not numeric'; }
+            if(!isset($result['options']['name'])) $err[] = 'option name is required';
+            if (!is_numeric($result['options']['order'])) { $err[] = 'option order is not numeric'; }
         }
         else $err[] = 'color_name is required';
 
@@ -386,8 +385,8 @@ class SSAPI {
 
             if (!is_numeric($result['item_id'])) { $err[] = 'ss_no is not numeric'; }
 
-            if(isset($result['options']['option_order'])) {
-                $result['option_id'] = intval($result['item_id'].sprintf('%02d', $result['options']['option_order']));
+            if(isset($result['options']['order'])) {
+                $result['options']['option_id'] = intval($result['item_id'].sprintf('%02d', $result['options']['order']));
             }
             else $err[] = 'option_order is required';
         }
@@ -423,12 +422,12 @@ class SSAPI {
         else $err[] = 'type_name is required';
 
         // Prepare frame sizes and status option
-        $result['status'] = 'DISCONTINUED';
+        $result['options']['migration']['option_best_status'] = 'DISCONTINUED';
 
         if(isset($data['framesizes'])) {
             $arr = array();
-            $result['specifications']['frame_sizes'] = $this->get_field_array($data['framesizes'], ';');
-            foreach ($result['specifications']['frame_sizes'] as $frame_size) {
+            $result['options']['specifications']['frame_sizes'] = $this->get_field_array($data['framesizes'], ';');
+            foreach ($result['options']['specifications']['frame_sizes'] as $frame_size) {
                 @list($sizes, $disc, $back, $stock) = $this->get_field_array($frame_size, ':');
                 @list($arm, $bridge, $lens, $height) = $this->get_field_array($sizes, '_');
                 if (($arm == 0) && ($bridge == 0) && ($lens == 0) && ($height == 0)) {
@@ -440,15 +439,15 @@ class SSAPI {
                 } else if ($back) {
                     $status = 'IN_STOCK';
                 }
-                if ($result['status'] === 'DISCONTINUED' && $status != 'DISCONTINUED') {
-                    $result['status'] = $status;
+                if ($result['options']['migration']['option_best_status'] === 'DISCONTINUED' && $status != 'DISCONTINUED') {
+                    $result['options']['migration']['option_best_status'] = $status;
                 }
-                if ($result['status'] === 'BACK_ORDERED' && $status === 'IN_STOCK') {
-                    $result['status'] = 'IN_STOCK';
+                if ($result['options']['migration']['option_best_status'] === 'BACK_ORDERED' && $status === 'IN_STOCK') {
+                    $result['options']['migration']['option_best_status'] = 'IN_STOCK';
                 }
                 $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height, 'disk' => $disc, 'back' => $back, 'stock' => $stock, 'status' => $status);
             }
-            $result['specifications']['frame_sizes'] = $arr;
+            $result['options']['specifications']['frame_sizes'] = $arr;
         }
         else $err[] = 'framesizes is required';
 
@@ -497,10 +496,9 @@ class SSAPI {
             }
             if (count($arr)) {
                 foreach($arr as $k => $v) {
-                    $gp = $this->domain_id_2_group_id($k);
-                    foreach($gp as $gid){ $result['group_prices'][$gid] = $v; }
+                    $v['_group_id'] = $this->domain_id_2_group_id($k);
+                    $result['options']['group_prices'][] = $v;
                 }
-//                $result['group_prices'] = $arr;
             }
         }
 
@@ -607,7 +605,7 @@ class SSAPI {
             return FALSE;
         }
     }
-    
+
     public function getLastError(){
         if(is_null($this->last_error_data)){
             return false;
@@ -729,12 +727,12 @@ class SSAPI {
         if(!is_null($from_date)) {
             $search['__service.updated']['$gt'] = $from_date;
         }
-/*
-         $search = ['q' => [
-            ['__service.client_id' => ['$ne' => $this->client_id] ],
-            ['__service.updated' => [['$gt' => $from_date], ['$lte' => $to_date] ]]
-        ]];
-*/
+        /*
+                 $search = ['q' => [
+                    ['__service.client_id' => ['$ne' => $this->client_id] ],
+                    ['__service.updated' => [['$gt' => $from_date], ['$lte' => $to_date] ]]
+                ]];
+        */
         return $this->send($type, $search, NULL, $flags, $options);
     }
 
@@ -749,14 +747,14 @@ class SSAPI {
         }
 
         $search = [
-                ['$match' => $search ],
-                ['$group' => [
-                    '_id' => null,
-                    'max' => [ '$max' => '$__service.updated' ],
-                    'min' => [ '$min' => '$__service.updated' ]
-                    ]
-                ]
-            ];
+            ['$match' => $search ],
+            ['$group' => [
+                '_id' => null,
+                'max' => [ '$max' => '$__service.updated' ],
+                'min' => [ '$min' => '$__service.updated' ]
+            ]
+            ]
+        ];
 
 
         /*
@@ -841,7 +839,6 @@ class SSAPI {
                 }
             }
         }
-
         return $result;
     }
 
