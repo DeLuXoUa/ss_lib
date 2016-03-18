@@ -461,7 +461,7 @@ class SSAPI {
 
                 if (strpos($domain_price, "X") !== false) {
                     $arr[$domain_id]['price'] = 0;
-                    $arr[$domain_id]['price_old'] = $result['price'];
+                    $arr[$domain_id]['price_old'] = $result['options']['price'];
                 } else {
                     $percent = NULL;
                     $round = NULL;
