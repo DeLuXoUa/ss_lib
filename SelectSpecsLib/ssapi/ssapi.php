@@ -289,18 +289,18 @@ class SSAPI {
         $result = [];
         $err = [];
         if(isset($data['sell_price'])) {
-            $result['options']['price'] = (float)$data['sell_price'];
-            if (!is_numeric($result['options']['price'])) { $err[] = 'sell_price is not numeric'; }
+            $result['price'] = (float)$data['sell_price'];
+            if (!is_numeric($result['price'])) { $err[] = 'sell_price is not numeric'; }
         }
         else $err[] = 'sell_price is required';
         if(isset($data['rrp'])) {
-            $result['options']['price_retailer'] = (float)$data['rrp'];
-            if (!is_numeric($result['options']['price_retailer'])) { $err[] = 'rrp is not numeric'; }
+            $result['rr_price'] = (float)$data['rrp'];
+            if (!is_numeric($result['rr_price'])) { $err[] = 'rrp is not numeric'; }
         }
         else $err[] = 'rrp is required';
         if(isset($data['old_price'])) {
-            $result['options']['price_old'] = (float)$data['old_price'];
-            if (!is_numeric($result['options']['price_old'])) { $err[] = 'old_price is not numeric'; }
+            $result['old_price'] = (float)$data['old_price'];
+            if (!is_numeric($result['old_price'])) { $err[] = 'old_price is not numeric'; }
         }
         if(isset($data['brand'])) {
             $result['designer_name'] = $data['brand'];
@@ -317,7 +317,7 @@ class SSAPI {
         else $err[] = 'model is required';
         if(isset($data['description']) or is_null($data['description'])) $result['options']['option_description'] = $data['description'];
         else $err[] = 'description is required';
-        if(isset($data['hashs1'])) $result['options']['description'] = $data['hashs1'];
+        if(isset($data['hashs1'])) $result['description'] = $data['hashs1'];
         else $err[] = 'hashs1 is required';
         if(isset($data['webstock_rx_sunglasses_pd'])) $result['specifications']['pd'] = $data['webstock_rx_sunglasses_pd'];
         else $err[] = 'webstock_rx_sunglasses_pd is required';
@@ -336,7 +336,7 @@ class SSAPI {
         else $err[] = 'webstock_extendeddescription is required';
         if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
         else $err[] = 'webstock_oldpicture is required';
-        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['options']['migration']['no_large_image'] = $data['webstock_smallpicoption'];
+        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['migration']['no_large_image'] = $data['webstock_smallpicoption'];
         else $err[] = 'webstock_smallpicoption is required';
         if(isset($data['webstock_warrantyperiod'])) $result['specifications']['warranty_period'] = $data['webstock_warrantyperiod'];
         else $err[] = 'webstock_warrantyperiod is required';
@@ -345,23 +345,23 @@ class SSAPI {
         if(isset($data['color_name'])) {
             if (strpos($data['color_name'], ';') === false) {
                 $result['stock']['discontinued'] = true;
-                $result['options']['order'] = 0;
-                $result['options']['name'] = $data['color_name'];
+                $result['options']['option_order'] = 0;
+                $result['options']['option_name'] = $data['color_name'];
             } else {
                 $result['stock']['discontinued'] = false;
-                @list($result['options']['order'], $result['options']['name']) = $this->get_field_array($data['color_name'], ';');
-                $result['options']['order'] = trim($result['options']['order']);
-                $result['options']['name'] = trim($result['options']['name']);
+                @list($result['options']['option_order'], $result['options']['option_name']) = $this->get_field_array($data['color_name'], ';');
+                $result['options']['option_order'] = trim($result['options']['option_order']);
+                $result['options']['option_name'] = trim($result['options']['option_name']);
             }
-            if(!isset($result['options']['name'])) $err[] = 'option name is required';
-            if (!is_numeric($result['options']['order'])) { $err[] = 'option order is not numeric'; }
+            if(!isset($result['options']['option_name'])) $err[] = 'option_name is required';
+            if (!is_numeric($result['options']['option_order'])) { $err[] = 'option_order is not numeric'; }
         }
         else $err[] = 'color_name is required';
         if(isset($data['ss_no'])){
             $result['item_id'] = intval(str_replace('.', '', $data['ss_no']));
             if (!is_numeric($result['item_id'])) { $err[] = 'ss_no is not numeric'; }
-            if(isset($result['options']['order'])) {
-                $result['options']['option_id'] = intval($result['item_id'].sprintf('%02d', $result['options']['order']));
+            if(isset($result['options']['option_order'])) {
+                $result['option_id'] = intval($result['item_id'].sprintf('%02d', $result['options']['option_order']));
             }
             else $err[] = 'option_order is required';
         }
@@ -391,11 +391,11 @@ class SSAPI {
         }
         else $err[] = 'type_name is required';
         // Prepare frame sizes and status option
-        $result['options']['migration']['option_best_status'] = 'DISCONTINUED';
+        $result['status'] = 'DISCONTINUED';
         if(isset($data['framesizes'])) {
             $arr = array();
-            $result['options']['specifications']['frame_sizes'] = $this->get_field_array($data['framesizes'], ';');
-            foreach ($result['options']['specifications']['frame_sizes'] as $frame_size) {
+            $result['specifications']['frame_sizes'] = $this->get_field_array($data['framesizes'], ';');
+            foreach ($result['specifications']['frame_sizes'] as $frame_size) {
                 @list($sizes, $disc, $back, $stock) = $this->get_field_array($frame_size, ':');
                 @list($arm, $bridge, $lens, $height) = $this->get_field_array($sizes, '_');
                 if (($arm == 0) && ($bridge == 0) && ($lens == 0) && ($height == 0)) {
@@ -407,15 +407,15 @@ class SSAPI {
                 } else if ($back) {
                     $status = 'IN_STOCK';
                 }
-                if ($result['options']['migration']['option_best_status'] === 'DISCONTINUED' && $status != 'DISCONTINUED') {
-                    $result['options']['migration']['option_best_status'] = $status;
+                if ($result['status'] === 'DISCONTINUED' && $status != 'DISCONTINUED') {
+                    $result['status'] = $status;
                 }
-                if ($result['options']['migration']['option_best_status'] === 'BACK_ORDERED' && $status === 'IN_STOCK') {
-                    $result['options']['migration']['option_best_status'] = 'IN_STOCK';
+                if ($result['status'] === 'BACK_ORDERED' && $status === 'IN_STOCK') {
+                    $result['status'] = 'IN_STOCK';
                 }
                 $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height, 'disk' => $disc, 'back' => $back, 'stock' => $stock, 'status' => $status);
             }
-            $result['options']['specifications']['frame_sizes'] = $arr;
+            $result['specifications']['frame_sizes'] = $arr;
         }
         else $err[] = 'framesizes is required';
         if(isset($data['country_load'])) {
@@ -427,7 +427,7 @@ class SSAPI {
                 $domain_id = $dp[0];
                 if (strpos($domain_price, "X") !== false) {
                     $arr[$domain_id]['price'] = 0;
-                    $arr[$domain_id]['price_old'] = $result['options']['price'];
+                    $arr[$domain_id]['price_old'] = $result['price'];
                 } else {
                     $percent = NULL;
                     $round = NULL;
@@ -459,12 +459,10 @@ class SSAPI {
             }
             if (count($arr)) {
                 foreach($arr as $k => $v) {
-                    $groups = $this->domain_id_2_group_id($k);
-                    foreach($groups as $g){
-                        $v['_group_id'] = $g;
-                        $result['options']['group_prices'][] = $v;
-                    }
+                    $gp = $this->domain_id_2_group_id($k);
+                    foreach($gp as $gid){ $result['group_prices'][$gid] = $v; }
                 }
+//                $result['group_prices'] = $arr;
             }
         }
         // recognize new items (added <= 3 months ago), add them category 'new'

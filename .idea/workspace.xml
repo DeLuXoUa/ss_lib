@@ -60,10 +60,9 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19824561">
-              <caret line="509" column="5" selection-start-line="509" selection-start-column="5" selection-end-line="509" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.25438598">
+              <caret line="253" column="44" selection-start-line="253" selection-start-column="44" selection-end-line="253" selection-end-column="44" />
               <folding>
-                <element signature="n#omnis_json_encode#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -403,7 +402,7 @@
       <updated>1456928075763</updated>
       <workItem from="1456928076957" duration="6960000" />
       <workItem from="1457106216992" duration="14146000" />
-      <workItem from="1458042789775" duration="6150000" />
+      <workItem from="1458042789775" duration="6691000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -459,11 +458,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458311039714</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="omnis converter changed">
+      <created>1458553867370</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1458553867370</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27256000" />
+    <option name="totallyTimeSpent" value="27797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -551,7 +556,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#omnis_json_encode#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -622,7 +626,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
-            <element signature="n#omnis_json_encode#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -740,10 +743,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19824561">
-          <caret line="509" column="5" selection-start-line="509" selection-start-column="5" selection-end-line="509" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.25438598">
+          <caret line="253" column="44" selection-start-line="253" selection-start-column="44" selection-end-line="253" selection-end-column="44" />
           <folding>
-            <element signature="n#omnis_json_encode#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
           </folding>
         </state>
