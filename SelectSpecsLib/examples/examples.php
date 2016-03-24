@@ -6,17 +6,16 @@ include(dirname(__FILE__) . '/../include.php');
 // we can use custom parameters for connection directly in code (NOT Recomended), please use config.php
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
-    //111c1111111111cc11111111 - test group_id
-    //SeCrEtToKeNvAlUe - test token
     $ssapi = new SSAPI(
-        //"127.0.0.1",
-        //"api.warder.tk",
-        "ssapi.selectspecs.com",
+        "127.0.0.1",
+        //"api.warder.tk", //port now is 8844
+        //"ssapi.selectspecs.com",
         8843,
+        //8844,
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
-        "local2"
+        "example_client"
     );
 } catch (Exception $e) {
     echo $e;
@@ -35,8 +34,6 @@ function result_print($result){
     }
     echo '<hr><p style="color: darkgoldenrod;">execution time is ', $ssapi->getLastTime(),' seconds</p><hr>';
 }
-
-echo $ssapi->ping();
 
 //Insert items
 //include(dirname(__FILE__).'/items/item4.php');
@@ -68,9 +65,9 @@ echo $ssapi->ping();
 //result_print($result);
 
 //Select LAST items by query with limit and skip
-//$result = $ssapi->items_last_updated("2016-03-07T17:38:12.475Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>700, "skip"=>0]);
-//echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>";
-//result_print($result);
+$result = $ssapi->items_last_updated("2015-03-07T17:38:12.475Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>10, "skip"=>50000]);
+echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>\n";
+result_print($result);
 
 //Select MIN&MAX LAST items by query
 //$result = $ssapi->items_last_updated_minmax("2012-01-01T00:00:00.000Z", NULL);

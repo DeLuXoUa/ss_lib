@@ -241,6 +241,81 @@ class SSAPI {
         return $result;
     }
 
+    public function web_json_decode_fromitems(&$items){
+        $result = [];
+        $items_i=0;
+        $options_i=0;
+        foreach($items as $key => $item) {
+            $items_i++;
+            unset($items[$key]);
+            $data = [];
+
+            if(isset($item['specifications'])) $data = array_merge($data, $item['specifications']);
+            if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
+            if(isset($item['migration'])) $data = array_merge($data, $item['migration']);
+
+            if(isset($item['model_name'])) $data['model_name'] = $item['model_name'];
+            if(isset($item['supplier_name'])) $data['supplier_name'] = $item['supplier_name'];
+            if(isset($item['designer_name'])) $data['designer_name'] = $item['designer_name'];
+            if(isset($item['brand_name'])) $data['brand_name'] = $item['brand_name'];
+            if(isset($item['categories'])) $data['category_names'] = $item['categories'];
+            if(isset($item['main_category'])) $data['tab']=$item['main_category'];
+            if(isset($item['item_number'])) $data['item_id']=$item['item_number'];
+            if(isset($item['description'])) $result['supplier_description'] = $item['description'];
+            if(isset($item['__service'])) $data['__service'] = $item['__service'];
+
+            //$item['options'];
+//==========---------------------------------------------------------------------------------
+
+            foreach($item['options'] as $option){
+                $options_i++;
+                $option_data = $data;
+
+                if(isset($option['option_number'])) $option_data['option_id']=$option['option_number'];
+                if(isset($option['status'])) $option_data['option_best_status'] = $option['status'];
+                if(isset($option['order'])) $option_data['option_order']=$option['order'];
+                if(isset($option['name'])) $option_data['option_name']=$option['name'];
+                if(isset($option['description'])) $option_data['description']=$option['description'];
+
+                if(isset($option["price"])) $option_data["price"] = (double)$option["price"];
+
+                if(isset($option["price_retailer"])) $option_data["rrp"] = (double)$option["price_retailer"];
+                else $option_data['rrp'] = $option['price'];
+
+                if(isset($option['price_old'])) $option_data['price_old'] = (double)$option['price_old'];
+                else $option_data['price_old'] = $option['price'];
+
+                if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
+                if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);
+
+                if(isset($option["group_prices"])){
+                    foreach($option["group_prices"] as $k => $v) {
+                        $domain_price=[];
+                        if(isset($v['price'])) $domain_price['price'] = $v['price'];
+                        elseif(isset($option['price'])) $domain_price['price'] = $option['price'];
+                        elseif(isset($data['price'])) $domain_price['price'] = $data['price'];
+
+                        if(isset($v['price_old'])) $domain_price['price_old'] = $v['price_old'];
+                        elseif(isset($option['price_old'])) $domain_price['price_old'] = $option['price_old'];
+                        elseif(isset($data['price_old'])) $domain_price['price_old'] = $data['price_old'];
+                        elseif(isset($option['price'])) $domain_price['price_old'] = $option['price'];
+                        elseif(isset($data['price'])) $domain_price['price_old'] = $data['price'];
+
+                        $option_data["prices_domain"][$this->group_id_2_domain_id($v['_group_id'])] = $domain_price;
+                    }
+                }
+
+                $result[]=$option_data;
+            }
+        }
+
+//        print_r($result);
+//        echo "\n*****\nfrom $items_i items we created $options_i options\n\n";
+//        die;
+
+        return $result;
+    }
+
     private function get_field_array($str, $separator)
     {
         $arr = explode($separator, rtrim($str, $separator));
@@ -1052,9 +1127,8 @@ class SSAPI {
     public function items_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         $result = $this->last_updated('items', $from_date, $to_date, $flags, $options);
         if($result && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB)) {
-            foreach($result as $k => $v){
-                $result[$k] = $this->web_json_decode($v);
-            }
+            $result = $this->web_json_decode_fromitems($result);
+//            foreach($result as $k => $v){ $result[$k] = $this->web_json_decode($v); }
         }
         return $result;
     }
@@ -1102,9 +1176,8 @@ class SSAPI {
         $result = $this->send('items', $search, $data, $flags, $options);
         if($result && !is_null($flags)) {
             if($flags & SSAPI_CONVERTER_WEB) {
-                foreach ($result as $k => $v) {
-                    $result[$k] = $this->web_json_decode($v);
-                }
+                $result = $this->web_json_decode_fromitems($result);
+//                foreach ($result as $k => $v) { $result[$k] = $this->web_json_decode($v); }
             }
         }
         return $result;
@@ -1207,4 +1280,5 @@ class SSAPI {
     }
 
 };
+
 ?>
