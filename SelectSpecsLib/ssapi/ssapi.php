@@ -579,7 +579,7 @@ class SSAPI {
         }
         else $err[] = 'model is required';
 
-        if(isset($data['description']) or is_null($data['description'])) $result['options']['option_description'] = $data['description'];
+        if(isset($data['description'])) $result['description'] = $data['description'];
         else $err[] = 'description is required';
 
         if(isset($data['hashs1'])) $result['options']['description'] = $data['hashs1'];
@@ -637,12 +637,12 @@ class SSAPI {
         else $err[] = 'color_name is required';
 
         if(isset($data['ss_no'])){
-            $result['item_id'] = intval(str_replace('.', '', $data['ss_no']));
+            $result['item_number'] = intval(str_replace('.', '', $data['ss_no']));
 
-            if (!is_numeric($result['item_id'])) { $err[] = 'ss_no is not numeric'; }
+            if (!is_numeric($result['item_number'])) { $err[] = 'ss_no is not numeric'; }
 
             if(isset($result['options']['order'])) {
-                $result['options']['option_id'] = intval($result['item_id'].sprintf('%02d', $result['options']['order']));
+                $result['options']['option_number'] = intval($result['item_number'].sprintf('%02d', $result['options']['order']));
             }
             else $err[] = 'option_order is required';
         }
@@ -678,7 +678,7 @@ class SSAPI {
         else $err[] = 'type_name is required';
 
         // Prepare frame sizes and status option
-        $result['options']['migration']['option_best_status'] = 'DISCONTINUED';
+        $result['options']['status'] = 'DISCONTINUED';
 
         if(isset($data['framesizes'])) {
             $arr = array();
@@ -695,13 +695,13 @@ class SSAPI {
                 } else if ($back) {
                     $status = 'IN_STOCK';
                 }
-                if ($result['options']['migration']['option_best_status'] === 'DISCONTINUED' && $status != 'DISCONTINUED') {
-                    $result['options']['migration']['option_best_status'] = $status;
+                if ($result['options']['status'] == 'DISCONTINUED' && $status != 'DISCONTINUED') {
+                    $result['options']['status'] = $status;
                 }
-                if ($result['options']['migration']['option_best_status'] === 'BACK_ORDERED' && $status === 'IN_STOCK') {
-                    $result['options']['migration']['option_best_status'] = 'IN_STOCK';
+                if ($result['options']['status'] == 'BACK_ORDERED' && $status == 'IN_STOCK') {
+                    $result['options']['status'] = 'IN_STOCK';
                 }
-                $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height, 'disk' => $disc, 'back' => $back, 'stock' => $stock, 'status' => $status);
+                $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height, 'stock' => $stock, 'status' => $status);
             }
             $result['options']['specifications']['frame_sizes'] = $arr;
         }
@@ -711,6 +711,10 @@ class SSAPI {
             $arr = array();
             $data['country_load'] = $this->get_field_array($data['country_load'], ',');
             foreach ($data['country_load'] as $domain_price) {
+                if(!isset($result['options']['price'])) {
+                    $err[] = 'sell_price is not defined and domain price can be set';
+                    break;
+                }
                 // We can get from omnis: "1000/R10" or "1000/-20" or "1000/-20/R10" or "1000/R10/-20" or 1000/X
                 $dp = $this->get_field_array($domain_price, '/');
                 $domain_id = $dp[0];
@@ -738,8 +742,9 @@ class SSAPI {
                         }
                     }
 
-                    $arr[$domain_id]['price_old'] = $result['price'];
-                    $arr[$domain_id]['price'] = $result['price'];
+                    $arr[$domain_id]['price_old'] = $result['options']['price'];
+                    $arr[$domain_id]['price'] = $result['options']['price'];
+
                     if (!is_null($percent) && $percent) {
                         $arr[$domain_id]['percent'] = $percent;
                         $arr[$domain_id]['price'] = round($arr[$domain_id]['price'] * (1 + $percent / 100), 2);
@@ -809,7 +814,7 @@ class SSAPI {
         else $err[] = 'webstock_basecurve is required';
 
         if(count($err)){
-            return [ "result"=> false, "errors"=> $err, "ss_no" => (isset($data['ss_no']) ? $data['ss_no'] : 'Unknown_number'), "option_id" => (isset($result['option_id']) ? $result['option_id'] : 'Unknown_option_id') ];
+            return [ "result"=> false, "errors"=> $err, "ss_no" => (isset($data['ss_no']) ? $data['ss_no'] : 'Unknown_number'), "option_number" => (isset($result['option_number']) ? $result['option_number'] : 'Unknown_option_number') ];
 
         } else {
             return [ "result"=> true, "data"=>$result];
@@ -1077,7 +1082,7 @@ class SSAPI {
                             $data[$k] = $data[$k]['data'];
                         } else {
 //                            print_r($data[$k]['errors']);
-                            $this->logger->error(["ss_no" => $data[$k]['ss_no'], "option_id" => $data[$k]['option_id'], "errors" => $data[$k]['errors']]);
+                            $this->logger->error(["ss_no" => $data[$k]['ss_no'], "option_number" => $data[$k]['option_number'], "errors" => $data[$k]['errors']]);
                             unset($data[$k]);
                         }
                     }
