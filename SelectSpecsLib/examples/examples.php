@@ -7,11 +7,11 @@ include(dirname(__FILE__) . '/../include.php');
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
     $ssapi = new SSAPI(
-        "127.0.0.1",
-        //"api.warder.tk", //port now is 8844
+        //"127.0.0.1",
+        "api.warder.tk", //port now is 8844
         //"ssapi.selectspecs.com",
-        8843,
-        //8844,
+        //8843,
+        8844,
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
