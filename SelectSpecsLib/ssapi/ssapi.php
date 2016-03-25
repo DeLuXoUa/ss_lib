@@ -366,7 +366,7 @@ class SSAPI {
                 if(isset($option['status'])) $option_data['option_best_status'] = $option['status'];
                 if(isset($option['order'])) $option_data['option_order']=$option['order'];
                 if(isset($option['name'])) $option_data['option_name']=$option['name'];
-                if(isset($option['description'])) $option_data['description']=$option['description'];
+                if(isset($option['description'])) $option_data['option_description']=$option['description'];
 
                 if(isset($option["price"])) $option_data["price"] = (double)$option["price"];
 
