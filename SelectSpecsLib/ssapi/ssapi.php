@@ -109,10 +109,12 @@ class SSAPI {
         return false;
     }
 
-    private function domain_id_2_group_id($alt_id){
+    public function domain_id_2_group_id($alt_id){
         $alt_id = (int)$alt_id;
         $result =[];
-        global $GROUP_ALT_ID;
+
+        include(dirname(__FILE__).'/../config_groups.php');
+
         foreach($GROUP_ALT_ID as $k => $v){
             if($alt_id == $v) $result[]=$k;
         }
@@ -121,7 +123,7 @@ class SSAPI {
     }
 
     private function group_id_2_domain_id($gid){
-        global $GROUP_ALT_ID;
+        include dirname(__FILE__) . '/../config_groups.php';
 
         if(isset($GROUP_ALT_ID[$gid])) return $GROUP_ALT_ID[$gid];
         else return false;

@@ -2,6 +2,7 @@
 
 //alt id by groups
 
+$GROUP_ALT_ID = [];
 $GROUP_ALT_ID['56a9da979a0bf84c09c316ca'] = 0; //SS
 $GROUP_ALT_ID['56a9da979a0bf84c09c316c4'] = 1; //oo au
 $GROUP_ALT_ID['56a9da979a0bf84c09c316d0'] = 4; //optix
