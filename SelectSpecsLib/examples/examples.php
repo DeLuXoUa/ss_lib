@@ -65,8 +65,12 @@ function result_print($result){
 //result_print($result);
 
 //Select LAST items by query with limit and skip
-$result = $ssapi->items_last_updated("2015-03-07T17:38:12.475Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>10, "skip"=>50000]);
-echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>\n";
+//$result = $ssapi->items_last_updated("2015-03-07T17:38:12.475Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>10, "skip"=>50000]);
+//echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>\n";
+//result_print($result);
+
+$result = $ssapi->items(["item_number"=>6011], NULL, SSAPI_CONVERTER_WEB);
+echo "<h2 style='color: blueviolet;'>SELECT 6011:</h2>\n";
 result_print($result);
 
 //Select MIN&MAX LAST items by query

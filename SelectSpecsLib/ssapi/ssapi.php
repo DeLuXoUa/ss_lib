@@ -381,20 +381,35 @@ class SSAPI {
                 if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
                 if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);
 
+                include dirname(__FILE__) . '/../config_groups.php';
+                foreach($GROUP_ALT_ID as $GAID){
+                    if (isset($option['price'])) $option_data["prices_domain"][$GAID]['price'] = $option['price'];
+                    elseif (isset($data['price'])) $option_data["prices_domain"][$GAID]['price'] = $data['price'];
+
+                    if(isset($option['price_old'])) $option_data["prices_domain"][$GAID]['price_old'] = $option['price_old'];
+                    elseif (isset($data['price_old'])) $option_data["prices_domain"][$GAID]['price_old'] = $data['price_old'];
+                    elseif (isset($option['price'])) $option_data["prices_domain"][$GAID]['price_old'] = $option['price'];
+                    elseif (isset($data['price'])) $option_data["prices_domain"][$GAID]['price_old'] = $data['price'];
+                }
+
                 if(isset($option["group_prices"])){
                     foreach($option["group_prices"] as $k => $v) {
-                        $domain_price=[];
-                        if(isset($v['price'])) $domain_price['price'] = $v['price'];
-                        elseif(isset($option['price'])) $domain_price['price'] = $option['price'];
-                        elseif(isset($data['price'])) $domain_price['price'] = $data['price'];
+                        if(isset($v['price']) && (!$v['price'] || $v['price'] == 0 || $v['price'] == '0' || $v['price']=='x' || $v['price']=='X')){
+                            unset($option_data["prices_domain"][$this->group_id_2_domain_id($v['_group_id'])]);
+                        } else {
+                            $domain_price = [];
+                            if (isset($v['price'])) $domain_price['price'] = $v['price'];
+                            elseif (isset($option['price'])) $domain_price['price'] = $option['price'];
+                            elseif (isset($data['price'])) $domain_price['price'] = $data['price'];
 
-                        if(isset($v['price_old'])) $domain_price['price_old'] = $v['price_old'];
-                        elseif(isset($option['price_old'])) $domain_price['price_old'] = $option['price_old'];
-                        elseif(isset($data['price_old'])) $domain_price['price_old'] = $data['price_old'];
-                        elseif(isset($option['price'])) $domain_price['price_old'] = $option['price'];
-                        elseif(isset($data['price'])) $domain_price['price_old'] = $data['price'];
+                            if (isset($v['price_old'])) $domain_price['price_old'] = $v['price_old'];
+                            elseif (isset($option['price_old'])) $domain_price['price_old'] = $option['price_old'];
+                            elseif (isset($data['price_old'])) $domain_price['price_old'] = $data['price_old'];
+                            elseif (isset($option['price'])) $domain_price['price_old'] = $option['price'];
+                            elseif (isset($data['price'])) $domain_price['price_old'] = $data['price'];
 
-                        $option_data["prices_domain"][$this->group_id_2_domain_id($v['_group_id'])] = $domain_price;
+                            $option_data["prices_domain"][$this->group_id_2_domain_id($v['_group_id'])] = $domain_price;
+                        }
                     }
                 }
 
