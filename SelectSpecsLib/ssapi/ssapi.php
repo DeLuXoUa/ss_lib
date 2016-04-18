@@ -521,8 +521,14 @@ class SSAPI {
         else $err[] = 'webstock_shipband is required';
         if(isset($data['webstock_modified'])) $result['migration']['is_modified'] = $data['webstock_modified'];
         else $err[] = 'webstock_modified is required';
-        if(isset($data['webstock_extendeddescription']) or is_null($data['webstock_extendeddescription'])) $result['migration']['product_information'] = $data['webstock_extendeddescription'];
-        else $err[] = 'webstock_extendeddescription is required';
+
+        if(isset($data['webstock_extendeddescription'])) {
+            $result['migration']['product_information'] = $data['webstock_extendeddescription'];
+        } else {
+            $result['migration']['product_information'] = "";
+//            $err[] = 'webstock_extendeddescription is required';
+        }
+
         if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
         else $err[] = 'webstock_oldpicture is required';
         if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['migration']['no_large_image'] = $data['webstock_smallpicoption'];

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
     <ignored path="ss-lib.iws" />
@@ -57,8 +56,8 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="503" column="0" selection-start-line="503" selection-start-column="0" selection-end-line="503" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="530" column="0" selection-start-line="530" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
               <folding>
                 <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#web_json_encode#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -485,7 +484,7 @@
       <workItem from="1458042789775" duration="8128000" />
       <workItem from="1511365812922" duration="241000" />
       <workItem from="1458813103601" duration="26753000" />
-      <workItem from="1459783774299" duration="26638000" />
+      <workItem from="1459783774299" duration="26801000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -606,11 +605,18 @@
       <option name="project" value="LOCAL" />
       <updated>1459857047929</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="items converter price fix">
+      <created>1460968542973</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1460968542973</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82866000" />
+    <option name="totallyTimeSpent" value="83029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -1166,8 +1172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="503" column="0" selection-start-line="503" selection-start-column="0" selection-end-line="503" selection-end-column="0" />
+        <state relative-caret-position="282">
+          <caret line="530" column="0" selection-start-line="530" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
           <folding>
             <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#web_json_encode#0;n#SSAPI#0;n#!!top" expanded="false" />
