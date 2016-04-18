@@ -498,8 +498,14 @@ class SSAPI {
             if (strlen(trim($result['model_name']))<1) { $err[] = 'model cant be empty'; }
         }
         else $err[] = 'model is required';
-        if(isset($data['description']) or is_null($data['description'])) $result['options']['option_description'] = $data['description'];
-        else $err[] = 'description is required';
+
+        if(isset($data['description'])){
+            $result['options']['option_description'] = $data['description'];
+        } else {
+            $result['options']['option_description'] = "";
+//            $err[] = 'description is required';
+        }
+
         if(isset($data['hashs1'])) $result['description'] = $data['hashs1'];
         else $err[] = 'hashs1 is required';
         if(isset($data['webstock_rx_sunglasses_pd'])) $result['specifications']['pd'] = $data['webstock_rx_sunglasses_pd'];
