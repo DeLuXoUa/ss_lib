@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
     <ignored path="ss-lib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -484,7 +483,7 @@
       <workItem from="1458042789775" duration="8128000" />
       <workItem from="1511365812922" duration="241000" />
       <workItem from="1458813103601" duration="26753000" />
-      <workItem from="1459783774299" duration="27656000" />
+      <workItem from="1459783774299" duration="27703000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -626,11 +625,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460969251940</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="description fix">
+      <created>1460969567224</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1460969567224</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83884000" />
+    <option name="totallyTimeSpent" value="83931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -681,7 +687,8 @@
     <MESSAGE value="omnis converter changed" />
     <MESSAGE value="GROUP_ALT_ID fix" />
     <MESSAGE value="items converter price fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="items converter price fix" />
+    <MESSAGE value="description fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="description fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
