@@ -381,7 +381,7 @@ class SSAPI {
                 if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
                 if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);
 
-                include dirname(__FILE__) . '/../config_groups.php';
+                include (dirname(__FILE__) . '/../config_groups.php');
                 foreach($GROUP_ALT_ID as $GAID){
                     if (isset($option['price'])) $option_data["prices_domain"][$GAID]['price'] = $option['price'];
                     elseif (isset($data['price'])) $option_data["prices_domain"][$GAID]['price'] = $data['price'];
@@ -774,8 +774,13 @@ class SSAPI {
         }
         else $err[] = 'model is required';
 
-        if(isset($data['description'])) $result['description'] = $data['description'];
-        else $err[] = 'description is required';
+        if(isset($data['description']) && $data['description']) {
+            $result['description'] = $data['description'];
+        }
+        else {
+            $result['description'] = "";
+            //$err[] = 'description is required';
+        }
 
         if(isset($data['hashs1'])) $result['options']['description'] = $data['hashs1'];
         else $err[] = 'hashs1 is required';
@@ -798,8 +803,12 @@ class SSAPI {
         if(isset($data['webstock_modified'])) $result['migration']['is_modified'] = $data['webstock_modified'];
         else $err[] = 'webstock_modified is required';
 
-        if(isset($data['webstock_extendeddescription']) or is_null($data['webstock_extendeddescription'])) $result['migration']['product_information'] = $data['webstock_extendeddescription'];
-        else $err[] = 'webstock_extendeddescription is required';
+        if(isset($data['webstock_extendeddescription']) && $data['webstock_extendeddescription']){
+            $result['migration']['product_information'] = $data['webstock_extendeddescription'];
+        }  else {
+            $result['migration']['product_information'] = "";
+            //$err[] = 'webstock_extendeddescription is required';
+        }
 
         if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
         else $err[] = 'webstock_oldpicture is required';
