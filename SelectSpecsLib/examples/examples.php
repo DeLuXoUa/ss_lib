@@ -60,9 +60,9 @@ function result_print($result){
 //result_print($result);
 
 //Select items by query
-$result = $ssapi->items(['item_number' => 8115]);
-echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
-print_r($result[0]['options']);
+//$result = $ssapi->items(['item_number' => 8115]);
+//echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
+//print_r($result[0]['options']);
 
 //Select LAST items by query with limit and skip
 //$result = $ssapi->items_last_updated("2016-04-14T00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>10, "skip"=>1]);
@@ -70,34 +70,32 @@ print_r($result[0]['options']);
 //result_print($result);
 
 //Download all items and count it
-//$skip = 0;
-//$limit = 1000;
-//$options_count = 0;
-//$prices_count = 0;
-//$prices_count_not_zero = 0;
-//$domain_price_count = [];
-//while($result = $ssapi->items_last_updated("2016-04-18 15:59:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>$limit, "skip"=>$skip])){
-//    $skip+=$limit;
+$skip = 0;
+$limit = 1000;
+$options_count = 0;
+$prices_count = 0;
+$prices_count_not_zero = 0;
+$domain_price_count = [];
+while($result = $ssapi->items_last_updated("2016-04-18 15:59:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>1, "skip"=>$skip])){
+    $skip+=$limit;
+    foreach($result as $r){
+        if(!$r['discontinued']) {
+            $options_count ++;
+            $prices_count += count($r['prices_domain']);
+            foreach ($r['prices_domain'] as $k => $pd) {
+                if ($pd['price'] && $pd['price'] != '0') {
+                    $prices_count_not_zero++;
+                    if(!isset($domain_price_count[$k])) $domain_price_count[$k]=0;
+                    $domain_price_count[$k]++;
+                }
+            }
+        }
+    }
 
-//    foreach($result as $r){
-//        if(!$r['discontinued']) {
-//            $options_count ++;
-
-//            $prices_count += count($r['prices_domain']);
-//            foreach ($r['prices_domain'] as $k => $pd) {
-//                if ($pd['price'] && $pd['price'] != '0') {
-//                    $prices_count_not_zero++;
-//                    if(!isset($domain_price_count[$k])) $domain_price_count[$k]=0;
-//                    $domain_price_count[$k]++;
-//                }
-//            }
-//        }
-//    }
-
-//    echo "chunk $skip: total options - [ $options_count ], total prices - $prices_count (nz: $prices_count_not_zero)\n";
-//}
-//echo "\n----------------------------------\nTOTAL: $prices_count (nz: $prices_count_not_zero)\n";
-//print_r($domain_price_count);
+    echo "chunk $skip: total options - [ $options_count ], total prices - $prices_count (nz: $prices_count_not_zero)\n";
+}
+echo "\n----------------------------------\nTOTAL: $prices_count (nz: $prices_count_not_zero)\n";
+print_r($domain_price_count);
 
 //$result = $ssapi->items(["item_number"=>6011], NULL, SSAPI_CONVERTER_WEB);
 //echo "<h2 style='color: blueviolet;'>SELECT 6011:</h2>\n";

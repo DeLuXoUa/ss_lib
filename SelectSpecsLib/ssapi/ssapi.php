@@ -251,7 +251,7 @@ class SSAPI {
 
                 if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
                 if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);
-                if(isset($option['stock'])) $data = array_merge($option_data, $option['stock']);
+                if(isset($option['stock'])) $option_data = array_merge($option_data, $option['stock']);
 
                 if(isset($option['_id'])) $data['_api_option_id'] = $option['_id'];
                 if(isset($option['option_number'])) $option_data['option_id']=$option['option_number'];
