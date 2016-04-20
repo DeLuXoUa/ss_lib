@@ -400,10 +400,10 @@ class SSAPI {
         else $err[] = 'model is required';
 
         if(isset($data['description'])) $result['options']['description'] = $data['description'];
-        else $err[] = 'description is required';
+        else $result['options']['description'] = "";
 
         if(isset($data['hashs1'])) $result['description'] = $data['hashs1'];
-        else $err[] = 'hashs1 is required';
+        else $result['description'] = "";
 
         if(isset($data['webstock_rx_sunglasses_pd'])) $result['specifications']['pd'] = $data['webstock_rx_sunglasses_pd'];
         else $err[] = 'webstock_rx_sunglasses_pd is required';
@@ -620,7 +620,7 @@ class SSAPI {
         }
 
         // if is prescription sunglasses, add category 'RX'
-        if ($result['main_category'] == 'Prescription Sunglasses') {
+        if (isset($result['main_category']) && $result['main_category'] == 'Prescription Sunglasses') {
             $rusult['categories'][] = 'Prescription Compatible';
         }
 
