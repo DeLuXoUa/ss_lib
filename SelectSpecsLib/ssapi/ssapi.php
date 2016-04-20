@@ -178,10 +178,10 @@ class SSAPI {
         if(isset($data['frame_sizes'])) $result['options']['specifications']['frame_sizes'] = $data['frame_sizes'];
 
         //==> stock
-        if(isset($data['is_out_of_stock'])) $result['stock']['is_out_of_stock'] = $data['is_out_of_stock'];
-        if(isset($data['featured'])) $result['stock']['featured'] = $data['featured'];
-        if(isset($data['discontinued'])) $result['stock']['discontinued'] = $data['discontinued'];
-        if(isset($data['two_for_one'])) $result['stock']['two_for_one'] = $data['two_for_one'];
+        if(isset($data['is_out_of_stock'])) $result['options']['stock']['is_out_of_stock'] = $data['is_out_of_stock'];
+        if(isset($data['featured'])) $result['options']['stock']['featured'] = $data['featured'];
+        if(isset($data['discontinued'])) $result['options']['stock']['discontinued'] = $data['discontinued'];
+        if(isset($data['two_for_one'])) $result['options']['stock']['two_for_one'] = $data['two_for_one'];
 
 
         if(isset($data['colours'])) $result['migrations']['colours'] = $data['colours'];
@@ -228,7 +228,7 @@ class SSAPI {
             $data = [];
 
             if(isset($item['specifications'])) $data = array_merge($data, $item['specifications']);
-            if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
+//            if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
             if(isset($item['migration'])) $data = array_merge($data, $item['migration']);
 
             if(isset($item['_id'])) $data['_api_item_id'] = $item['_id'];
@@ -250,8 +250,9 @@ class SSAPI {
                 $option_data = $data;
 
                 if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
-                if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);                
-                
+                if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);
+                if(isset($option['stock'])) $data = array_merge($option_data, $option['stock']);
+
                 if(isset($option['_id'])) $data['_api_option_id'] = $option['_id'];
                 if(isset($option['option_number'])) $option_data['option_id']=$option['option_number'];
                 if(isset($option['status'])) $option_data['option_best_status'] = $option['status'];
@@ -439,11 +440,11 @@ class SSAPI {
 
         if(isset($data['color_name'])) {
             if (strpos($data['color_name'], ';') === false) {
-                $result['stock']['discontinued'] = true;
+                $result['options']['stock']['discontinued'] = true;
                 $result['options']['order'] = 0;
                 $result['options']['name'] = $data['color_name'];
             } else {
-                $result['stock']['discontinued'] = false;
+                $result['options']['stock']['discontinued'] = false;
 
                 @list($result['options']['order'], $result['options']['name']) = $this->get_field_array($data['color_name'], ';');
                 $result['options']['order'] = trim($result['options']['order']);
