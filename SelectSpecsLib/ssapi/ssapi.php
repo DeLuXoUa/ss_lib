@@ -355,7 +355,7 @@ class SSAPI {
             if(isset($item['item_number'])) $data['item_id']=$item['item_number'];
             if(isset($item['description'])) $data['supplier_description'] = $item['description'];
             if(isset($item['__service'])) $data['__service'] = $item['__service'];
-
+            
             //$item['options'];
 //==========---------------------------------------------------------------------------------
 
@@ -363,6 +363,9 @@ class SSAPI {
                 $options_i++;
                 $option_data = $data;
 
+                if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
+                if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);                
+                
                 if(isset($option['_id'])) $data['_api_option_id'] = $option['_id'];
                 if(isset($option['option_number'])) $option_data['option_id']=$option['option_number'];
                 if(isset($option['status'])) $option_data['option_best_status'] = $option['status'];
@@ -378,9 +381,12 @@ class SSAPI {
                 if(isset($option['price_old'])) $option_data['price_old'] = (double)$option['price_old'];
                 else $option_data['price_old'] = $option['price'];
 
-                if(isset($option['specifications'])) $option_data = array_merge($option_data, $option['specifications']);
-                if(isset($option['migration'])) $option_data = array_merge($option_data, $option['migration']);
-
+                if(!isset($option['item_info'])) $option_data['item_info'] = '';
+                if(!isset($option['supp_name'])) $option_data['supp_name'] = '';
+                if(!isset($option['no_large_image'])) $option_data['no_large_image'] = 0;
+                if(!isset($option['no_option_images'])) $option_data['no_option_images'] = 0;
+                if(!isset($option['product_information'])) $option_data['product_information'] = '';
+                
                 include dirname(__FILE__) . '/../config_groups.php';
                 foreach($GROUP_ALT_ID as $GAID){
                     if (isset($option['price'])) $option_data["prices_domain"][$GAID]['price'] = $option['price'];
