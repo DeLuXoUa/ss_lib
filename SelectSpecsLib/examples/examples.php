@@ -76,7 +76,7 @@ $options_count = 0;
 $prices_count = 0;
 $prices_count_not_zero = 0;
 $domain_price_count = [];
-while($result = $ssapi->items_last_updated("2016-04-18 15:59:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>1, "skip"=>$skip])){
+while($result = $ssapi->items_last_updated("2016-04-18 15:59:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>$limit, "skip"=>$skip])){
     $skip+=$limit;
     foreach($result as $r){
         if(!$r['discontinued']) {
