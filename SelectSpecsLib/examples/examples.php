@@ -60,17 +60,17 @@ function result_print($result){
 //result_print($result);
 
 //Select items by query
-$result = $ssapi->items(['item_number' => 8115]);
-echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
-echo "\n\n".count($result[0]['options'])."\n\n";
-var_dump($result[0]['options'][8]);
+//$result = $ssapi->items(['item_number' => 8115]);
+//echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
+//echo "\n\n".count($result[0]['options'])."\n\n";
+//var_dump($result[0]['options'][8]);
 
 //Select LAST items by query with limit and skip
 //$result = $ssapi->items_last_updated("2016-04-14T00:00:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>10, "skip"=>1]);
 //echo "<h2 style='color: blueviolet;'>SELECT LAST:</h2>\n";
 //result_print($result);
 
-/*
+
 //Download all items and count it
 $skip = 0;
 $limit = 1000;
@@ -98,7 +98,7 @@ while($result = $ssapi->items_last_updated("2016-04-18 15:59:00.000Z", NULL, SSA
 }
 echo "\n----------------------------------\nTOTAL: $prices_count (nz: $prices_count_not_zero)\n";
 print_r($domain_price_count);
-*/
+
 
 //$result = $ssapi->items(["item_number"=>6011], NULL, SSAPI_CONVERTER_WEB);
 //echo "<h2 style='color: blueviolet;'>SELECT 6011:</h2>\n";
