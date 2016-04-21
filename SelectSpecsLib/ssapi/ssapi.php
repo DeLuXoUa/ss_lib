@@ -228,7 +228,7 @@ class SSAPI {
             $data = [];
 
             if(isset($item['specifications'])) $data = array_merge($data, $item['specifications']);
-//            if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
+            if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
             if(isset($item['migration'])) $data = array_merge($data, $item['migration']);
 
             if(isset($item['_id'])) $data['_api_item_id'] = $item['_id'];
