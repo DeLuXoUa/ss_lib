@@ -178,7 +178,7 @@ class SSAPI {
         if(isset($data['frame_sizes'])) $result['options']['specifications']['frame_sizes'] = $data['frame_sizes'];
 
         //==> stock
-        if(isset($data['is_out_of_stock'])) $result['options']['stock']['is_out_of_stock'] = $data['is_out_of_stock'];
+//        if(isset($data['is_out_of_stock'])) $result['options']['stock']['is_out_of_stock'] = $data['is_out_of_stock'];
         if(isset($data['featured'])) $result['options']['stock']['featured'] = $data['featured'];
         if(isset($data['discontinued'])) $result['options']['stock']['discontinued'] = $data['discontinued'];
         if(isset($data['two_for_one'])) $result['options']['stock']['two_for_one'] = $data['two_for_one'];
@@ -408,7 +408,7 @@ class SSAPI {
         if(isset($data['webstock_rx_sunglasses_pd'])) $result['specifications']['pd'] = $data['webstock_rx_sunglasses_pd'];
         else $err[] = 'webstock_rx_sunglasses_pd is required';
 
-        if(isset($data['featured'])) $result['stock']['featured'] = $data['featured'];
+        if(isset($data['featured'])) $result['options']['stock']['featured'] = $data['featured'];
         else $err[] = 'featured is required';
 
         if(isset($data['webstock_tempdesc']) or is_null($data['webstock_tempdesc'])) $result['migration']['item_info'] = $data['webstock_tempdesc'];
@@ -615,7 +615,7 @@ class SSAPI {
         if(isset($data['webstock_twoforone'])) {
             if ($data['webstock_twoforone'] === 'YES' || $data['webstock_twoforone'] === true) {
                 $result['categories'][] = '2 for 1';
-                $result['two_for_one'] = true;
+                $result['options']['stock']['two_for_one'] = true;
             }
         }
 
