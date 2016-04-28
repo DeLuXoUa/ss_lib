@@ -231,6 +231,8 @@ class SSAPI {
             if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
             if(isset($item['migration'])) $data = array_merge($data, $item['migration']);
 
+            if(!isset($item['dateadded']) || !$item['dateadded']) $data['item_added'] = time();
+
             if(isset($item['_id'])) $data['_api_item_id'] = $item['_id'];
             if(isset($item['model_name'])) $data['model_name'] = $item['model_name'];
             if(isset($item['supplier_name'])) $data['supplier_name'] = $item['supplier_name'];
@@ -593,23 +595,28 @@ class SSAPI {
         // recognize new items (added <= 3 months ago), add them category 'new'
         if(isset($data['webstock_dateadded'])) {
 
-            if(isset($data['webstock_dateadded'])) $result['migration']['item_added'] = $data['webstock_dateadded'];
-
-            $added = strtotime($data['webstock_dateadded']);
-
-            if ($added >= strtotime('-3 month')) {
+            if(is_null($data['webstock_dateadded'])) {
                 $result['categories'][] = 'New Items';
-            }
+            } else {
+                $result['migration']['item_added'] = $data['webstock_dateadded'];
 
-            if($result['migration']['item_added'] == ''){
-                $err[] = 'webstock_dateadded is cant be empty';
-            } elseif($result['migration']['item_added'] == 'NULL'){
-                $err[] = 'webstock_dateadded is cant be NULL';
-            } elseif (!$added || ($added > (time()+43200))) { //+12 hours for ignore timezone differences
-                $err[] = 'webstock_dateadded is cant be in future';
+                $added = strtotime($data['webstock_dateadded']);
+
+                if ($added >= strtotime('-3 month')) {
+                    $result['categories'][] = 'New Items';
+                }
+
+                if ($result['migration']['item_added'] == '') {
+                    $err[] = 'webstock_dateadded is cant be empty';
+                } elseif ($result['migration']['item_added'] == 'NULL') {
+                    $err[] = 'webstock_dateadded is cant be NULL';
+                } elseif (!$added || ($added > (time() + 43200))) { //+12 hours for ignore timezone differences
+                    $err[] = 'webstock_dateadded is cant be in future';
+                }
             }
+        } else {
+            $result['categories'][] = 'New Items';
         }
-        else $err[] = 'webstock_dateadded is required';
 
         // promo 2 for 1 Added into category
         if(isset($data['webstock_twoforone'])) {
