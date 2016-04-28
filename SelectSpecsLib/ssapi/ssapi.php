@@ -605,7 +605,7 @@ class SSAPI {
                 $err[] = 'webstock_dateadded is cant be empty';
             } elseif($result['migration']['item_added'] == 'NULL'){
                 $err[] = 'webstock_dateadded is cant be NULL';
-            } elseif (!$added || ($added > time())) {
+            } elseif (!$added || ($added > (time()+43200))) { //+12 hours for ignore timezone differences
                 $err[] = 'webstock_dateadded is cant be in future';
             }
         }
