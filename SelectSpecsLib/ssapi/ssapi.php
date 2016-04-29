@@ -231,7 +231,7 @@ class SSAPI {
             if(isset($item['stock'])) $data = array_merge($data, $item['stock']);
             if(isset($item['migration'])) $data = array_merge($data, $item['migration']);
 
-            if(!isset($item['dateadded']) || !$item['dateadded']) $data['item_added'] = time();
+            if(!isset($item['dateadded']) || !$item['dateadded']) $data['item_added'] = date("Y-m-d H:i:s");
 
             if(isset($item['_id'])) $data['_api_item_id'] = $item['_id'];
             if(isset($item['model_name'])) $data['model_name'] = $item['model_name'];

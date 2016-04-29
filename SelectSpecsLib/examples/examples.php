@@ -1,5 +1,6 @@
 <pre>
 <?php
+
 //include(dirname(__FILE__) . '/profiler.php');
 include(dirname(__FILE__) . '/../include.php');
 
