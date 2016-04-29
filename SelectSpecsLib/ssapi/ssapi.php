@@ -15,7 +15,7 @@ class SSAPI {
     private $ex_times_log = array();
     private $client_id = null;
     private $protocol_version = 2;
-    private $timeout = 15000;
+    private $timeout = 30000;
     public $logger = null;
 
     function __construct($host, $port, $auth_key_id, $auth_token, $auth_group_id, $custom_client_id, $timeout = 15, $mode = NULL, $logger_params = null){

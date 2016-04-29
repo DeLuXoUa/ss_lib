@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
+    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="dateadded fix">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
@@ -57,8 +57,8 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="233" column="94" selection-start-line="233" selection-start-column="94" selection-end-line="233" selection-end-column="94" />
+            <state relative-caret-position="189">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
                 <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -496,7 +496,7 @@
       <workItem from="1458813103601" duration="26753000" />
       <workItem from="1459783774299" duration="56826000" />
       <workItem from="1461162859851" duration="15843000" />
-      <workItem from="1461665684091" duration="4338000" />
+      <workItem from="1461665684091" duration="5676000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -715,11 +715,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461829757632</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="dateadded fix">
+      <created>1461858510889</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1461858510889</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133235000" />
+    <option name="totallyTimeSpent" value="134573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -776,7 +783,8 @@
     <MESSAGE value="options stock fix in converter" />
     <MESSAGE value="examples" />
     <MESSAGE value="webstock_dateadded fix +13 hours" />
-    <option name="LAST_COMMIT_MESSAGE" value="webstock_dateadded fix +13 hours" />
+    <MESSAGE value="dateadded fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="dateadded fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1317,8 +1325,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="233" column="94" selection-start-line="233" selection-start-column="94" selection-end-line="233" selection-end-column="94" />
+        <state relative-caret-position="189">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
             <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
