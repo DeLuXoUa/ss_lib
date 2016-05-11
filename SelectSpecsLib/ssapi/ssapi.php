@@ -270,11 +270,11 @@ class SSAPI {
                 if(isset($option['price_old'])) $option_data['price_old'] = (double)$option['price_old'];
                 else $option_data['price_old'] = $option['price'];
 
-                if(!isset($option['item_info'])) $option_data['item_info'] = '';
-                if(!isset($option['supp_name'])) $option_data['supp_name'] = '';
-                if(!isset($option['no_large_image'])) $option_data['no_large_image'] = 0;
-                if(!isset($option['no_option_images'])) $option_data['no_option_images'] = 0;
-                if(!isset($option['product_information'])) $option_data['product_information'] = '';
+                if(!isset($option_data['item_info'])) $option_data['item_info'] = '';
+                if(!isset($option_data['supp_name'])) $option_data['supp_name'] = '';
+                if(!isset($option_data['no_large_image'])) $option_data['no_large_image'] = 0;
+                if(!isset($option_data['no_option_images'])) $option_data['no_option_images'] = 0;
+                if(!isset($option_data['product_information'])) $option_data['product_information'] = '';
                 
                 include dirname(__FILE__) . '/../config_groups.php';
                 foreach($GROUP_ALT_ID as $GAID){

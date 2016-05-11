@@ -61,7 +61,7 @@ function result_print($result){
 //result_print($result);
 
 //Select items by query
-$result = $ssapi->items(['item_number' => 8115], NULL, SSAPI_CONVERTER_WEB);
+$result = $ssapi->items(['item_number' => 7734], NULL, SSAPI_CONVERTER_WEB);
 echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
 echo "\n\n".count($result[0]['options'])."\n\n";
 var_dump($result);
