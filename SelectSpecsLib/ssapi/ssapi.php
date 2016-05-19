@@ -87,18 +87,16 @@ class SSAPI {
             ]);
 
             if(!$request2->isError()){
-//                print_r($request2->result);
                 if($request2->result){
-//                    $this->access = $request2->result['access'];
-                    if($this->mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
-                        $this->notif_connection->sendNotification('auth.nrm', [
-                            '_key_id' => $this->auth['_key_id'],
-                            '_group_id' => $this->auth['_group_id'],
-                            'token' => $this->auth['token'],
-                            'client_id' => $this->client_id,
-                            'socketTimeout' => $this->timeout
-                        ]);
-                    }
+//                    if($this->mode & SSAPI_CONNECTION_NOTIFYS_ENABLE){
+//                        $this->notif_connection->sendNotification('auth.nrm', [
+//                            '_key_id' => $this->auth['_key_id'],
+//                            '_group_id' => $this->auth['_group_id'],
+//                            'token' => $this->auth['token'],
+//                            'client_id' => $this->client_id,
+//                            'socketTimeout' => $this->timeout
+//                        ]);
+//                    }
 
                     return true;
                 }
@@ -796,7 +794,7 @@ class SSAPI {
         }
     }
 
-    private function send($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
+    public function send($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
         $method = $this->method_parser($method, $search, $data, $flags, $options);
         if($method) {
             return $this->message_sender(
@@ -808,7 +806,7 @@ class SSAPI {
         }
     }
 
-    private function last_updated($type, $from_date, $to_date, $flags = NULL, $options = NULL){
+    public function last_updated($type, $from_date, $to_date, $flags = NULL, $options = NULL){
         $search = array();
         $search['__service.client_id']['$ne'] = $this->client_id;
 
@@ -957,10 +955,16 @@ class SSAPI {
         return $this->send('users', $search, $data, $flags, $options);
     }
     public function user_profiles_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
-        return $this->last_updated('users.profiles', $from_date, $to_date, $flags, $options);
+        return $this->profiles_last_updated($from_date, $to_date, $flags = NULL, $options = NULL);
     }
     public function user_profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('users.profiles', $search, $data, $flags, $options);
+        return $this->profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL);
+    }
+    public function profiles_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('profiles', $from_date, $to_date, $flags, $options);
+    }
+    public function profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('profiles', $search, $data, $flags, $options);
     }
     public function gettext_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('gettext', $from_date, $to_date, $flags, $options);
@@ -993,44 +997,6 @@ class SSAPI {
     public function group_domains($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('groups.domains', $search, $data, $flags, $options);
     }
-//========================OMNIS================================
-    public function omnis_orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.orders', $search, $data, $flags, $options);
-    }
-    public function omnis_order_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.orders.items', $search, $data, $flags, $options);
-    }
-    public function omnis_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.items', $search, $data, $flags, $options);
-    }
-    public function omnis_item_images($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.items.images', $search, $data, $flags, $options);
-    }
-    public function omnis_item_translations($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.items.translations', $search, $data, $flags, $options);
-    }
-    public function omnis_item_categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.items.categories', $search, $data, $flags, $options);
-    }
-    public function omnis_users($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.users', $search, $data, $flags, $options);
-    }
-    public function omnis_user_profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.users.profiles', $search, $data, $flags, $options);
-    }
-    public function omnis_groups($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.groups', $search, $data, $flags, $options);
-    }
-    public function omnis_group_rules($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.groups.rules', $search, $data, $flags, $options);
-    }
-    public function omnis_group_domains($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('omnis.groups.domains', $search, $data, $flags, $options);
-    }
-    public function ping(){
-        $request = $this->connection->sendRequest('ping', NULL);
-    }
-
 };
 
 ?>
