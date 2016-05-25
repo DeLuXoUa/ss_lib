@@ -127,95 +127,6 @@ class SSAPI {
         else return false;
     }
 
-    private function web_json_encode_optionstoitems(&$data){
-
-        if(isset($data['rrp'])) $result['price_retailer'] = (float)$data['rrp'];
-        if(isset($data['price_old'])) $result['price_old'] = (float)$data['price_old'];
-        if(isset($data['price'])) $result['price'] = (float)$data['price'];
-
-        //==> __service
-        $result['__service'] = [];
-        $result['__service']['client_id'] = $this->client_id;
-        $result['__service']['_key_id'] = $this->auth['_key_id'];
-        $result['__service']['_group_id'] = $this->auth['_group_id'];
-
-        //==> group_prices
-        if(isset($data["prices_domain"])) {
-            $result['group_prices'] = [];
-            foreach($data["prices_domain"] as $k => $v) {
-                $gp = $this->domain_id_2_group_id($k);
-                foreach($gp as $gid) {
-                    $gpv = ["_group_id" => $gid];
-
-                    if(isset($v['price'])) { $gpv['price'] = $v['price']; }
-                    else { $gpv['price'] = $result['price']; }
-
-                    if(isset($v['price_old'])) $gpv['price_old'] = $v['price_old'];
-
-                    $result['group_prices'][] = $gpv;
-                }
-            }
-        }
-
-        //==> specifications
-        if(isset($data['base_curve'])) $result['specifications']['base_curve'] = $data['base_curve'];
-        if(isset($data['sph_min'])) $result['specifications']['sph_min'] = $data['sph_min'];
-        if(isset($data['sph_max'])) $result['specifications']['sph_max'] = $data['sph_max'];
-        if(isset($data['sph_step'])) $result['specifications']['sph_step'] = $data['sph_step'];
-        if(isset($data['cyl'])) $result['specifications']['cyl'] = $data['cyl'];
-        if(isset($data['axis'])) $result['specifications']['axis'] = $data['axis'];
-        if(isset($data['multifocaladd'])) $result['specifications']['multifocaladd'] = $data['multifocaladd'];
-        if(isset($data['warranty_period'])) $result['specifications']['warranty_period'] = $data['warranty_period'];
-        if(isset($data['pd'])) $result['specifications']['pd'] = $data['pd'];
-        if(isset($data['height'])) $result['specifications']['height'] = $data['height'];
-        if(isset($data['width'])) $result['specifications']['width'] = $data['width'];
-        if(isset($data['depth'])) $result['specifications']['depth'] = $data['depth'];
-        if(isset($data['weight'])) $result['specifications']['weight'] = $data['weight'];
-
-
-        if(isset($data['frame_sizes'])) $result['options']['specifications']['frame_sizes'] = $data['frame_sizes'];
-
-        //==> stock
-//        if(isset($data['is_out_of_stock'])) $result['options']['stock']['is_out_of_stock'] = $data['is_out_of_stock'];
-        if(isset($data['featured'])) $result['options']['stock']['featured'] = $data['featured'];
-        if(isset($data['discontinued'])) $result['options']['stock']['discontinued'] = $data['discontinued'];
-        if(isset($data['two_for_one'])) $result['options']['stock']['two_for_one'] = $data['two_for_one'];
-
-
-        if(isset($data['colours'])) $result['migrations']['colours'] = $data['colours'];
-        if(isset($data['supplier_description'])) $result['description'] = $data['supplier_description'];
-        if(isset($data['option_best_status'])) $result['status'] = $data['option_best_status'];
-        if(isset($data['model_name'])) $result['model_name'] = $data['model_name'];
-        if(isset($data['supplier_name'])) $result['supplier_name'] = $data['supplier_name'];
-        if(isset($data['designer_name'])) $result['designer_name'] = $data['designer_name'];
-        if(isset($data['brand_name'])) $result['brand_name'] = $data['brand_name'];
-        if(isset($data['category_names'])) $result['categories'] = $data['category_names'];
-        if(isset($data['tab'])) $result['main_category']=$data['tab'];
-        if(isset($data['item_id'])) $result['item_id']=$data['item_id'];
-        if(isset($data['option_id'])) $result['option_id']=$data['option_id'];
-
-        //==> migration
-
-        if(isset($data['item_added'])) $result['migration']['item_added'] = $data['item_added'];
-        if(isset($data['supp_name'])) $result['migration']['supp_name'] = $data['supp_name'];
-        if(isset($data['no_large_image'])) $result['migration']['no_large_image'] = $data['no_large_image'];
-        if(isset($data['no_option_images'])) $result['migration']['no_option_images'] = $data['no_option_images'];
-        if(isset($data['product_information'])) $result['migration']['product_information'] = $data['product_information'];
-        if(isset($data['is_modified'])) $result['migration']['is_modified'] = $data['is_modified'];
-        if(isset($data['item_info'])) $result['migration']['item_info'] = $data['item_info'];
-        if(isset($data['designer_id'])) $result['migration']['designer_id'] = $data['designer_id'];
-        if(isset($data['default_option_order'])) $result['migration']['default_option_order'] = $data['default_option_order'];
-        if(isset($data['tab_id'])) $result['migration']['tab_id'] = $data['tab_id'];
-        if(isset($data['experiment_key'])) $result['migration']['experiment_key'] = $data['experiment_key'];
-
-        //==> options
-        if(isset($data['option_description'])) $result['options']['option_description'] = $data['option_description'];
-        if(isset($data['option_name'])) $result['options']['option_name'] = $data['option_name'];
-        if(isset($data['option_order'])) $result['options']['option_order'] = $data['option_order'];
-
-        return $result;
-    }
-
     public function web_json_decode_fromitems(&$items){
         $result = [];
         $items_i=0;
@@ -859,16 +770,169 @@ class SSAPI {
         return $this->send($type, $search, NULL, SSAPI_AGGREGATOR, NULL);
     }
 
+    public function web_json_encode_orders(
+        &$data, //pointer to source data for fastest parsing and safest for memory  
+        $isMulti //flag what mean is array of items or just one value
+    ){
+        
+        if($isMulti){ //if is array - parsing via recursive method of itself calling
+            foreach($data as $k => $v){
+                if(!$this->web_json_encode_orders($data[$k], FALSE)){
+                    return false;
+                }
+            }
+            return $data;
+        }
+
+        if(isset($data['id'])) $data['order_number'] = $data['id'];
+        if(isset($data['user_id'])) $data['user_number'] = $data['user_id'];
+        if(isset($data['profile_id'])) $data['profile_number'] = $data['profile_id'];
+
+        unset($data['id']);
+        unset($data['user_id']);
+        unset($data['profile_id']);
+
+        if(isset($data['domain_id'])) { $data['migration']['domain_id'] = $data['domain_id']; unset($data['domain_id']); }
+        if(isset($data['store_id'])) { $data['migration']['store_id'] = $data['store_id']; unset($data['store_id']); }
+        if(isset($data['staff_id'])) { $data['migration']['staff_id'] = $data['staff_id']; unset($data['staff_id']); }
+        if(isset($data['ipn_user_data'])) { $data['migration']['ipn_user_data'] = $data['ipn_user_data']; unset($data['ipn_user_data']); }
+        if(isset($data['ipn_email_sent'])) { $data['migration']['ipn_email_sent'] = $data['ipn_email_sent']; unset($data['ipn_email_sent']); }
+        if(isset($data['checkout_page_email_sent'])) { $data['migration']['checkout_page_email_sent'] = $data['checkout_page_email_sent']; unset($data['checkout_page_email_sent']); }
+        if(isset($data['checkout_page_visited'])) { $data['migration']['checkout_page_visited'] = $data['checkout_page_visited']; unset($data['checkout_page_visited']); }
+        if(isset($data['reference'])) { $data['migration']['reference'] = $data['reference']; unset($data['reference']); }
+        if(isset($data['errors'])) { $data['migration']['errors'] = $data['errors']; unset($data['errors']); }
+        if(isset($data['parent_id'])) { $data['migration']['parent_id'] = $data['parent_id']; unset($data['parent_id']); }
+        if(isset($data['exported'])) { $data['migration']['exported'] = $data['exported']; unset($data['exported']); }
+        if(isset($data['currency_id'])) { $data['migration']['currency_id'] = $data['currency_id']; unset($data['currency_id']); }
+        if(isset($data['billing_address_id'])) { $data['migration']['billing_address_id'] = $data['billing_address_id']; unset($data['billing_address_id']); }
+        if(isset($data['reference'])) { $data['migration']['reference'] = $data['reference']; unset($data['reference']); }
+        if(isset($data['order_ip'])) { $data['migration']['order_ip'] = $data['order_ip']; unset($data['order_ip']); }
+        if(isset($data['delivery_method_id'])) { $data['migration']['delivery_method_id'] = $data['delivery_method_id']; unset($data['delivery_method_id']); }
+        if(isset($data['delivery_address_id'])) { $data['migration']['delivery_address_id'] = $data['delivery_address_id']; unset($data['delivery_address_id']); }
+        if(isset($data['addresschanged'])) { $data['migration']['addresschanged'] = $data['addresschanged']; unset($data['addresschanged']); }
+        if(isset($data['billing_address_id'])) { $data['migration']['billing_address_id'] = $data['billing_address_id']; unset($data['billing_address_id']); }
+
+        if(isset($data['checkout_at'])) { $data['dates']['checkout_at'] = $data['checkout_at']; unset($data['checkout_at']); }
+        if(isset($data['created_at'])) { $data['dates']['created_at'] = $data['created_at']; unset($data['created_at']); }
+        if(isset($data['updated_at'])) { $data['dates']['updated_at'] = $data['updated_at']; unset($data['updated_at']); }
+
+        if(isset($data['bill']['currency_id'])) { $data['bill']['currency_id'] = $data['currency_id']; unset($data['currency_id']); }
+        if(isset($data['bill']['final_total'])) { $data['bill']['final_total'] = $data['final_total']; unset($data['final_total']); }
+        if(isset($data['bill']['price_extra'])) { $data['bill']['price_extra'] = $data['price_extra']; unset($data['price_extra']); }
+        if(isset($data['bill']['total_save_two_for_one'])) { $data['bill']['total_save_two_for_one'] = $data['total_save_two_for_one']; unset($data['total_save_two_for_one']); }
+        if(isset($data['bill']['order_amount'])) { $data['bill']['order_amount'] = $data['order_amount']; unset($data['order_amount']); }
+        if(isset($data['bill']['promo_discount'])) { $data['bill']['promo_discount'] = $data['promo_discount']; unset($data['promo_discount']); }
+        if(isset($data['bill']['promo_code_id'])) { $data['bill']['promo_code_id'] = $data['promo_code_id']; unset($data['promo_code_id']); }
+        if(isset($data['bill']['pcode_value'])) { $data['bill']['pcode_value'] = $data['pcode_value']; unset($data['pcode_value']); }
+        if(isset($data['bill']['beauty_card'])) { $data['bill']['beauty_card'] = $data['beauty_card']; unset($data['beauty_card']); }
+        if(isset($data['bill']['shipping_cost'])) { $data['bill']['shipping_cost'] = $data['shipping_cost']; unset($data['shipping_cost']); }
+        if(isset($data['bill']['vat_perc'])) { $data['bill']['vat_perc'] = $data['vat_perc']; unset($data['vat_perc']); }
+        if(isset($data['bill']['rate'])) { $data['bill']['rate'] = $data['rate']; unset($data['rate']); }
+        if(isset($data['bill']['payment_record_id'])) { $data['bill']['payment_record_id'] = $data['payment_record_id']; unset($data['payment_record_id']); }
+        if(isset($data['bill']['payment_system_id'])) { $data['bill']['payment_system_id'] = $data['payment_system_id']; unset($data['payment_system_id']); }
+        if(isset($data['bill']['parent_id'])) { $data['bill']['parent_id'] = $data['parent_id']; unset($data['parent_id']); }
+        if(isset($data['bill']['code'])) { $data['bill']['code'] = $data['code']; unset($data['code']); }
+        if(isset($data['bill']['number'])) { $data['bill']['number'] = $data['number']; unset($data['number']); }
+
+        if(isset($data['items']) && $data['items']) {
+            foreach($data['items'] as $k => $v){
+
+                if(isset($v["item_id"])) { $data['items'][$k]["item_number"] = $v["item_id"]; unset($data['items'][$k]["item_id"]); }
+                if(isset($v["item_id"])) { $data['items'][$k]["ordered_item_number"] = $v["id"]; unset($data['items'][$k]["id"]); }
+                if(isset($v["item_id"])) { $data['items'][$k]["ordered_item_type"] = $v["type"]; unset($data['items'][$k]["type"]); }
+
+                if(isset($data['items'][$k]['prescription_id'])) unset($data['items'][$k]['prescription_id']);
+
+                if(isset($v['prescription']) && $v['prescription'] && isset($v['prescription']['id'])){
+                    $data['items'][$k]['prescription']['prescription_number'] = $v['prescription']['id'];
+                    unset($data['items'][$k]['prescription']['id']);
+                }
+
+            }
+        }
+
+        return $data;
+    }
+
+    public function web_json_decode_orders(
+        &$data, //pointer to source data for fastest parsing and safest for memory
+        $isMulti //flag what mean is array of items or just one value
+    ){
+
+        if($isMulti){ //if is array - parsing via recursive method of itself calling
+            foreach($data as $k => $v){
+                if(!$this->web_json_decode_orders($data[$k], FALSE)){
+                    return false;
+                }
+            }
+            return $data;
+        }
+
+        if(isset($data['order_number'])) $data['id'] = $data['order_number'];
+        if(isset($data['user_number'])) $data['user_id'] = $data['user_number'];
+        if(isset($data['profile_number'])) $data['profile_id'] = $data['profile_number'];
+
+        if(isset($data['migration'])) { $data = array_merge($data, $data['migration']); unset($data['migration']); }
+        if(isset($data['dates'])) { $data = array_merge($data, $data['dates']); unset($data['dates']); }
+        if(isset($data['bill'])) { $data = array_merge($data, $data['bill']); unset($data['bill']); }
+
+        if(isset($data['items']) && $data['items']) {
+            foreach($data['items'] as $k => $v) {
+
+                if(isset($v["item_number"])) $data['items'][$k]["item_id"] = $v["item_number"];
+                if(isset($v["ordered_item_number"])) $data['items'][$k]["id"] = $v["ordered_item_number"];
+                if(isset($v["ordered_item_type"])) $data['items'][$k]["type"] = $v["ordered_item_type"];
+
+                if(isset($v["order_number"])) $data['items'][$k]['order_id'] = $data['order_number'];
+                if(isset($v["user_number"])) $data['items'][$k]['user_id'] = $data['user_number'];
+                if(isset($v["profile_number"])) $data['items'][$k]['profile_id'] = $data['profile_number'];
+
+
+                if(isset($v['prescription']) && $v['prescription'] && isset($v['prescription']['id'])){
+
+                    if(isset($v['prescription']['prescription_number'])) {
+                        $data['items'][$k]['prescription_id'] = $v['prescription']['prescription_number'];
+                        $data['items'][$k]['prescription']['id'] = $v['prescription']['prescription_number'];
+                    }
+
+                    if(isset($data['profile_number'])) $data['items'][$k]['prescription']['profile_id'] = $data['profile_number'];
+                }
+
+            }
+        }
+
+        return $data;
+    }
+
+
 //===========================================================================================
 //=======================   P U B L I C   F U N C T I O N S   ===============================
 // *_last_updated - is function for search updates creates by another client
 //===========================================================================================
 
     public function orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        return $this->send('orders', $search, $data, $flags, $options);
+        if($data && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB))
+        {
+            $this->web_json_encode_orders($data, ($flags & SSAPI_MULTI_QUERY));
+        }
+
+        $result = $this->send('orders', $search, $data, $flags, $options);
+        if($result && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB)) {
+
+            if(is_null($data)) {
+                $result = $this->web_json_decode_orders($result, true);
+            } elseif(isset($result['result'])) {
+                $result['result'] = $this->web_json_decode_orders($result['result'], true);
+            }
+        }
+        return $result;
     }
     public function orders_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
-        return $this->last_updated('orders', $from_date, $to_date, $flags, $options);
+        $result = $this->last_updated('orders', $from_date, $to_date, $flags, $options);
+        if($result && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB)) {
+            $result = $this->web_json_decode_orders($result, true);
+        }
+        return $result;
     }
     public function order_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('orders.items', $search, $data, $flags, $options);
@@ -888,46 +952,13 @@ class SSAPI {
     }
 
     public function items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
-        if($data && !is_null($flags))
-        {
-            if($flags & SSAPI_CONVERTER_WEB) {
-                if ($flags & SSAPI_MULTI_QUERY) {
-                    foreach ($data as $k => $v) {
-                        $data[$k] = $this->web_json_encode($v);
-                    }
-                } else {
-                    $data = $this->web_json_encode($data);
-                }
-            } elseif($flags & SSAPI_CONVERTER_OMNIS) {
-                if($flags & SSAPI_MULTI_QUERY) {
-                    foreach ($data as $k => $v) {
-                        $data[$k] = $this->omnis_json_encode($v);
-                        if($data[$k]['result']){
-                            $data[$k] = $data[$k]['data'];
-                        } else {
-//                            print_r($data[$k]['errors']);
-                            $this->logger->error(["ss_no" => $data[$k]['ss_no'], "option_number" => $data[$k]['option_number'], "errors" => $data[$k]['errors']]);
-                            unset($data[$k]);
-                        }
-                    }
-                } else {
-                    $data = $this->omnis_json_encode($data);
-                    if($data['result']){
-                        $data=$data['data'];
-                    } else {
-//                        print_r($data['errors']);
-                        $this->logger->error(["ss_no" => $data['ss_no'], "option_id" => $data['option_id'], "errors" => $data['errors']]);
-                        return false;
-                    }
-                }
-            }
-        }
-
         $result = $this->send('items', $search, $data, $flags, $options);
-        if($result && !is_null($flags)) {
-            if($flags & SSAPI_CONVERTER_WEB) {
+        if($result && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB)) {
+            
+            if(is_null($data)) {
                 $result = $this->web_json_decode_fromitems($result);
-//                foreach ($result as $k => $v) { $result[$k] = $this->web_json_decode($v); }
+            } elseif(isset($result['result'])) {
+                $result['result'] = $this->web_json_decode_fromitems($result['result']);
             }
         }
         return $result;

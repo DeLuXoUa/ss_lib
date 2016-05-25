@@ -8,11 +8,11 @@ include(dirname(__FILE__) . '/../include.php');
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
     $ssapi = new SSAPI(
-        //"127.0.0.1",
-        "api.warder.tk", //port now is 8844
+        "127.0.0.1",
+        //"api.warder.tk", //port now is 8844
         //"ssapi.selectspecs.com",
-        //8843,
-        8844,
+        8843,
+        //8844,
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
@@ -36,12 +36,24 @@ function result_print($result){
     echo '<hr><p style="color: darkgoldenrod;">execution time is ', $ssapi->getLastTime(),' seconds</p><hr>';
 }
 
+//insert order
+//$data = json_decode(
+//    '{"id":"51523286","number":null,"code":"e35066f7f5452144a7fe89bdab6cd2db","parent_id":null,"payment_system_id":null,"payment_record_id":null,"profile_id":null,"order_ip":"81.136.23.229","delivery_address_id":null,"beauty_card":null,"billing_address_id":null,"currency_id":"1","rate":"1.00","vat_perc":"1.00000","shipping_cost":"5.95","exported":false,"delivery_method_id":null,"comments":null,"errors":"","checkout_at":null,"pcode_value":null,"promo_code_id":null,"promo_discount":"0.00","order_amount":"122.24","status":"","final_total":"128.19","addresschanged":false,"reference":null,"user_id":null,"price_extra":null,"extra_comment":null,"domain_id":null,"checkout_page_visited":"0","checkout_page_email_sent":"0","ipn_email_sent":"0","ipn_user_data":null,"total_save_two_for_one":"0.00","staff_id":null,"store_id":null,"created_at":"2016-05-24 10:12:24","updated_at":"2016-05-24 10:12:24","domain":"selectspecs.com","items":[{"id":"1131102","type":"ordinary","order_id":"51523286","tab_id":"1","designer_id":"246","status":"IN_STOCK","weight":"6","height":"45","prescription_id":"1287293","quantity":"1","item_id":"51950","option_order":"4","arm":"145","bridge":"21","lens_width":"49","item_description":"BOSS 0681","option_name":"OHQ","option_description":"BLCK HAVN","supplier_name":"SAFI","supplier_description":null,"price":"122.24","rel_id":null,"frame_size":"1","count_2_for_1":"0","created_at":"2016-05-24 10:12:24","prescription":{"id":"1287293","profile_id":null,"name":null,"R_Sphere":null,"R_Cylinder":null,"R_Axis":null,"L_Sphere":null,"L_Cylinder":null,"L_Axis":null,"R_Sphere2":null,"R_Cylinder2":null,"R_Axis2":null,"L_Sphere2":null,"L_Cylinder2":null,"L_Axis2":null,"R_Sphere3":null,"R_Cylinder3":null,"R_Axis3":null,"L_Sphere3":null,"L_Cylinder3":null,"L_Axis3":null,"R_Addition":null,"L_Addition":null,"PD":null,"pdcheckType":null,"prism_re_dir":null,"prism_re_pow":null,"prism_le_dir":null,"prism_le_pow":null,"faxed":null,"posted":null,"emailed":null,"add_info":null,"use_id":"1","lens_id":null,"tint_id":"99","tint_level_id":null,"rx":false,"attached_filename":null,"amazon_etag":null,"reglaze_info":null,"lens_diameter":null,"vertical_height_b":null,"vertical_height_p":null,"presc_use_sub":null,"presc_sun":false,"multifocaladd":null,"colours":null,"created_at":"2016-05-24 10:12:24","updated_at":"2016-05-24 10:12:24"}},{"id":"1131140","type":"ordinary","order_id":"51523286","tab_id":"1","designer_id":"246","status":"IN_STOCK","weight":"6","height":"45","prescription_id":"1287365","quantity":"1","item_id":"51950","option_order":"4","arm":"145","bridge":"21","lens_width":"49","item_description":"BOSS 0681","option_name":"OHQ","option_description":"BLCK HAVN","supplier_name":"SAFI","supplier_description":null,"price":"122.24","rel_id":null,"frame_size":"1","count_2_for_1":"0","created_at":"2016-05-24 11:00:28","prescription":{"id":"1287365","profile_id":null,"name":null,"R_Sphere":null,"R_Cylinder":null,"R_Axis":null,"L_Sphere":null,"L_Cylinder":null,"L_Axis":null,"R_Sphere2":null,"R_Cylinder2":null,"R_Axis2":null,"L_Sphere2":null,"L_Cylinder2":null,"L_Axis2":null,"R_Sphere3":null,"R_Cylinder3":null,"R_Axis3":null,"L_Sphere3":null,"L_Cylinder3":null,"L_Axis3":null,"R_Addition":null,"L_Addition":null,"PD":null,"pdcheckType":null,"prism_re_dir":null,"prism_re_pow":null,"prism_le_dir":null,"prism_le_pow":null,"faxed":null,"posted":null,"emailed":null,"add_info":null,"use_id":"1","lens_id":null,"tint_id":"99","tint_level_id":null,"rx":false,"attached_filename":null,"amazon_etag":null,"reglaze_info":null,"lens_diameter":null,"vertical_height_b":null,"vertical_height_p":null,"presc_use_sub":null,"presc_sun":false,"multifocaladd":null,"colours":null,"created_at":"2016-05-24 11:00:28","updated_at":"2016-05-24 11:00:28"}}]}',
+//    true);
+//
+//$result = $ssapi->orders( NULL, $data, SSAPI_CONVERTER_WEB );
+//echo "<h2 style='color: blueviolet;'>ORDER INSERT RESULT:</h2>";
+//print_r($result);
+
+//Select orders
+$result = $ssapi->orders(["order_number"=>51523286], NULL, SSAPI_CONVERTER_WEB );
+echo "<h2 style='color: blueviolet;'>ORDERS:</h2>";
+print_r($result);
+
 //Select profiles by query
-$result = $ssapi->profiles(NULL, ["user_number"]);
-$result = $ssapi->profiles();
-echo "<h2 style='color: blueviolet;'>PROFILES:</h2>";
-echo "\n\n".count($result[0]['options'])."\n\n";
-var_dump($result);
+//$result = $ssapi->profiles(["user_number"=>105710]);
+//echo "<h2 style='color: blueviolet;'>PROFILES:</h2>";
+//result_print($result);
 
 //Insert items
 //include(dirname(__FILE__).'/items/item4.php');
