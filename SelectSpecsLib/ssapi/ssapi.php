@@ -816,23 +816,23 @@ class SSAPI {
         if(isset($data['created_at'])) { $data['dates']['created_at'] = $data['created_at']; unset($data['created_at']); }
         if(isset($data['updated_at'])) { $data['dates']['updated_at'] = $data['updated_at']; unset($data['updated_at']); }
 
-        if(isset($data['bill']['currency_id'])) { $data['bill']['currency_id'] = $data['currency_id']; unset($data['currency_id']); }
-        if(isset($data['bill']['final_total'])) { $data['bill']['final_total'] = $data['final_total']; unset($data['final_total']); }
-        if(isset($data['bill']['price_extra'])) { $data['bill']['price_extra'] = $data['price_extra']; unset($data['price_extra']); }
-        if(isset($data['bill']['total_save_two_for_one'])) { $data['bill']['total_save_two_for_one'] = $data['total_save_two_for_one']; unset($data['total_save_two_for_one']); }
-        if(isset($data['bill']['order_amount'])) { $data['bill']['order_amount'] = $data['order_amount']; unset($data['order_amount']); }
-        if(isset($data['bill']['promo_discount'])) { $data['bill']['promo_discount'] = $data['promo_discount']; unset($data['promo_discount']); }
-        if(isset($data['bill']['promo_code_id'])) { $data['bill']['promo_code_id'] = $data['promo_code_id']; unset($data['promo_code_id']); }
-        if(isset($data['bill']['pcode_value'])) { $data['bill']['pcode_value'] = $data['pcode_value']; unset($data['pcode_value']); }
-        if(isset($data['bill']['beauty_card'])) { $data['bill']['beauty_card'] = $data['beauty_card']; unset($data['beauty_card']); }
-        if(isset($data['bill']['shipping_cost'])) { $data['bill']['shipping_cost'] = $data['shipping_cost']; unset($data['shipping_cost']); }
-        if(isset($data['bill']['vat_perc'])) { $data['bill']['vat_perc'] = $data['vat_perc']; unset($data['vat_perc']); }
-        if(isset($data['bill']['rate'])) { $data['bill']['rate'] = $data['rate']; unset($data['rate']); }
-        if(isset($data['bill']['payment_record_id'])) { $data['bill']['payment_record_id'] = $data['payment_record_id']; unset($data['payment_record_id']); }
-        if(isset($data['bill']['payment_system_id'])) { $data['bill']['payment_system_id'] = $data['payment_system_id']; unset($data['payment_system_id']); }
-        if(isset($data['bill']['parent_id'])) { $data['bill']['parent_id'] = $data['parent_id']; unset($data['parent_id']); }
-        if(isset($data['bill']['code'])) { $data['bill']['code'] = $data['code']; unset($data['code']); }
-        if(isset($data['bill']['number'])) { $data['bill']['number'] = $data['number']; unset($data['number']); }
+        if(isset($data['currency_id'])) { $data['bill']['currency_id'] = $data['currency_id']; unset($data['currency_id']); }
+        if(isset($data['final_total'])) { $data['bill']['final_total'] = $data['final_total']; unset($data['final_total']); }
+        if(isset($data['price_extra'])) { $data['bill']['price_extra'] = $data['price_extra']; unset($data['price_extra']); }
+        if(isset($data['total_save_two_for_one'])) { $data['bill']['total_save_two_for_one'] = $data['total_save_two_for_one']; unset($data['total_save_two_for_one']); }
+        if(isset($data['order_amount'])) { $data['bill']['order_amount'] = $data['order_amount']; unset($data['order_amount']); }
+        if(isset($data['promo_discount'])) { $data['bill']['promo_discount'] = $data['promo_discount']; unset($data['promo_discount']); }
+        if(isset($data['promo_code_id'])) { $data['bill']['promo_code_id'] = $data['promo_code_id']; unset($data['promo_code_id']); }
+        if(isset($data['pcode_value'])) { $data['bill']['pcode_value'] = $data['pcode_value']; unset($data['pcode_value']); }
+        if(isset($data['beauty_card'])) { $data['bill']['beauty_card'] = $data['beauty_card']; unset($data['beauty_card']); }
+        if(isset($data['shipping_cost'])) { $data['bill']['shipping_cost'] = $data['shipping_cost']; unset($data['shipping_cost']); }
+        if(isset($data['vat_perc'])) { $data['bill']['vat_perc'] = $data['vat_perc']; unset($data['vat_perc']); }
+        if(isset($data['rate'])) { $data['bill']['rate'] = $data['rate']; unset($data['rate']); }
+        if(isset($data['payment_record_id'])) { $data['bill']['payment_record_id'] = $data['payment_record_id']; unset($data['payment_record_id']); }
+        if(isset($data['payment_system_id'])) { $data['bill']['payment_system_id'] = $data['payment_system_id']; unset($data['payment_system_id']); }
+        if(isset($data['parent_id'])) { $data['bill']['parent_id'] = $data['parent_id']; unset($data['parent_id']); }
+        if(isset($data['code'])) { $data['bill']['code'] = $data['code']; unset($data['code']); }
+        if(isset($data['number'])) { $data['bill']['number'] = $data['number']; unset($data['number']); }
 
         if(isset($data['items']) && $data['items']) {
             foreach($data['items'] as $k => $v){

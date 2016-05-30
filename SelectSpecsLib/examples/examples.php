@@ -45,10 +45,15 @@ function result_print($result){
 //echo "<h2 style='color: blueviolet;'>ORDER INSERT RESULT:</h2>";
 //print_r($result);
 
-//Select orders
-$result = $ssapi->orders(["order_number"=>51523286], NULL, SSAPI_CONVERTER_WEB );
+//Insert user
+$result = $ssapi->users(NULL, ["hashedPassword"=>"asd@asd.com", "login"=>['email'=>'asdasd'], 'user_number'=>12321] );
 echo "<h2 style='color: blueviolet;'>ORDERS:</h2>";
 print_r($result);
+
+//Select orders
+//$result = $ssapi->orders(["order_number"=>51523286], NULL, SSAPI_CONVERTER_WEB );
+//echo "<h2 style='color: blueviolet;'>ORDERS:</h2>";
+//print_r($result);
 
 //Select profiles by query
 //$result = $ssapi->profiles(["user_number"=>105710]);
