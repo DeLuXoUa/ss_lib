@@ -8,11 +8,11 @@ include(dirname(__FILE__) . '/../include.php');
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
     $ssapi = new SSAPI(
-        "127.0.0.1",
-        //"api.warder.tk", //port now is 8844
+        //"127.0.0.1",
+        "api.omnismain.com", //port now is 8844
         //"ssapi.selectspecs.com",
-        8843,
-        //8844,
+        //8843,
+        8844,
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
@@ -45,10 +45,16 @@ function result_print($result){
 //echo "<h2 style='color: blueviolet;'>ORDER INSERT RESULT:</h2>";
 //print_r($result);
 
+//profiles
+//$result = $ssapi->profiles(["profile_number" => 342690], NULL );
+$result = $ssapi->profiles(["__service.updated" => ['$gt'=>'2015-05-27']], NULL );
+echo "<h2 style='color: blueviolet;'>Profiles:</h2>";
+var_dump($result);
+
 //Insert user
-$result = $ssapi->users(NULL, ["hashedPassword"=>"asd@asd.com", "login"=>['email'=>'asdasd'], 'user_number'=>12321] );
-echo "<h2 style='color: blueviolet;'>ORDERS:</h2>";
-print_r($result);
+//$result = $ssapi->users(NULL, ["hashedPassword"=>"asd@asd.com", "login"=>['email'=>'asdasd'], 'user_number'=>12321] );
+//echo "<h2 style='color: blueviolet;'>ORDERS:</h2>";
+//print_r($result);
 
 //Select orders
 //$result = $ssapi->orders(["order_number"=>51523286], NULL, SSAPI_CONVERTER_WEB );

@@ -452,7 +452,9 @@ class SSAPI {
 
                 if (strpos($domain_price, "X") !== false) {
                     $arr[$domain_id]['price'] = 0;
-                    $arr[$domain_id]['price_old'] = $result['options']['price'];
+
+                    if(isset($result['options']['price_old'])) $arr[$domain_id]['price_old'] = $result['options']['price_old'];
+                    else $arr[$domain_id]['price_old'] = $result['options']['price'];
                 } else {
                     $percent = NULL;
                     $round = NULL;
@@ -473,7 +475,9 @@ class SSAPI {
                         }
                     }
 
-                    $arr[$domain_id]['price_old'] = $result['options']['price'];
+                    if(isset($result['options']['price_old'])) $arr[$domain_id]['price_old'] = $result['options']['price_old'];
+                    else $arr[$domain_id]['price_old'] = $result['options']['price'];
+
                     $arr[$domain_id]['price'] = $result['options']['price'];
 
                     if (!is_null($percent) && $percent) {

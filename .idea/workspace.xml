@@ -39,21 +39,22 @@
       <file leaf-file-name="examples.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="114" selection-start-line="48" selection-start-column="114" selection-end-line="48" selection-end-column="114" />
+            <state relative-caret-position="272">
+              <caret line="49" column="74" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="74" />
               <folding>
-                <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-                <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+                <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+                <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
               </folding>
             </state>
           </provider>
@@ -62,15 +63,14 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="848" column="17" selection-start-line="848" selection-start-column="17" selection-end-line="848" selection-end-column="17" />
+            <state relative-caret-position="569">
+              <caret line="481" column="0" selection-start-line="481" selection-start-column="0" selection-end-line="481" selection-end-column="0" />
               <folding>
                 <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="e#34482#34770#0#PHP" expanded="false" />
+                <element signature="e#34750#35038#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,6 +97,11 @@
       <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="master" />
     </push-targets>
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -122,9 +127,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="width" value="1318" />
-    <option name="height" value="775" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -151,9 +157,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,13 +251,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -521,19 +527,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
-      <setting name="environment" value="" />
-      <setting name="specsToExecute" value="" />
-      <setting name="tags" value="" />
-      <setting name="parallelNodes" value="" />
-      <setting name="execInParallel" value="false" />
-      <setting name="programParameters" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="moduleName" value="" />
-      <envMap />
-      <setting name="rowsRange" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -609,7 +602,10 @@
       <workItem from="1462979620794" duration="5903000" />
       <workItem from="1464003078924" duration="13034000" />
       <workItem from="1464171563610" duration="8453000" />
-      <workItem from="1464436378316" duration="1353000" />
+      <workItem from="1464436378316" duration="4208000" />
+      <workItem from="1464688074324" duration="1128000" />
+      <workItem from="1464767542229" duration="19000" />
+      <workItem from="1465226375168" duration="101000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -877,26 +873,34 @@
       <option name="project" value="LOCAL" />
       <updated>1464169062600</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="bill error fix">
+      <created>1464598853931</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1464598853931</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169162000" />
+    <option name="totallyTimeSpent" value="173265000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="0" width="1318" height="775" extended-state="0" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5031746" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.4968254" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24846625" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -907,7 +911,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1358" y="-1160" width="1096" height="780" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1365" y="-272" width="1096" height="1906" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -942,7 +947,8 @@
     <MESSAGE value="timeout = 30sec" />
     <MESSAGE value="timeout = 60sec" />
     <MESSAGE value="option_data must be not option" />
-    <option name="LAST_COMMIT_MESSAGE" value="option_data must be not option" />
+    <MESSAGE value="bill error fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bill error fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -960,10 +966,9 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -981,18 +986,19 @@
         <state relative-caret-position="1088">
           <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
           <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1004,44 +1010,32 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1053,10 +1047,9 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1083,19 +1076,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/profiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1103,36 +1084,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1144,10 +1114,9 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1166,19 +1135,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/profiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1186,36 +1143,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1227,10 +1173,9 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1249,19 +1194,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/profiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1269,36 +1202,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1310,10 +1232,9 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1332,19 +1253,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/profiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1364,18 +1273,19 @@
         <state relative-caret-position="0">
           <caret line="46" column="102" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="102" />
           <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1387,10 +1297,9 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1431,38 +1340,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/Docs/changelog.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1496,27 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="114" selection-start-line="48" selection-start-column="114" selection-end-line="48" selection-end-column="114" />
-          <folding>
-            <marker date="1464172473227" expanded="true" signature="965:974" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="1072:1093" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5076:5094" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5295:5313" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5468:5486" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="5625:5643" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="6869:6887" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10014:10032" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10318:10336" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10476:10485" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10688:10699" placeholder="..." />
-            <marker date="1464172473227" expanded="true" signature="10849:10865" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/flags.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1525,17 +1391,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="49" column="74" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="74" />
+          <folding>
+            <marker date="1464605183361" expanded="true" signature="969:978" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="1076:1097" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5080:5098" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5327:5345" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5538:5556" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5713:5731" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="5870:5888" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="7114:7132" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10259:10277" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10563:10581" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10721:10730" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="10933:10944" ph="..." />
+            <marker date="1464605183361" expanded="true" signature="11094:11110" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="848" column="17" selection-start-line="848" selection-start-column="17" selection-end-line="848" selection-end-column="17" />
+        <state relative-caret-position="569">
+          <caret line="481" column="0" selection-start-line="481" selection-start-column="0" selection-end-line="481" selection-end-column="0" />
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#34482#34770#0#PHP" expanded="false" />
+            <element signature="e#34750#35038#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
