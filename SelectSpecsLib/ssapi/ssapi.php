@@ -353,7 +353,7 @@ class SSAPI {
             if (strpos($data['color_name'], ';') === false) {
                 $result['options']['stock']['discontinued'] = true;
                 $result['options']['order'] = 0;
-                $result['options']['name'] = $data['color_name'];
+                $result['options']['name'] = trim($data['color_name']);
             } else {
                 $result['options']['stock']['discontinued'] = false;
 
