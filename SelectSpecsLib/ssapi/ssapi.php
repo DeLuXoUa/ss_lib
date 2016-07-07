@@ -293,6 +293,10 @@ class SSAPI {
             $result['options']['price_old'] = (float)$data['old_price'];
             if (!is_numeric($result['options']['price_old'])) { $err[] = 'old_price is not numeric'; }
         }
+        
+       if(isset($data['map'])) {
+            $result['options']['map'] = $data['map'];
+        }
 
         if(isset($data['brand'])) {
             $result['designer_name'] = $data['brand'];
