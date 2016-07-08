@@ -838,6 +838,19 @@ class SSAPI {
         if(isset($data['code'])) { $data['bill']['code'] = $data['code']; unset($data['code']); }
         if(isset($data['number'])) { $data['bill']['number'] = $data['number']; unset($data['number']); }
 
+        //if(isset($data['info'])
+        //if(isset($data['avs_info'])
+        //if(isset($data['invoice_no'])
+        //if(isset($data['order_no'])
+
+        if(isset($data['agent_id'])) { $data['migration.agent_id'] = $data['agent_id']; unset($data['agent_id']); }
+
+        if(isset($data['new_netbanx_ref'])) { $data['bill.new_netbanx_ref']=$data['agent_id']; unset($data['agent_id']); }
+        if(isset($data['prom_term'])) { $data['bill.prom_term']=$data['agent_id']; unset($data['agent_id']); }
+        if(isset($data['shippingband'])) { $data['bill.shippingband']=$data['agent_id']; unset($data['agent_id']); }
+        if(isset($data['agent_id'])) { $data['bill.agent_id']=$data['agent_id']; unset($data['agent_id']); }
+        if(isset($data['address_store_id'])) { $data['bill.address_store_id']=$data['agent_id']; unset($data['agent_id']); }
+        
         if(isset($data['items']) && $data['items']) {
             foreach($data['items'] as $k => $v){
 

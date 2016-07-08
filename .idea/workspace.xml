@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
     <ignored path="ss-lib.iws" />
@@ -63,12 +62,11 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="357" column="44" selection-start-line="357" selection-start-column="44" selection-end-line="357" selection-end-column="44" />
+            <state relative-caret-position="179">
+              <caret line="187" column="24" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
               <folding>
                 <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="e#34756#35044#0#PHP" expanded="false" />
               </folding>
@@ -160,7 +158,56 @@
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectSpecsLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectSpecsLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="PackagesPane" />
     </panes>
@@ -518,7 +565,7 @@
       <workItem from="1464767542229" duration="19000" />
       <workItem from="1465226375168" duration="752000" />
       <workItem from="1466077624759" duration="3032000" />
-      <workItem from="1467193207208" duration="326000" />
+      <workItem from="1467193207208" duration="4968000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -800,11 +847,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465226492216</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="color_name trim fn added&#10;">
+      <created>1467193547672</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1467193547672</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177274000" />
+    <option name="totallyTimeSpent" value="181916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -820,9 +874,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.4968254" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24810892" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -869,7 +923,8 @@
     <MESSAGE value="option_data must be not option" />
     <MESSAGE value="bill error fix" />
     <MESSAGE value="price old fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="price old fix" />
+    <MESSAGE value="color_name trim fn added&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="color_name trim fn added&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -887,7 +942,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -931,7 +985,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -968,7 +1021,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -1035,7 +1087,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -1094,7 +1145,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -1153,7 +1203,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -1218,7 +1267,6 @@
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
@@ -1336,12 +1384,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="357" column="44" selection-start-line="357" selection-start-column="44" selection-end-line="357" selection-end-column="44" />
+        <state relative-caret-position="179">
+          <caret line="187" column="24" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="e#34756#35044#0#PHP" expanded="false" />
           </folding>
