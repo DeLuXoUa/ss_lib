@@ -350,7 +350,7 @@ class SSAPI {
         if(isset($data['webstock_warrantyperiod'])) $result['specifications']['warranty_period'] = $data['webstock_warrantyperiod'];
         else $err[] = 'webstock_warrantyperiod is required';
 
-        if(isset($data['webstock_parsesearch']) or is_null($data['webstock_parsesearch'])) $result['migration']['supp_name'] = $data['webstock_parsesearch'];
+        if(isset($data['webstock_parsesearch']) or is_null($data['webstock_parsesearch'])) $result['migration']['supp_name'] = ( $data['webstock_parsesearch'] ? $data['webstock_parsesearch'] : $data['model']);
         else $err[] = 'webstock_parsesearch is required';
 
         if(isset($data['color_name'])) {
