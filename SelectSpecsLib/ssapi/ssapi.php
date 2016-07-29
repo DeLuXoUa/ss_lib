@@ -341,10 +341,10 @@ class SSAPI {
         if(isset($data['webstock_extendeddescription']) or is_null($data['webstock_extendeddescription'])) $result['migration']['product_information'] = $data['webstock_extendeddescription'];
         else $err[] = 'webstock_extendeddescription is required';
 
-        if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = $data['webstock_oldpicture'];
+        if(isset($data['webstock_oldpicture']) or is_null($data['webstock_oldpicture']) ) $result['migration']['no_option_images'] = ($data['webstock_oldpicture'] ? true : false );
         else $err[] = 'webstock_oldpicture is required';
 
-        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['options']['migration']['no_large_image'] = $data['webstock_smallpicoption'];
+        if(isset($data['webstock_smallpicoption']) or is_null($data['webstock_smallpicoption'])) $result['options']['migration']['no_large_image'] = ($data['webstock_smallpicoption'] ? true : false );
         else $err[] = 'webstock_smallpicoption is required';
 
         if(isset($data['webstock_warrantyperiod'])) $result['specifications']['warranty_period'] = $data['webstock_warrantyperiod'];
