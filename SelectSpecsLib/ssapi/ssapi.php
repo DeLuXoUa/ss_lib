@@ -371,6 +371,10 @@ class SSAPI {
         }
         else $err[] = 'color_name is required';
 
+        if(isset($result['options']['name']) && !strlen($result['options']['name'])){
+            $err[] = 'option_name is required';
+        }
+
         if(isset($data['ss_no'])){
             $result['item_number'] = intval(str_replace('.', '', $data['ss_no']));
 

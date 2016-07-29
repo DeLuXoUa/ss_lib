@@ -51,8 +51,8 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="349" column="52" selection-start-line="349" selection-start-column="52" selection-end-line="349" selection-end-column="52" />
+            <state relative-caret-position="331">
+              <caret line="358" column="48" selection-start-line="358" selection-start-column="48" selection-end-line="358" selection-end-column="48" />
               <folding>
                 <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -505,7 +505,7 @@
       <workItem from="1465226375168" duration="752000" />
       <workItem from="1466077624759" duration="3032000" />
       <workItem from="1467193207208" duration="4968000" />
-      <workItem from="1469804422811" duration="1671000" />
+      <workItem from="1469804422811" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -801,11 +801,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469805236734</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="default values">
+      <created>1469806273124</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1469806273124</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183587000" />
+    <option name="totallyTimeSpent" value="183905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -872,7 +879,8 @@
     <MESSAGE value="price old fix" />
     <MESSAGE value="color_name trim fn added&#10;" />
     <MESSAGE value="option_images&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="option_images&#10;" />
+    <MESSAGE value="default values" />
+    <option name="LAST_COMMIT_MESSAGE" value="default values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1248,8 +1256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="349" column="52" selection-start-line="349" selection-start-column="52" selection-end-line="349" selection-end-column="52" />
+        <state relative-caret-position="331">
+          <caret line="358" column="48" selection-start-line="358" selection-start-column="48" selection-end-line="358" selection-end-column="48" />
           <folding>
             <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
