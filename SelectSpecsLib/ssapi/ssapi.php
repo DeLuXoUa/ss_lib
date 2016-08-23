@@ -429,9 +429,7 @@ class SSAPI {
                     continue;
                 }
                 $status = 'IN_STOCK';
-                $result['options']['stock']['discontinued'] = FALSE;
                 if ($disc) {
-                    $result['options']['stock']['discontinued'] = TRUE;
                     $status = 'DISCONTINUED';
                 } else if ($back) {
                     $status = 'IN_STOCK';
@@ -442,8 +440,11 @@ class SSAPI {
                 if ($result['options']['status'] == 'BACK_ORDERED' && $status == 'IN_STOCK') {
                     $result['options']['status'] = 'IN_STOCK';
                 }
+                if ($stock>0) {
+                    $result['options']['stock']['discontinued'] = FALSE;
+                }
                 $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height,
-                				 'stock' => $stock, 'status' => $status, 'gtin' => $gtin);
+                    'stock' => $stock, 'status' => $status, 'gtin' => $gtin);
             }
             $result['options']['specifications']['frame_sizes'] = $arr;
         }
