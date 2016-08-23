@@ -429,7 +429,9 @@ class SSAPI {
                     continue;
                 }
                 $status = 'IN_STOCK';
+                $result['options']['stock']['discontinued'] = FALSE;
                 if ($disc) {
+                    $result['options']['stock']['discontinued'] = TRUE;
                     $status = 'DISCONTINUED';
                 } else if ($back) {
                     $status = 'IN_STOCK';
