@@ -424,7 +424,7 @@ class SSAPI {
             $result['options']['specifications']['frame_sizes'] = $this->get_field_array($data['framesizes'], ';');
             foreach ($result['options']['specifications']['frame_sizes'] as $frame_size) {
                 @list($sizes, $disc, $back, $stock, $gtin) = $this->get_field_array($frame_size, ':');
-                @list($arm, $bridge, $lens, $height) = $this->get_field_array($sizes, '_');
+                @list($arm, $bridge, $lens, $height, $eld) = $this->get_field_array($sizes, '_');
                 if (($arm == 0) && ($bridge == 0) && ($lens == 0) && ($height == 0)) {
                     continue;
                 }
@@ -444,7 +444,7 @@ class SSAPI {
                     $result['options']['stock']['discontinued'] = FALSE;
                 }
                 $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height,
-                    'stock' => $stock, 'status' => $status, 'gtin' => $gtin);
+                    'stock' => $stock, 'status' => $status, 'gtin' => $gtin, 'eld' => $eld);
             }
             $result['options']['specifications']['frame_sizes'] = $arr;
         }
