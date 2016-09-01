@@ -107,25 +107,107 @@ class SSAPI {
         return false;
     }
 
-    public function domain_id_2_group_id($alt_id){
-        $alt_id = (int)$alt_id;
-        $result =[];
 
-        include(dirname(__FILE__).'/../config_groups.php');
 
-        foreach($GROUP_ALT_ID as $k => $v){
-            if($alt_id == $v) $result[]=$k;
+    private function get_field_array($str, $separator)
+    {
+        $arr = explode($separator, rtrim($str, $separator));
+        if (($arr[0] == '') && (count($arr) == 1)) {
+            $arr = array();
         }
-        if(count($result)) return $result;
-        else return false;
+
+        return $arr;
     }
 
-    private function group_id_2_domain_id($gid){
-        include dirname(__FILE__) . '/../config_groups.php';
+    private function message_parser($search, $data, $flags, $options){
 
-        if(isset($GROUP_ALT_ID[$gid])) return $GROUP_ALT_ID[$gid];
-        else return false;
+        $message = array();
+        $message['flags'] = array();
+
+        if(!is_null($flags)) {
+            if($flags & SSAPI_NO_WAIT_RESPONSE) { $message['flags'][] = 'noresponse'; }
+            elseif($flags & SSAPI_RETURN_RESULT) { $message['flags'][] = 'returnresult'; } //only if we waiting response we can use this flag
+
+            if($flags & SSAPI_CREATE_IF_NOT_EXIST) { $message['flags'][] = 'createifnotexist'; }
+            if($flags & SSAPI_FULL_REWRITE) { $message['flags'][] = 'fullrewrite'; }
+            if($flags & SSAPI_ONLY_IN_GROUP) { $message['flags'][] = 'ingrouponly'; }
+            if($flags & SSAPI_MULTI_QUERY) { $message['flags'][] = 'multi'; }
+            if($flags & SSAPI_FORCEADD) { $message['flags'][] = 'forceadd'; }
+
+            if($flags & SSAPI_TASK_FOR_JOB_SERVER) { $message['flags'][] = 'taskforjobserver'; }
+        }
+
+        if($search) { $message['search'] = $search; }
+        if($data) { $message['data'] = $data; }
+//        $options['protocol_version'] = 2;
+//        $options['client_id'] = $this->client_id;
+        $options['protocol_version'] = $this->protocol_version;
+        $message['options'] = $options;
+
+        return $message;
     }
+
+    private function method_parser($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
+        $method_type = NULL;
+        if(!is_null($flags) && ($flags & SSAPI_AGGREGATOR)) {
+            $method_type = '.aggregator';
+        } else {
+            if (!is_null($search) && !is_null($data)) {
+                $method_type = '.update';
+            } elseif (!is_null($data)) {
+                $method_type = '.add';
+            } elseif (!is_null($search)) {
+                if (!is_null($flags) && $flags & SSAPI_DELETE_DOCUMENT) {
+                    $method_type = '.delete';
+                } else {
+                    $method_type = '.get';
+                }
+            }
+        }
+
+        if($method_type) {
+            return ($method . $method_type);
+        } else {
+            return FALSE;
+        }
+    }
+
+    private function last_updated_minmax($type, $from_date, $to_date){
+        $search['__service.client_id']['$ne'] = $this->client_id;
+
+        if(!is_null($to_date)) {
+            $search['__service.updated']['$lte'] =  $to_date;
+        }
+        if(!is_null($from_date)) {
+            $search['__service.updated']['$gt'] = $from_date;
+        }
+
+        $search = [
+            ['$match' => $search ],
+            ['$group' => [
+                '_id' => null,
+                'max' => [ '$max' => '$__service.updated' ],
+                'min' => [ '$min' => '$__service.updated' ]
+            ]
+            ]
+        ];
+
+
+        /*
+                 $search = ['q' => [
+                    ['__service.client_id' => ['$ne' => $this->client_id] ],
+                    ['__service.updated' => [['$gt' => $from_date], ['$lte' => $to_date] ]]
+                ]];
+        */
+        return $this->send($type, $search, NULL, SSAPI_AGGREGATOR, NULL);
+    }
+
+
+
+//===========================================================================================
+//=======================   P U B L I C   F U N C T I O N S   ===============================
+// *_last_updated - is function for search updates creates by another client
+//===========================================================================================
 
     public function web_json_decode_fromitems(&$items){
         $result = [];
@@ -145,14 +227,23 @@ class SSAPI {
             if(isset($item['_id'])) $data['_api_item_id'] = $item['_id'];
             if(isset($item['model_name'])) $data['model_name'] = $item['model_name'];
             if(isset($item['supplier_name'])) $data['supplier_name'] = $item['supplier_name'];
+
             if(isset($item['designer_name'])) $data['designer_name'] = $item['designer_name'];
+            if(isset($item["group_designers"])){
+                foreach($item["group_designers"] as $grd) {
+                    if($did = $this->group_id_2_domain_id($grd['_group_id'])) {
+                        $data['group_designers'][$did] = $grd['designer_name'];
+                    }
+                }
+            }
+
             if(isset($item['brand_name'])) $data['brand_name'] = $item['brand_name'];
             if(isset($item['categories'])) $data['category_names'] = $item['categories'];
             if(isset($item['main_category'])) $data['tab']=$item['main_category'];
             if(isset($item['item_number'])) $data['item_id']=$item['item_number'];
             if(isset($item['description'])) $data['supplier_description'] = $item['description'];
             if(isset($item['__service'])) $data['__service'] = $item['__service'];
-            
+
             //$item['options'];
 //==========---------------------------------------------------------------------------------
 
@@ -184,8 +275,8 @@ class SSAPI {
                 if(!isset($option_data['no_large_image'])) $option_data['no_large_image'] = 0;
                 if(!isset($option_data['no_option_images'])) $option_data['no_option_images'] = 0;
                 if(!isset($option_data['product_information'])) $option_data['product_information'] = '';
-                
-                include dirname(__FILE__) . '/../config_groups.php';
+
+                include (dirname(__FILE__) . '/../config_groups.php');
                 foreach($GROUP_ALT_ID as $GAID){
                     if (isset($option['price'])) $option_data["prices_domain"][$GAID]['price'] = $option['price'];
                     elseif (isset($data['price'])) $option_data["prices_domain"][$GAID]['price'] = $data['price'];
@@ -228,14 +319,23 @@ class SSAPI {
         return $result;
     }
 
-    private function get_field_array($str, $separator)
-    {
-        $arr = explode($separator, rtrim($str, $separator));
-        if (($arr[0] == '') && (count($arr) == 1)) {
-            $arr = array();
-        }
+    public function domain_id_2_group_id($alt_id){
+        $alt_id = (int)$alt_id;
+        $result =[];
 
-        return $arr;
+        include(dirname(__FILE__).'/../config_groups.php');
+        foreach($GROUP_ALT_ID as $k => $v){
+            if($alt_id == $v) $result[]=$k;
+        }
+        if(count($result)) return $result;
+        else return false;
+    }
+
+    public function group_id_2_domain_id($gid){
+        include dirname(__FILE__) . '/../config_groups.php';
+
+        if(isset($GROUP_ALT_ID[$gid])) return $GROUP_ALT_ID[$gid];
+        else return false;
     }
 
     public function omnis_json_encode_byitems($data)
@@ -293,13 +393,27 @@ class SSAPI {
             $result['options']['price_old'] = (float)$data['old_price'];
             if (!is_numeric($result['options']['price_old'])) { $err[] = 'old_price is not numeric'; }
         }
-        
-       if(isset($data['map'])) {
+
+        if(isset($data['map'])) {
             $result['options']['map'] = $data['map'];
         }
 
         if(isset($data['brand'])) {
             $result['designer_name'] = $data['brand'];
+        }
+
+        if(isset($data['group_designers'])) {
+
+            $group_designers = [];
+            foreach($data['group_designers'] as $domain_id => $designer_name) {
+                if($grids = $this->domain_id_2_group_id($domain_id)){
+                    foreach($grids as $grid) {
+                        $group_designers[] = ["_group_id" => $grid, "designer_name" => $designer_name];
+                    }
+                }
+            }
+
+            if(count($group_designers)){ $result['group_designers']= $group_designers; }
         }
 
         if(isset($data['supplier'])) {
@@ -573,59 +687,6 @@ class SSAPI {
         }
     }
 
-    private function message_parser($search, $data, $flags, $options){
-
-        $message = array();
-        $message['flags'] = array();
-
-        if(!is_null($flags)) {
-            if($flags & SSAPI_NO_WAIT_RESPONSE) { $message['flags'][] = 'noresponse'; }
-            elseif($flags & SSAPI_RETURN_RESULT) { $message['flags'][] = 'returnresult'; } //only if we waiting response we can use this flag
-
-            if($flags & SSAPI_CREATE_IF_NOT_EXIST) { $message['flags'][] = 'createifnotexist'; }
-            if($flags & SSAPI_FULL_REWRITE) { $message['flags'][] = 'fullrewrite'; }
-            if($flags & SSAPI_ONLY_IN_GROUP) { $message['flags'][] = 'ingrouponly'; }
-            if($flags & SSAPI_MULTI_QUERY) { $message['flags'][] = 'multi'; }
-            if($flags & SSAPI_FORCEADD) { $message['flags'][] = 'forceadd'; }
-
-            if($flags & SSAPI_TASK_FOR_JOB_SERVER) { $message['flags'][] = 'taskforjobserver'; }
-        }
-
-        if($search) { $message['search'] = $search; }
-        if($data) { $message['data'] = $data; }
-//        $options['protocol_version'] = 2;
-//        $options['client_id'] = $this->client_id;
-        $options['protocol_version'] = $this->protocol_version;
-        $message['options'] = $options;
-
-        return $message;
-    }
-
-    private function method_parser($method, $search = NULL, $data = NULL, $flags = NULL, $options = NULL) {
-        $method_type = NULL;
-        if(!is_null($flags) && ($flags & SSAPI_AGGREGATOR)) {
-            $method_type = '.aggregator';
-        } else {
-            if (!is_null($search) && !is_null($data)) {
-                $method_type = '.update';
-            } elseif (!is_null($data)) {
-                $method_type = '.add';
-            } elseif (!is_null($search)) {
-                if (!is_null($flags) && $flags & SSAPI_DELETE_DOCUMENT) {
-                    $method_type = '.delete';
-                } else {
-                    $method_type = '.get';
-                }
-            }
-        }
-
-        if($method_type) {
-            return ($method . $method_type);
-        } else {
-            return FALSE;
-        }
-    }
-
     public function getLastError(){
         if(is_null($this->last_error_data)){
             return false;
@@ -685,6 +746,7 @@ class SSAPI {
             }
         }
     }
+
     public function message_sender($method, $message){
         $ex_time = microtime(true);
         if(isset($message['flags']) && in_array('noresponse', $message['flags'])){
@@ -756,35 +818,7 @@ class SSAPI {
         return $this->send($type, $search, NULL, $flags, $options);
     }
 
-    private function last_updated_minmax($type, $from_date, $to_date){
-        $search['__service.client_id']['$ne'] = $this->client_id;
 
-        if(!is_null($to_date)) {
-            $search['__service.updated']['$lte'] =  $to_date;
-        }
-        if(!is_null($from_date)) {
-            $search['__service.updated']['$gt'] = $from_date;
-        }
-
-        $search = [
-            ['$match' => $search ],
-            ['$group' => [
-                '_id' => null,
-                'max' => [ '$max' => '$__service.updated' ],
-                'min' => [ '$min' => '$__service.updated' ]
-            ]
-            ]
-        ];
-
-
-        /*
-                 $search = ['q' => [
-                    ['__service.client_id' => ['$ne' => $this->client_id] ],
-                    ['__service.updated' => [['$gt' => $from_date], ['$lte' => $to_date] ]]
-                ]];
-        */
-        return $this->send($type, $search, NULL, SSAPI_AGGREGATOR, NULL);
-    }
 
     public function web_json_encode_orders(
         &$data, //pointer to source data for fastest parsing and safest for memory  
@@ -934,11 +968,6 @@ class SSAPI {
     }
 
 
-//===========================================================================================
-//=======================   P U B L I C   F U N C T I O N S   ===============================
-// *_last_updated - is function for search updates creates by another client
-//===========================================================================================
-
     public function orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         if($data && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB))
         {
@@ -966,6 +995,7 @@ class SSAPI {
     public function order_items($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('orders.items', $search, $data, $flags, $options);
     }
+
 
     public function items_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         $result = $this->last_updated('items', $from_date, $to_date, $flags, $options);
@@ -1008,6 +1038,8 @@ class SSAPI {
     public function item_categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('items.categories', $search, $data, $flags, $options);
     }
+
+
     public function users_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('users', $from_date, $to_date, $flags, $options);
     }
@@ -1020,20 +1052,21 @@ class SSAPI {
     public function user_profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL);
     }
+
+
     public function profiles_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('profiles', $from_date, $to_date, $flags, $options);
     }
     public function profiles($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('profiles', $search, $data, $flags, $options);
     }
+
+
     public function gettext_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('gettext', $from_date, $to_date, $flags, $options);
     }
     public function gettext($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('gettext', $search, $data, $flags, $options);
-    }
-    public function gapi($search = NULL, $flags = NULL, $options = NULL){
-        return $this->send('gapi', $search, NULL, $flags, $options);
     }
     public function gettext_parsed($label, $value = NULL, $language = "en", $group_id = NULL, $advanced = NULL, $flags = NULL, $options = NULL){
         if($value) $data = ["value" => $value];
@@ -1048,6 +1081,11 @@ class SSAPI {
 
         return $this->send('gettext', $search, $data, $flags, $options);
     }
+
+    public function gapi($search = NULL, $flags = NULL, $options = NULL){
+        return $this->send('gapi', $search, NULL, $flags, $options);
+    }
+
     public function groups($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('groups', $search, $data, $flags, $options);
     }
