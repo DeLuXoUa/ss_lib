@@ -209,6 +209,25 @@ class SSAPI {
 // *_last_updated - is function for search updates creates by another client
 //===========================================================================================
 
+    public function domain_id_2_group_id($alt_id){
+        $alt_id = (int)$alt_id;
+        $result =[];
+
+        include(dirname(__FILE__).'/../config_groups.php');
+        foreach($GROUP_ALT_ID as $k => $v){
+            if($alt_id == $v) $result[]=$k;
+        }
+        if(count($result)) return $result;
+        else return false;
+    }
+
+    public function group_id_2_domain_id($gid){
+        include dirname(__FILE__) . '/../config_groups.php';
+
+        if(isset($GROUP_ALT_ID[$gid])) return $GROUP_ALT_ID[$gid];
+        else return false;
+    }
+
     public function web_json_decode_fromitems(&$items){
         $result = [];
         $items_i=0;
@@ -317,25 +336,6 @@ class SSAPI {
 //        die;
 
         return $result;
-    }
-
-    public function domain_id_2_group_id($alt_id){
-        $alt_id = (int)$alt_id;
-        $result =[];
-
-        include(dirname(__FILE__).'/../config_groups.php');
-        foreach($GROUP_ALT_ID as $k => $v){
-            if($alt_id == $v) $result[]=$k;
-        }
-        if(count($result)) return $result;
-        else return false;
-    }
-
-    public function group_id_2_domain_id($gid){
-        include dirname(__FILE__) . '/../config_groups.php';
-
-        if(isset($GROUP_ALT_ID[$gid])) return $GROUP_ALT_ID[$gid];
-        else return false;
     }
 
     public function omnis_json_encode_byitems($data)
@@ -971,7 +971,7 @@ class SSAPI {
     public function orders($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         if($data && !is_null($flags) && ($flags & SSAPI_CONVERTER_WEB))
         {
-            $this->web_json_encode_orders($data, ($flags & SSAPI_MULTI_QUERY));
+            $data = $this->web_json_encode_orders($data, ($flags & SSAPI_MULTI_QUERY));
         }
 
         $result = $this->send('orders', $search, $data, $flags, $options);

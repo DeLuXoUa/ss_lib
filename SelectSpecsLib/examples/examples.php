@@ -9,10 +9,10 @@ include(dirname(__FILE__) . '/../include.php');
 try {
     $ssapi = new SSAPI(
         //"127.0.0.1",
-        //"api.omnismain.com", //port now is 8844
-        "ssapi.selectspecs.com",
-        8843,
-        //8844,
+        "api.omnismain.com", //port now is 8844
+        //"ssapi.selectspecs.com",
+        //8843,
+        8844,
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
@@ -35,6 +35,10 @@ function result_print($result){
     }
     echo '<hr><p style="color: darkgoldenrod;">execution time is ', $ssapi->getLastTime(),' seconds</p><hr>';
 }
+
+
+
+
 
 //insert order
 //$data = json_decode(
@@ -103,32 +107,32 @@ function result_print($result){
 
 
 //Download all items and count it
-$skip = 0;
-$limit = 1000;
-$options_count = 0;
-$prices_count = 0;
-$prices_count_not_zero = 0;
-$domain_price_count = [];
-while($result = $ssapi->items_last_updated("2010-04-18 15:59:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>$limit, "skip"=>$skip])){
-    $skip+=$limit;
-    foreach($result as $r){
-        if(!$r['discontinued']) {
-            $options_count ++;
-            $prices_count += count($r['prices_domain']);
-            foreach ($r['prices_domain'] as $k => $pd) {
-                if ($pd['price'] && $pd['price'] != '0') {
-                    $prices_count_not_zero++;
-                    if(!isset($domain_price_count[$k])) $domain_price_count[$k]=0;
-                    $domain_price_count[$k]++;
-                }
-            }
-        }
-    }
-
-    echo "chunk $skip: total options - [ $options_count ], total prices - $prices_count (nz: $prices_count_not_zero)\n";
-}
-echo "\n----------------------------------\nTOTAL: $prices_count (nz: $prices_count_not_zero)\n";
-print_r($domain_price_count);
+//$skip = 0;
+//$limit = 1000;
+//$options_count = 0;
+//$prices_count = 0;
+//$prices_count_not_zero = 0;
+//$domain_price_count = [];
+//while($result = $ssapi->items_last_updated("2010-04-18 15:59:00.000Z", NULL, SSAPI_CONVERTER_WEB, ["order"=>["__service.updated"=>1], "limit"=>$limit, "skip"=>$skip])){
+//    $skip+=$limit;
+//    foreach($result as $r){
+//        if(!$r['discontinued']) {
+//            $options_count ++;
+//            $prices_count += count($r['prices_domain']);
+//            foreach ($r['prices_domain'] as $k => $pd) {
+//                if ($pd['price'] && $pd['price'] != '0') {
+//                    $prices_count_not_zero++;
+//                    if(!isset($domain_price_count[$k])) $domain_price_count[$k]=0;
+//                    $domain_price_count[$k]++;
+//                }
+//            }
+//        }
+//    }
+//
+//    echo "chunk $skip: total options - [ $options_count ], total prices - $prices_count (nz: $prices_count_not_zero)\n";
+//}
+//echo "\n----------------------------------\nTOTAL: $prices_count (nz: $prices_count_not_zero)\n";
+//print_r($domain_price_count);
 
 
 //$result = $ssapi->items(["item_number"=>6011], NULL, SSAPI_CONVERTER_WEB);
