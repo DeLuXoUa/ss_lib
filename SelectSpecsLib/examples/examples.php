@@ -8,11 +8,10 @@ include(dirname(__FILE__) . '/../include.php');
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
     $ssapi = new SSAPI(
-        //"127.0.0.1",
-        "api.omnismain.com", //port now is 8844
-        //"ssapi.selectspecs.com",
-        //8843,
-        8844,
+        //"127.0.0.1", 8843,
+        //"api.omnismain.com", 8844,
+        "ssapi.selectspecs.com", 8843,
+
         "56b32b778ec929c4110cbbfc",
         "@:START:TCP:1454582647656-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
         "56a9da969a0bf84c09c316be",
@@ -37,6 +36,43 @@ function result_print($result){
 }
 
 
+
+//Select gettext
+
+/*
+ *
+ * "datatype" : "gettext_translation" - ordinary gettext
+ * "datatype" : "categories_translation" - categories gettext
+ * ...
+ * */
+
+$result = $ssapi->gettext_last_updated("2010-01-01 00:00:00", NULL, NULL, ["limit"=>100]);
+echo "<h2 style='color: blueviolet;'>GETTEXT:</h2>";
+result_print($result);
+
+//[0]=>
+//  array(10) {
+//    ["_id"]=> string(24) "57d190b61ca1541200893bfe"
+//    ["_group_id"]=> string(24) "56a9da979a0bf84c09c316ca"
+//    ["datatype"]=> string(19) "gettext_translation"
+//    ["label"]=> string(11) "1000SemiRim"
+//    ["value"]=> array(2) {
+//        ["value"]=> string(80) "Over 1000 Semi-Rimless styles available from only ?14.50 inc. lenses & coatings."
+//        ["id"]=> string(3) "100"
+//    }
+//    ["lang"]=> string(2) "en"
+//    ["versions"]=> array(0) { }
+//    ["is_translated"]=> bool(false)
+//    ["urls"]=> array(0) { }
+//    ["__service"]=> array(6) {
+//        ["_group_id"]=> string(24) "56a9da969a0bf84c09c316be"
+//        ["_key_id"]=> string(24) "56b32b778ec929c4110cbbfc"
+//        ["client_id"]=> string(31) "ubuntu_cron_items_import_script"
+//        ["ip"]=> string(19) "::ffff:80.78.51.108"
+//        ["created"]=> string(24) "2016-09-08T16:24:22.645Z"
+//        ["updated"]=> string(24) "2016-09-08T16:24:22.645Z"
+//    }
+//  }
 
 
 
