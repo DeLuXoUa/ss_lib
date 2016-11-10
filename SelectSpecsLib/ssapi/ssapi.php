@@ -258,7 +258,16 @@ class SSAPI {
 
             if(isset($item['brand_name'])) $data['brand_name'] = $item['brand_name'];
             if(isset($item['categories'])) $data['category_names'] = $item['categories'];
-            if(isset($item['main_category'])) $data['tab']=$item['main_category'];
+            if(isset($item['main_category'])){
+                $data['tab']=$item['main_category'];
+
+                if (
+                    in_array('Prescription Compatible', $data['category_names']) &&
+                    $data['tab'] == 'DESIGNER SUNGLASSES'
+                ) {
+                    $data['tab'] = 'PRESCRIPTION SUNGLASSES';
+                }
+            }
             if(isset($item['item_number'])) $data['item_id']=$item['item_number'];
             if(isset($item['description'])) $data['supplier_description'] = $item['description'];
             if(isset($item['__service'])) $data['__service'] = $item['__service'];

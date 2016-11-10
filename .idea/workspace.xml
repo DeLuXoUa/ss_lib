@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
+    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="main cat = prescription compatible">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
     <ignored path="ss-lib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,25 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="examples.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="examples.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
               <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-              <folding>
-                <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-                <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-                <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2941">
-              <caret line="973" column="20" selection-start-line="973" selection-start-column="20" selection-end-line="973" selection-end-column="20" />
+            <state relative-caret-position="280">
+              <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
               <folding>
                 <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#auth#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -60,10 +56,7 @@
                 <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="e#10736#15078#0#PHP" expanded="false" />
                 <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -73,7 +66,6 @@
                 <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -135,8 +127,8 @@
         <option value="$PROJECT_DIR$/SelectSpecsLib/include.php" />
         <option value="$PROJECT_DIR$/SelectSpecsLib/examples/example_msql.php" />
         <option value="$PROJECT_DIR$/SelectSpecsLib/config_groups.php" />
-        <option value="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
         <option value="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
+        <option value="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
       </list>
     </option>
   </component>
@@ -153,7 +145,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1924" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -182,77 +174,10 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SelectSpecsLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SelectSpecsLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ssapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ss-lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SelectSpecsLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -756,6 +681,7 @@
       <workItem from="1473773388522" duration="609000" />
       <workItem from="1473856355213" duration="597000" />
       <workItem from="1474640365645" duration="2320000" />
+      <workItem from="1478769789428" duration="330000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -1076,10 +1002,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198587000" />
+    <option name="totallyTimeSpent" value="198917000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1088,14 +1014,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5031746" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1" y="31" width="1916" height="1008" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1" y="31" width="1916" height="1008" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.4968254" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2473176" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2468017" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1146,7 +1072,8 @@
     <MESSAGE value="default values" />
     <MESSAGE value="group_designers" />
     <MESSAGE value="order encode fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="order encode fix" />
+    <MESSAGE value="main cat = prescription compatible" />
+    <option name="LAST_COMMIT_MESSAGE" value="main cat = prescription compatible" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1170,10 +1097,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1183,7 +1107,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1221,11 +1144,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,10 +1159,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1253,7 +1169,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1284,11 +1199,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,10 +1214,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1316,7 +1224,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1377,11 +1284,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,10 +1299,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1409,7 +1309,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1462,11 +1361,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1481,10 +1376,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1494,7 +1386,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1547,11 +1438,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,10 +1453,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1579,7 +1463,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1638,11 +1521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="46" column="102" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="102" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1657,10 +1536,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1670,7 +1546,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1775,10 +1650,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/config_groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2941">
-          <caret line="973" column="20" selection-start-line="973" selection-start-column="20" selection-end-line="973" selection-end-column="20" />
+        <state relative-caret-position="280">
+          <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
           <folding>
             <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#auth#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1786,10 +1677,7 @@
             <element signature="n#message_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#method_parser#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#domain_id_2_group_id#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_id_2_domain_id#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_fromitems#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="e#10736#15078#0#PHP" expanded="false" />
             <element signature="n#omnis_json_encode_byitems#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getLastError#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getAllErrors#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1799,7 +1687,6 @@
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#web_json_decode_orders#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1821,26 +1708,6 @@
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_domains#0;n#SSAPI#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/config_groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-          <folding>
-            <marker date="1474891260160" expanded="true" signature="939:948" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1046:1067" ph="..." />
-            <marker date="1474891260160" expanded="true" signature="1402:1420" ph="..." />
           </folding>
         </state>
       </provider>
