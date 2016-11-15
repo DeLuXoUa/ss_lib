@@ -565,6 +565,7 @@ class SSAPI {
                 }
                 if ($stock>0) {
                     $result['options']['stock']['discontinued'] = FALSE;
+                    $result['categories'][] = 'Express';
                 }
                 $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height,
                     'stock' => $stock, 'status' => $status, 'gtin' => $gtin, 'eld' => $eld);
