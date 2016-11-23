@@ -14,3 +14,4 @@ $GROUP_ALT_ID['56a9da979a0bf84c09c316f4'] = 1000; //ss gen
 $GROUP_ALT_ID['56a9da979a0bf84c09c316fa'] = 0; //ss callcenter
 $GROUP_ALT_ID['56a9da979a0bf84c09c31700'] = 5; //drug
 $GROUP_ALT_ID['56a9da979a0bf84c09c31700'] = 5; //drug callcenter
+$GROUP_ALT_ID['56a9da979a0bf84c09c31777'] = 6; //china group
