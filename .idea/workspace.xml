@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="main cat = prescription compatible">
+    <list default="true" id="5eaa1fe2-468c-4bd0-a508-12dd7ab9b430" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/examples/examples.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" afterPath="$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php" />
     </list>
     <ignored path="ss-lib.iws" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="config_groups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/config_groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -37,9 +38,24 @@
       <file leaf-file-name="examples.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="561">
+              <caret line="33" column="24" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="24" />
+              <folding>
+                <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+                <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +63,8 @@
       <file leaf-file-name="ssapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
+            <state relative-caret-position="627">
+              <caret line="825" column="19" selection-start-line="825" selection-start-column="19" selection-end-line="825" selection-end-column="19" />
               <folding>
                 <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#auth#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -64,11 +80,10 @@
                 <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-                <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+                <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -83,6 +98,8 @@
                 <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+                <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+                <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
                 <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -95,8 +112,8 @@
       <file leaf-file-name="flags.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/flags.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="61" selection-start-line="2" selection-start-column="0" selection-end-line="20" selection-end-column="61" />
+            <state relative-caret-position="170">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -143,10 +160,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5.38 xampp" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="1932" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -173,16 +189,83 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectSpecsLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectSpecsLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ss-lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectSpecsLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -681,7 +764,16 @@
       <workItem from="1473773388522" duration="609000" />
       <workItem from="1473856355213" duration="597000" />
       <workItem from="1474640365645" duration="2320000" />
-      <workItem from="1478769789428" duration="330000" />
+      <workItem from="1478769789428" duration="1795000" />
+      <workItem from="1479921285242" duration="1640000" />
+      <workItem from="1481128506888" duration="1352000" />
+      <workItem from="1481548578894" duration="1395000" />
+      <workItem from="1482155034867" duration="7500000" />
+      <workItem from="1483611806350" duration="2130000" />
+      <workItem from="1484126123001" duration="1203000" />
+      <workItem from="1484217411883" duration="3367000" />
+      <workItem from="1485340070845" duration="1281000" />
+      <workItem from="1488878147957" duration="116000" />
     </task>
     <task id="LOCAL-00001" summary="error fix on example file">
       <created>1456929401946</created>
@@ -998,14 +1090,28 @@
       <option name="project" value="LOCAL" />
       <updated>1473411850579</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="main cat = prescription compatible">
+      <created>1478770130966</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1478770130966</updated>
+    </task>
+    <task id="LOCAL-00047" summary="china">
+      <created>1479921614710</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1479921614710</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198917000" />
+    <option name="totallyTimeSpent" value="220366000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1014,14 +1120,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5031746" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1" y="31" width="1916" height="1008" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1920" y="23" width="1920" height="1017" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.4968254" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2468017" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24732906" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1048,7 +1154,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="error fix on example file" />
     <MESSAGE value="featured fix in converter" />
     <MESSAGE value="designer_name error&#10;and timeout set added" />
     <MESSAGE value="public omnis converter" />
@@ -1073,7 +1178,8 @@
     <MESSAGE value="group_designers" />
     <MESSAGE value="order encode fix" />
     <MESSAGE value="main cat = prescription compatible" />
-    <option name="LAST_COMMIT_MESSAGE" value="main cat = prescription compatible" />
+    <MESSAGE value="china" />
+    <option name="LAST_COMMIT_MESSAGE" value="china" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1105,11 +1211,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1124,6 +1229,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1144,7 +1251,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-          <folding />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,11 +1289,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1186,6 +1307,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1199,7 +1322,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,11 +1360,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1241,6 +1378,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1284,7 +1423,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1307,11 +1461,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1326,6 +1479,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1361,7 +1516,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1384,11 +1554,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1403,6 +1572,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1438,7 +1609,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="0" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1461,11 +1647,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1480,6 +1665,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1521,7 +1708,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="46" column="102" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="102" />
-          <folding />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1544,11 +1746,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1563,6 +1764,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1644,32 +1847,47 @@
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/example_msql.php" />
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/flags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="61" selection-start-line="2" selection-start-column="0" selection-end-line="20" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/config_groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/examples/examples.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="561">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <marker date="1484217850466" expanded="true" signature="1067:1076" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1174:1195" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="1832:1850" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7253:7271" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="7428:7446" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="10869:10887" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11144:11162" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11410:11428" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="11732:11750" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12024:12042" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12328:12346" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12486:12495" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12698:12709" ph="..." />
+            <marker date="1484217850466" expanded="true" signature="12859:12875" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectSpecsLib/config_groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SelectSpecsLib/ssapi/ssapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
+        <state relative-caret-position="627">
+          <caret line="825" column="19" selection-start-line="825" selection-start-column="19" selection-end-line="825" selection-end-column="19" />
           <folding>
             <element signature="n#__construct#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#auth#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1685,11 +1903,10 @@
             <element signature="n#getAllTimes#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#getTotalTime#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#message_sender#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#send#0;n#SSAPI#0;n#!!top" expanded="false" />
-            <element signature="n#last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#order_items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_last_updated_minmax#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#items#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_images#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#items_translations_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#item_translations#0;n#SSAPI#0;n#!!top" expanded="false" />
@@ -1704,6 +1921,8 @@
             <element signature="n#gettext_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gettext_parsed#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams_last_updated#0;n#SSAPI#0;n#!!top" expanded="false" />
+            <element signature="n#exams#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#gapi#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#groups#0;n#SSAPI#0;n#!!top" expanded="false" />
             <element signature="n#group_rules#0;n#SSAPI#0;n#!!top" expanded="false" />

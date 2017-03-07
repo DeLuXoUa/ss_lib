@@ -1092,6 +1092,13 @@ class SSAPI {
         return $this->send('gettext', $search, $data, $flags, $options);
     }
 
+    public function exams_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('exams', $from_date, $to_date, $flags, $options);
+    }
+    public function exams($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('exams', $search, $data, $flags, $options);
+    }
+
     public function gapi($search = NULL, $flags = NULL, $options = NULL){
         return $this->send('gapi', $search, NULL, $flags, $options);
     }
