@@ -12,14 +12,13 @@ include(dirname(__FILE__) . '/../include.php');
 //$ssAPI = new SSAPI('api.example.com/json-rpc', 8843, 'secret token', 'group id');
 try {
     $ssapi = new SSAPI(
-        //"127.0.0.1", 1232,
-        //"api.aa.com", 1111,
-        "ssapi.aa.com", 1234,
+        "DOMAIN_MUST_BE_HERE",
+        "PORT_MUST_BE_HERE",
 
-        "",
-        "@:START:TCP:-a1f531a2b3543ae86f92e1982a85461f-4768b62a-3ead-490f-9aa8-d7721d5addde-b519c345-uQBEG3fx:END:@",
-        "",
-        "example_client"
+        "SECRET_KEY_MUST_BE_HERE",
+        "CERTIFICATE_CODE_MUST_BE_HERE",
+        "GROUP_ID_MUST_BE_HERE",
+        "CLIENT_IDENTIFICATOR_MUST_BE_HERE"
     );
 } catch (Exception $e) {
     echo $e;
