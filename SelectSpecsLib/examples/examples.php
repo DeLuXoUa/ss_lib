@@ -1,6 +1,10 @@
 <pre>
 <?php
 
+//$value = 'richardlawrencedesigns@gmail.com' . ':hello:' . '123123';
+//echo substr(str_rot13(sha1($value)), 0, 32);
+//die();
+
 //include(dirname(__FILE__) . '/profiler.php');
 include(dirname(__FILE__) . '/../include.php');
 
@@ -27,7 +31,7 @@ function result_print($result){
 
     if($result){
         var_dump($result);
-    } elseif($ssapi->getLastError()){
+    } elseif($ssapi->getLastError()) {
         echo '<br>ERROR HAPPENNED: <p style="color:red">';
         var_dump($ssapi->getLastError());
         echo '</p>';
@@ -36,6 +40,14 @@ function result_print($result){
 }
 
 
+$result = $ssapi->items(['item_number' => 314001], NULL );
+//echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
+//echo "\n\n".count($result[0]['options'])."\n\n";
+echo count($result)."\n\n\n";
+var_dump($result);
+//$result = $ssapi->items( [ "group_designers" => [ '$ne' => false ] ]);
+
+die;
 
 //Select gettext
 
@@ -46,9 +58,9 @@ function result_print($result){
  * ...
  * */
 
-$result = $ssapi->gettext_last_updated("2010-01-01 00:00:00", NULL, NULL, ["limit"=>100]);
-echo "<h2 style='color: blueviolet;'>GETTEXT:</h2>";
-result_print($result);
+//$result = $ssapi->gettext_last_updated("2010-01-01 00:00:00", NULL, NULL, ["limit"=>100]);
+//echo "<h2 style='color: blueviolet;'>GETTEXT:</h2>";
+//result_print($result);
 
 //[0]=>
 //  array(10) {
@@ -131,7 +143,7 @@ result_print($result);
 //result_print($result);
 
 //Select items by query
-//$result = $ssapi->items(['item_number' => 7734], NULL, SSAPI_CONVERTER_WEB);
+//$result = $ssapi->items(['item_number' => 314001], NULL, SSAPI_CONVERTER_WEB);
 //echo "<h2 style='color: blueviolet;'>ITEMS SELECT:</h2>";
 //echo "\n\n".count($result[0]['options'])."\n\n";
 //var_dump($result);

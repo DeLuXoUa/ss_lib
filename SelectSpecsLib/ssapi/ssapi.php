@@ -258,7 +258,16 @@ class SSAPI {
 
             if(isset($item['brand_name'])) $data['brand_name'] = $item['brand_name'];
             if(isset($item['categories'])) $data['category_names'] = $item['categories'];
-            if(isset($item['main_category'])) $data['tab']=$item['main_category'];
+            if(isset($item['main_category'])){
+                $data['tab']=$item['main_category'];
+
+                if (
+                    in_array('Prescription Compatible', $data['category_names']) &&
+                    $data['tab'] == 'DESIGNER SUNGLASSES'
+                ) {
+                    $data['tab'] = 'PRESCRIPTION SUNGLASSES';
+                }
+            }
             if(isset($item['item_number'])) $data['item_id']=$item['item_number'];
             if(isset($item['description'])) $data['supplier_description'] = $item['description'];
             if(isset($item['__service'])) $data['__service'] = $item['__service'];
@@ -556,6 +565,7 @@ class SSAPI {
                 }
                 if ($stock>0) {
                     $result['options']['stock']['discontinued'] = FALSE;
+                    $result['categories'][] = 'Express';
                 }
                 $arr[] = array('arm' => $arm, 'bridge' => $bridge, 'lens' => $lens, 'height' => $height,
                     'stock' => $stock, 'status' => $status, 'gtin' => $gtin, 'eld' => $eld);
@@ -1080,6 +1090,13 @@ class SSAPI {
         if(!is_null($advanced)) $search["advanced"] = $advanced;
 
         return $this->send('gettext', $search, $data, $flags, $options);
+    }
+
+    public function exams_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('exams', $from_date, $to_date, $flags, $options);
+    }
+    public function exams($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('exams', $search, $data, $flags, $options);
     }
 
     public function gapi($search = NULL, $flags = NULL, $options = NULL){
