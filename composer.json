@@ -15,7 +15,7 @@
             "SSAPI\\": "lib/"
         },
         "files": [
-            "sslib/SelctSpecsLib/include.php"
+            "sslib/SelectSpecsLib/include.php"
         ]
     }
 }
