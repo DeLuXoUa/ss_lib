@@ -2,8 +2,7 @@
     "name": "deluxo/sslib",
     "description": "SSLIB api",
     "type": "library",
-    "version": "1.0.1",
-    "licence": "MIT",
+    "version": "0.8.6",
     "authors": [
         {
             "name": "DeLuXoUa",
@@ -13,10 +12,10 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "SSAPI\\": "lib/"
+            "SSAPI\\": "SelectSpecsLib/ssapi"
         },
         "files": [
-            "sslib/SelectSpecsLib/include.php"
+            "SelectSpecsLib/include.php"
         ]
     }
 }
