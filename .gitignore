@@ -1,1 +1,4 @@
 /vendor/
+/nbproject/
+Thumbs.db
+.DS_Store
