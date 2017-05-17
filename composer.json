@@ -1,0 +1,21 @@
+{
+    "name": "deluxo/sslib",
+    "description": "SSLIB api",
+    "type": "library",
+    "version": "0.8.6",
+    "authors": [
+        {
+            "name": "DeLuXoUa",
+            "email": "aligator.if@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SSAPI\\": "SelectSpecsLib/ssapi"
+        },
+        "files": [
+            "SelectSpecsLib/include.php"
+        ]
+    }
+}
