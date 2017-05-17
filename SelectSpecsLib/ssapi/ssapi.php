@@ -1071,6 +1071,12 @@ class SSAPI {
         return $this->send('profiles', $search, $data, $flags, $options);
     }
 
+    public function payments_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('payments', $from_date, $to_date, $flags, $options);
+    }
+    public function payments($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('payments', $search, $data, $flags, $options);
+    }
 
     public function gettext_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('gettext', $from_date, $to_date, $flags, $options);
