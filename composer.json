@@ -1,6 +1,6 @@
 {
   "name": "deluxo/sslib",
-  "description": "SSLIB api",
+  "description": "SSLIB api for worker",
   "license": "MIT",
   "minimum-stability": "stable",
   "type": "library",
