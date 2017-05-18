@@ -2,6 +2,7 @@
     "name": "deluxo/sslib",
     "description": "SSLIB api",
     "type": "library",
+    "version": "2.0.0",
     "authors": [
         {
             "name": "DeLuXoUa",
