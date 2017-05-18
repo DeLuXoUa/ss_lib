@@ -2,14 +2,13 @@
     "name": "deluxo/sslib",
     "description": "SSLIB api",
     "type": "library",
-    "version": "1.8.7.0-stable",
+    "version": "1.8.7",
     "authors": [
         {
             "name": "DeLuXoUa",
             "email": "aligator.if@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "SSAPI\\": "SelectSpecsLib/ssapi"
