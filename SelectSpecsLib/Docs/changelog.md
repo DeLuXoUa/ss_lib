@@ -1,3 +1,7 @@
+## version 0.8.7
+- payments api added
+
+....
 ## version 0.8.4
 - socket timeout send to server added
 - fix some bugs in converters
