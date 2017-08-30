@@ -1098,6 +1098,20 @@ class SSAPI {
         return $this->send('gettext', $search, $data, $flags, $options);
     }
 
+    public function reviews_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('reviews', $from_date, $to_date, $flags, $options);
+    }
+    public function reviews($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('reviews', $search, $data, $flags, $options);
+    }
+
+    public function wishlist_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('wishlist', $from_date, $to_date, $flags, $options);
+    }
+    public function wishlist($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('wishlist', $search, $data, $flags, $options);
+    }
+    
     public function exams_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('exams', $from_date, $to_date, $flags, $options);
     }
