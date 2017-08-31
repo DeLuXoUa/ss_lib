@@ -1104,6 +1104,7 @@ class SSAPI {
     public function reviews($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('reviews', $search, $data, $flags, $options);
     }
+    
 
     public function wishlist_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
         return $this->last_updated('wishlist', $from_date, $to_date, $flags, $options);
