@@ -1132,6 +1132,13 @@ class SSAPI {
     public function group_domains($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('groups.domains', $search, $data, $flags, $options);
     }
+
+    public function categories_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('categories', $from_date, $to_date, $flags, $options);
+    }
+    public function categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('categories', $search, NULL, $flags, $options);
+    }
 };
 
 ?>
