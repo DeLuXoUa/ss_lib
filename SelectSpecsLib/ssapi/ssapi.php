@@ -1133,6 +1133,27 @@ class SSAPI {
     public function group_domains($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
         return $this->send('groups.domains', $search, $data, $flags, $options);
     }
+
+    public function categories_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('categories', $from_date, $to_date, $flags, $options);
+    }
+    public function categories($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('categories', $search, NULL, $flags, $options);
+    }
+
+    public function filters_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('filters', $from_date, $to_date, $flags, $options);
+    }
+    public function filters($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('filters', $search, NULL, $flags, $options);
+    }
+
+    public function menus_last_updated($from_date, $to_date, $flags = NULL, $options = NULL){
+        return $this->last_updated('menus', $from_date, $to_date, $flags, $options);
+    }
+    public function menus($search = NULL, $data = NULL, $flags = NULL, $options = NULL){
+        return $this->send('menus', $search, NULL, $flags, $options);
+    }
 };
 
 ?>
